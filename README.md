@@ -12,13 +12,15 @@ This work extends neural memory systems to support controllable, instruction-gui
 ## Official Links
 [![Static Badge](https://img.shields.io/badge/generalized_neural_memory-paper-green)](https://arxiv.org/abs/2402.04624)
 
-[![GNM Models](https://img.shields.io/badge/gnm_all-models-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-gnm-all)
-[![GNM Models](https://img.shields.io/badge/icl_all-models-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-icl-all)
-[![GNM Models](https://img.shields.io/badge/rag_all-models-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-rag-all)
-[![GNM Models](https://img.shields.io/badge/gnm_all_ablation-models-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-gnm-all-ablation)
-[![GNM Models](https://img.shields.io/badge/gnm_facts_only-models-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-gnm-facts)
-[![GNM Models](https://img.shields.io/badge/icl_facts_only-models-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-icl-facts)
-[![GNM Models](https://img.shields.io/badge/rag_facts_only-models-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-rag-facts)
+[![GNM Models](https://img.shields.io/badge/gnm_all-model-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-gnm-all)
+[![GNM Models](https://img.shields.io/badge/icl_all-model-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-icl-all)
+[![GNM Models](https://img.shields.io/badge/rag_all-model-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-rag-all)
+[![GNM Models](https://img.shields.io/badge/gnm_all_ablation-model-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-gnm-all-ablation)
+[![GNM Models](https://img.shields.io/badge/gnm_facts_only-model-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-gnm-facts)
+[![GNM Models](https://img.shields.io/badge/icl_facts_only-model-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-icl-facts)
+[![GNM Models](https://img.shields.io/badge/rag_facts_only-model-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-rag-facts)
+
+[![GNM Data](https://img.shields.io/badge/counterfact_gnm-data-red)](https://huggingface.co/datasets/maxbennett/counterfact-gnm)
 
 
 ## Getting Setup
