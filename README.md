@@ -21,62 +21,6 @@ This work extends neural memory systems to support controllable, instruction-gui
 [![GNM Models](https://img.shields.io/badge/rag_facts_only-models-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-rag-facts)
 
 
-
-
-
-## Repository Structure
-
-```
-├── src/                          # Source code
-│   ├── gnm.py                    # Main GNM model implementation
-│   ├── gnm_data.py               # Data loading and processing
-│   ├── instructions.py           # Instruction generation utilities
-│   ├── memoryllm_train.py        # Training and validation functions
-│   ├── config_memoryllm_train.py # Training and eval config schema
-│   ├── modeling_memoryllm.py     # Slightly modified code from MemoryLLM codebase
-│   └── MemoryLLM/                # Forked MemoryLLM codebase (from MemoryLLM code, cited below)
-│   └── utils/                     # Utility scripts (metrics, plotting, constructors, etc.)
-├── experiments/                  # Experiment configurations (DVC pipelines)
-│   ├── train_exp1_gnm/           # Experiment 1: GNM training
-│   ├── train_exp1_icl/           # Experiment 1: ICL baseline training
-│   ├── train_exp1_rag/           # Experiment 1: RAG baseline training
-│   ├── train_exp2_gnm/           # Experiment 2: GNM training
-│   ├── train_exp2_gnm_ablation/  # Experiment 2: Ablation studies
-│   ├── train_exp2_icl/           # Experiment 2: ICL baseline training
-│   ├── train_exp2_rag/           # Experiment 2: RAG baseline training
-│   ├── eval_exp1/                # Experiment 1: Evaluation
-│   ├── eval_exp2/                # Experiment 2: Evaluation
-│   ├── eval_exp2_train/          # Experiment 2: Training set evaluation (for format generalization)
-│   ├── eval_exp2_val_id/         # Experiment 2: In-distribution validation (for format generalization)
-│   └── eval_exp3/                # Experiment 3: Evaluation
-├── data_pipelines/               # Data generation pipelines
-│   ├── generate_categorized_counterfact_data_from_mapping/       # categorize counterfact dataset
-│   └── generate_documents/       # Document generation
-├── data/                         # data
-│   ├── raw/                      # for importing counterfact data
-│   ├── counterfact_with_categories/         # for categorizing counterfact
-│   └── counterfact_gnm/          # for storing our synthetic dataset
-├── models/.                      # Trained model checkpoints
-├── saved_evals/                  # Saved evaluation results
-├── notebooks/                    # Analysis and plotting notebooks
-└── plots/                        # Generated figures
-```
-
-Jupyter notebooks in `notebooks/` reproduce all figures and analyses from the paper:
-
-| Notebook | Description |
-|----------|-------------|
-| `ablation.ipynb` | Ablation study visualizations |
-| `comp_gen.ipynb` | Compositional generalization analysis |
-| `flops.ipynb` | Computational cost analysis |
-| `format_generalization.ipynb` | Format generalization experiments |
-| `memory_analysis.ipynb` | Memory analysis |
-| `mixed_docs.ipynb` | `Continual Learning of Knowledge, Styles, and Behaviors' experiments |
-| `mixed_docs_heatmaps.ipynb` | `Continual Learning of Knowledge, Styles, and Behaviors' Heatmap visualizations |
-| `warmup_summary.ipynb` | `Continual Learning of Targeted Facts' experiment summary |
-| `warmup_heatmaps.ipynb` | `Continual Learning of Targeted Facts' heatmap visualizations |
-
-
 ## Getting Setup
 
 ### Step #1: Setup Environment 
@@ -205,6 +149,61 @@ Pre-computed evaluation results are available in `saved_evals/`. Each subdirecto
 - `format_generalization/`: Format generalization results
 - `mixed_documents/`: `Continual Learning of Knowledge, Styles, and Behaviors' evaluation
 - `warmup/`: `Continual Learning of Targeted Facts' analysis
+
+Jupyter notebooks in `notebooks/` reproduce all figures and analyses from the paper:
+
+| Notebook | Description |
+|----------|-------------|
+| `ablation.ipynb` | Ablation study visualizations |
+| `comp_gen.ipynb` | Compositional generalization analysis |
+| `flops.ipynb` | Computational cost analysis |
+| `format_generalization.ipynb` | Format generalization experiments |
+| `memory_analysis.ipynb` | Memory analysis |
+| `mixed_docs.ipynb` | `Continual Learning of Knowledge, Styles, and Behaviors' experiments |
+| `mixed_docs_heatmaps.ipynb` | `Continual Learning of Knowledge, Styles, and Behaviors' Heatmap visualizations |
+| `warmup_summary.ipynb` | `Continual Learning of Targeted Facts' experiment summary |
+| `warmup_heatmaps.ipynb` | `Continual Learning of Targeted Facts' heatmap visualizations |
+
+
+
+
+## Repository Structure
+
+```
+├── src/                          # Source code
+│   ├── gnm.py                    # Main GNM model implementation
+│   ├── gnm_data.py               # Data loading and processing
+│   ├── instructions.py           # Instruction generation utilities
+│   ├── memoryllm_train.py        # Training and validation functions
+│   ├── config_memoryllm_train.py # Training and eval config schema
+│   ├── modeling_memoryllm.py     # Slightly modified code from MemoryLLM codebase
+│   └── MemoryLLM/                # Forked MemoryLLM codebase (from MemoryLLM code, cited below)
+│   └── utils/                     # Utility scripts (metrics, plotting, constructors, etc.)
+├── experiments/                  # Experiment configurations (DVC pipelines)
+│   ├── train_exp1_gnm/           # Experiment 1: GNM training
+│   ├── train_exp1_icl/           # Experiment 1: ICL baseline training
+│   ├── train_exp1_rag/           # Experiment 1: RAG baseline training
+│   ├── train_exp2_gnm/           # Experiment 2: GNM training
+│   ├── train_exp2_gnm_ablation/  # Experiment 2: Ablation studies
+│   ├── train_exp2_icl/           # Experiment 2: ICL baseline training
+│   ├── train_exp2_rag/           # Experiment 2: RAG baseline training
+│   ├── eval_exp1/                # Experiment 1: Evaluation
+│   ├── eval_exp2/                # Experiment 2: Evaluation
+│   ├── eval_exp2_train/          # Experiment 2: Training set evaluation (for format generalization)
+│   ├── eval_exp2_val_id/         # Experiment 2: In-distribution validation (for format generalization)
+│   └── eval_exp3/                # Experiment 3: Evaluation
+├── data_pipelines/               # Data generation pipelines
+│   ├── generate_categorized_counterfact_data_from_mapping/       # categorize counterfact dataset
+│   └── generate_documents/       # Document generation
+├── data/                         # data
+│   ├── raw/                      # for importing counterfact data
+│   ├── counterfact_with_categories/         # for categorizing counterfact
+│   └── counterfact_gnm/          # for storing our synthetic dataset
+├── models/.                      # Trained model checkpoints
+├── saved_evals/                  # Saved evaluation results
+├── notebooks/                    # Analysis and plotting notebooks
+└── plots/                        # Generated figures
+```
 
 
 ## Acknowledgments
