@@ -1,0 +1,56 @@
+{
+  "compositions": [
+    3208.0
+  ],
+  "fact_accuracy": [
+    1.0
+  ],
+  "fact_accuracy_matrix": [
+    1.0
+  ],
+  "fact_accuracy_over_time": [
+    1.0
+  ],
+  "fact_retention": [
+    1.0
+  ],
+  "fact_selectivity": [
+    0.03999999910593033
+  ],
+  "fact_selectivity_matrix": [
+    0.03999999910593033
+  ],
+  "fact_specificity": [
+    0.9183266758918762
+  ],
+  "fact_specificity_matrix": [
+    0.9183266758918762
+  ],
+  "flops_per_token": [
+    0.0
+  ],
+  "loss": [
+    1.1005637645721436
+  ],
+  "non_compositions": [
+    4128.0
+  ],
+  "refusal_accuracy": [
+    0.8311628103256226
+  ],
+  "refusal_precision": [
+    0.82034832239151
+  ],
+  "refusal_precision_over_time": [
+    0.82034832239151
+  ],
+  "refusal_recall": [
+    0.8427495360374451
+  ],
+  "refusal_recall_over_time": [
+    0.8427495360374451
+  ],
+  "refusal_specificity": [
+    0.9982014298439026
+  ]
+}

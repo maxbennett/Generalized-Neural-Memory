@@ -1,0 +1,114 @@
+run_name: "train_exp1_icl"
+seed: 42 
+
+log:
+  wandb_project: "test_name"
+  batch_log_interval: 1
+
+distributed:
+  cuda_visible_devices: "0,1,2,3,4,5"
+  nproc_per_node: 6
+  master_port: 29512
+
+model:
+  model: memoryllm_chat
+  model_state_dict_path: null
+  checkpoint_dict_path: null
+
+sampling:
+  num_paraphrase_from_facts_to_learn: 2
+  num_paraphrase_from_facts_to_refuse: 0
+  num_true_output_neighbor_from_facts_to_learn: 1
+  num_true_output_neighbor_from_facts_to_refuse: 0
+  num_paraphrase_from_other_facts: 1
+  num_true_output_neighbor_from_other_facts: 0
+  max_total_io_pairs_per_sample: 4
+  num_in_future_to_pull_back_future_paraphrase: 0
+  num_in_past_to_pull_forward_true_output_neighbor: 2 # deprecated, doesn't do anything
+  num_in_past_to_pull_forward_paraphrase_not_target_to_learn: 1 # deprecated, doesn't do anything
+  num_io_pairs_to_chunk: 2
+  max_new_tokens: 3
+
+loop:
+  start_epoch: 0
+  starting_global_step: 0
+  plot_every_n_epochs: 1
+  checkpoint_every_n_epochs: 1
+  max_checkpoints: 5
+  completions_batch_sample_count: 1
+  early_stop: true
+  early_stop_patience: 0
+  early_stop_min_delta: 0
+  max_epochs: 50
+  sequence_length: 2
+  sequence_length_validation: 2
+  window_size: 6 # deprecated, doesn't do anything
+  stride: 6 # deprecated, doesn't do anything
+  max_risk_score_threshold: 80000 # deprecated, doesn't do anything
+  unlearning: true
+
+opt:
+  optimizer: "adamw8bit"
+  learning_rate: 5e-5 
+  max_grad_norm: 25.0
+  gradient_accumulation_steps: 1
+  batch_size_per_device: 1
+  use_lr_scheduler: false
+  lr_warmup_epochs: 0
+  min_lr: 4e-7
+  weight_decay: 0.01
+
+data:
+  training_datasets:
+    - "../../data/counterfact_gnm/data/train/train_0.json"
+    - "../../data/counterfact_gnm/data/train/train_1.json"
+    - "../../data/counterfact_gnm/data/train/train_2.json"
+    - "../../data/counterfact_gnm/data/train/train_3.json"
+    - "../../data/counterfact_gnm/data/train/train_4.json"
+  val_ood_datasets:
+    - "../../data/counterfact_gnm/data/test/test_unseen_categories_0.json"
+    # - "../../data/counterfact_gnm/data/test/test_unseen_categories_1.json"
+    # - "../../data/counterfact_gnm/data/test/test_unseen_categories_2.json"
+  # val_ood_path: "../../shared_data/holdout_subcat3_docs/test_unseen_categories.json"
+  val_id_path:  "../../data/counterfact_gnm/data/val/test_seen_categories.json"
+  train_limit: 400
+  val_limit: null
+  # ---
+  # Experiment 1
+  # ---
+  # ---
+  eligible_target_types_train:
+    - "fact_subcategories"
+    - "fact_categories"
+  holdout_targets_train: 
+    - "continents"
+    - "science_academia_law_medicine_related_occupation"
+    - "northern_central_european_languages"
+    - "religion"
+  holdout_target_values_train: null
+  # ---
+  eligible_target_types_val_id:
+    - "fact_subcategories"
+  holdout_targets_val_id:
+    - "continents"
+    - "science_academia_law_medicine_related_occupation"
+    - "northern_central_european_languages"
+    - "religion"
+  holdout_target_values_val_id: null
+  # ---
+  eligible_target_types_val_ood:
+    - "fact_subcategories"
+  holdout_targets_val_ood:
+    - "us_cities_or_states"
+    - "non_us_cities_or_states"
+    - "country"
+    - "major_western_european_languages"
+    - "eastern_european_mediterranean_languages"
+    - "asian_middle_eastern_languages_and_pacific"
+    - "tech_industrial_or_gaming_company"
+    - "TV_entertainment_or_news_organization"
+    - "car_company"
+    - "music_or_art_related_occupation"
+    - "sports_related_occupation"
+    - "politics_entertainment_religion_related_occupation"
+  holdout_target_values_val_ood: null

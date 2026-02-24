@@ -1,0 +1,23 @@
+stages:
+  add_category_to_raw_counterfact:
+    cmd: python add_category_to_raw_counterfact_from_mapping.py --in ../../data/raw/counterfact/ --out artifacts/counterfact_raw_categorized/ --mapping mapping.json
+    deps:
+      - ../../scripts/add_category_to_raw_counterfact_from_mapping.py
+      - ../../data/raw/counterfact/test/data-00000-of-00001.arrow
+      - ../../data/raw/counterfact/train/data-00000-of-00001.arrow
+      - mapping.json  # Add mapping file as dependency
+    outs:
+      - artifacts/counterfact_raw_categorized/train.json
+      - artifacts/counterfact_raw_categorized/test.json
+      - artifacts/counterfact_raw_categorized/train_unmapped.json  # New unmapped files
+      - artifacts/counterfact_raw_categorized/test_unmapped.json
+      - artifacts/counterfact_raw_categorized/unmapped_values_summary.json
+
+  run_category_analytics:
+    cmd: python run_category_analytics.py --in artifacts/counterfact_raw_categorized/ --out artifacts/counterfact_raw_categorized/counterfact_raw_categorized_analytics.json
+    deps:
+      - run_category_analytics.py
+      - artifacts/counterfact_raw_categorized/train.json
+      - artifacts/counterfact_raw_categorized/test.json
+    outs:
+      - artifacts/counterfact_raw_categorized/counterfact_raw_categorized_analytics.json

@@ -1,0 +1,13 @@
+/data/*
+/data/
+/eval/artifacts/
+/eval/artifacts/*
+/train/artifacts/
+/train/artifacts/*
+/train/results/*
+/train/wandb/*
+/train/checkpoints/*
+/train/checkpoints/
+/eval/wandb/*
+/train/models/*
+/results/

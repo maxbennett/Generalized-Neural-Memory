@@ -1,0 +1,98 @@
+{
+  "run_name": "memoryllm",
+  "seed": 42,
+  "distributed": {
+    "cuda_visible_devices": "0,1,2,3",
+    "nproc_per_node": 4,
+    "master_port": 29512
+  },
+  "data": {
+    "eligible_target_types_val_ood": [
+      "fact_subcategories",
+      "fact_categories",
+      "formats",
+      "refusal_categories",
+      "refusal_subcategories"
+    ],
+    "val_ood_datasets": [
+      "../../data/counterfact_gnm/data/train/train_0.json"
+    ],
+    "training_datasets": null,
+    "val_id_path": null,
+    "eligible_target_types_train": null,
+    "eligible_target_types_val_id": null,
+    "add_refusal_to_user_message": false,
+    "holdout_targets_train": null,
+    "holdout_target_values_train": null,
+    "holdout_targets_val_id": null,
+    "holdout_target_values_val_id": null,
+    "holdout_targets_val_ood": [
+      "xml",
+      "continents",
+      "science_academia_law_medicine_related_occupation",
+      "northern_central_european_languages",
+      "religion",
+      "continents_refusal",
+      "northern_central_european_languages_refusal",
+      "science_academia_law_medicine_related_occupation_refusal",
+      "religion_refusal"
+    ],
+    "holdout_target_values_val_ood": [
+      "json_text",
+      "json_content",
+      "yaml_text",
+      "yaml_content",
+      "csv_text",
+      "csv_content",
+      "toml_text",
+      "toml_content"
+    ],
+    "train_limit": null,
+    "val_limit": 400
+  },
+  "sampling": {
+    "num_paraphrase_from_facts_to_learn": 1,
+    "num_true_output_neighbor_from_facts_to_learn": 1,
+    "num_paraphrase_from_facts_to_refuse": 2,
+    "num_true_output_neighbor_from_facts_to_refuse": 1,
+    "num_paraphrase_from_other_facts": 1,
+    "num_true_output_neighbor_from_other_facts": 0,
+    "max_total_io_pairs_per_sample": 4,
+    "num_io_pairs_to_chunk": 2,
+    "max_new_tokens": 8,
+    "num_in_future_to_pull_back_future_paraphrase": 4,
+    "num_in_past_to_pull_forward_true_output_neighbor": 4,
+    "num_in_past_to_pull_forward_paraphrase_not_target_to_learn": 4
+  },
+  "opt": null,
+  "model": {
+    "model": "memoryllm_chat",
+    "model_path": "YuWangX/memoryllm-8b-chat",
+    "tokenizer_path": "YuWangX/memoryllm-8b-chat",
+    "model_state_dict_path": "../../shared_models/mixed_documents/memoryllm/exp3_memoryllm_model.pth",
+    "checkpoint_dict_path": null,
+    "pretty_name": "GNM"
+  },
+  "loop": {
+    "sequence_length": 10,
+    "sequence_length_validation": null,
+    "unlearning": false,
+    "early_stop": true,
+    "window_size": 6,
+    "stride": 6,
+    "max_risk_score_threshold": 80000,
+    "start_epoch": 0,
+    "starting_global_step": 0,
+    "plot_every_n_epochs": 1,
+    "checkpoint_every_n_epochs": 2,
+    "max_checkpoints": 5,
+    "completions_batch_sample_count": 1,
+    "early_stop_patience": 5,
+    "early_stop_min_delta": 0.01,
+    "max_epochs": 100
+  },
+  "log": {
+    "wandb_project": "gnm_draft_experiments",
+    "batch_log_interval": 1
+  }
+}

@@ -1,0 +1,66 @@
+stages:
+  evaluate:
+    foreach: ${evals}
+    do:
+      cmd: >
+        source ~/miniconda3/bin/activate memoryllm &&
+        export CUDA_VISIBLE_DEVICES=${distributed.cuda_visible_devices}; export MASTER_PORT=${distributed.master_port}; torchrun --standalone --nnodes=1 --nproc_per_node=${distributed.nproc_per_node} scripts/eval.py
+        --model ${item.model}
+        --model-state-dict-path "${item.model_state_dict_path}"
+        --pretty-name "${item.pretty_name}"
+        --run-key ${item.run_key}
+        --outdir results/${item.run_key}
+        --params=params.yaml 
+      deps:
+        - scripts/eval.py
+        - ../../src/gnm.py
+        - ../../src/instructions.py
+        - params.yaml
+      outs:
+        - results/${item.run_key}
+  
+# stages:
+#   aggregate_results:
+#     cmd: >
+#       python scripts/aggregate_results.py
+#       --results-root results
+#       --selector ${run.aggregate_on}
+#       --this-run-id ${run.run_id}
+#       --out-csv results/${run.aggregate_on}/aggregated_results.csv
+#     deps:
+#       - scripts/aggregate_results.py
+#       - results
+#     outs:
+#       - results
+
+  # aggregate_results:
+  #   cmd: python eval/scripts/aggregate_results.py --results-root eval/results --out-csv eval/aggregated_results.csv
+  #   deps:
+  #     - eval/scripts/aggregate_results.py
+  #     - eval/results
+  #   outs:
+  #     - eval/aggregated_results.csv
+
+  # plot_results:
+  #   cmd: python eval/scripts/plot_results.py --csv eval/aggregated_results.csv --split test --outdir eval/figures
+  #   deps:
+  #     - eval/scripts/plot_results.py
+  #     - eval/aggregated_results.csv
+  #   outs:
+  #     - eval/figures
+
+  # plot_matrices:
+  #   cmd: python eval/scripts/plot_matrices.py --results-root eval/results --outdir eval/figures
+  #   deps:
+  #     - eval/scripts/plot_matrices.py
+  #     - eval/results
+  #   outs:
+  #     - eval/figures
+          # python scripts/eval.py
+  
+  
+  # python -m debugpy --listen 5678 --wait-for-client scripts/eval.py
+  # python scripts/eval.py
+  # python -m debugpy --listen 5679 --wait-for-client scripts/eval.py
+  # python scripts/eval.py
+  

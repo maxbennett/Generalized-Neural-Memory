@@ -1,0 +1,73 @@
+run_name: "exp3"
+seed: 42 # for seq 4
+
+distributed:
+  cuda_visible_devices: "0"
+  nproc_per_node: 1
+  master_port: 29512
+
+log:
+  wandb_project: "test_name"
+  batch_log_interval: 1
+
+sampling:
+  num_paraphrase_from_facts_to_learn: 1
+  num_paraphrase_from_facts_to_refuse: 2
+  num_true_output_neighbor_from_facts_to_learn: 1
+  num_true_output_neighbor_from_facts_to_refuse: 1
+  num_paraphrase_from_other_facts: 1
+  num_true_output_neighbor_from_other_facts: 0
+  max_total_io_pairs_per_sample: 4
+  num_io_pairs_to_chunk: 2
+  max_new_tokens: 8
+
+loop:
+  completions_batch_sample_count: 1
+  sequence_length: 1
+  unlearning: false
+
+data:
+  val_ood_datasets:
+    - "../../data/counterfact_gnm/data/test/test_unseen_categories_0.json"
+    - "../../data/counterfact_gnm/data/test/test_unseen_categories_1.json"
+    - "../../data/counterfact_gnm/data/test/test_unseen_categories_2.json"
+  val_limit: null
+  
+  # -------------------------------------------------
+  # FACT REFUSAL COMPOSITION EXPERIMENT
+  # ---
+  eligible_target_types_val_ood:
+  - "fact_refusal_compositions"
+  - "fact_subcategories"
+  holdout_targets_val_ood: null
+  holdout_target_values_val_ood: null
+
+evals:
+  - model: memoryllm_chat
+    run_key: gnm
+    pretty_name: "GNM"
+    model_state_dict_path: "../../models/gnm_all/model.pth"
+  - model: llama3_8b_instruct_rag
+    run_key: rag_trained
+    pretty_name: "Llama3 RAG Trained"
+    model_state_dict_path: "../../models/rag_all/model.pth"
+  - model: llama3_8b_instruct_rag
+    run_key: rag_untrained
+    pretty_name: "Llama3 RAG Untrained"
+    model_state_dict_path: null
+  - model: memoryllm_chat_no_memory
+    run_key: naive_model
+    pretty_name: "Naive Model"
+    model_state_dict_path: null
+  - model: llama3_8b_instruct
+    run_key: llama3_ft
+    pretty_name: "Finetuned Llama3"
+    model_state_dict_path: "../../models/icl_all/model.pth"
+  - model: llama3_8b_instruct
+    run_key: llama3
+    pretty_name: "Llama3"
+    model_state_dict_path: null
+  - model: memoryllm_chat
+    run_key: memoryllm
+    pretty_name: "MemoryLLM"
+    model_state_dict_path: null

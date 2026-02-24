@@ -1,0 +1,19 @@
+stages:
+  train:
+    cmd: >
+      source ~/miniconda3/bin/activate memoryllm &&
+      export CUDA_VISIBLE_DEVICES=${distributed.cuda_visible_devices}; export MASTER_PORT=${distributed.master_port}; torchrun --standalone --nnodes=1 --nproc_per_node=${distributed.nproc_per_node} scripts/train.py
+      --params=params.yaml 
+    deps:
+      - scripts/train.py
+      - params.yaml
+    outs:
+      - artifacts/best_trained_model.pth
+
+  
+  
+  # python -m debugpy --listen 5678 --wait-for-client scripts/eval.py
+  # python scripts/eval.py
+  # python -m debugpy --listen 5679 --wait-for-client scripts/eval.py
+  # python scripts/eval.py
+  

@@ -1,0 +1,16 @@
+# Data directories - ignore contents but keep directory structure
+data/raw/*
+data/counterfact_with_categories/*
+data/counterfact_gnm/*
+
+# Models directory - ignore all model files
+models/*
+
+# Keep .gitkeep files to preserve directory structure
+!**/.gitkeep
+
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.safetensors

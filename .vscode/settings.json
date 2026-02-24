@@ -1,0 +1,5 @@
+{
+"python.defaultInterpreterPath": "/put/path/here",
+"python.pythonPath": "/put/path/here",
+"python.analysis.extraPaths": ["src"]
+}

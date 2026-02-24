@@ -1,0 +1,20 @@
+stages:
+  evaluate:
+    foreach: ${evals}
+    do:
+      cmd: >
+        source ~/miniconda3/bin/activate memoryllm &&
+        export CUDA_VISIBLE_DEVICES=${distributed.cuda_visible_devices}; export MASTER_PORT=${distributed.master_port}; torchrun --standalone --nnodes=1 --nproc_per_node=${distributed.nproc_per_node} scripts/eval.py
+        --model ${item.model}
+        --model-state-dict-path "${item.model_state_dict_path}"
+        --pretty-name "${item.pretty_name}"
+        --run-key ${item.run_key}
+        --outdir results/${item.run_key}
+        --params=params.yaml 
+      deps:
+        - scripts/eval.py
+        - ../../src/gnm.py
+        - ../../src/instructions.py
+        - params.yaml
+      outs:
+        - results/${item.run_key}

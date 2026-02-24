@@ -1,0 +1,36 @@
+stages:
+  format:
+    cmd: python scripts/format_counterfact.py --in ../../data/counterfact_with_categories --out artifacts/counterfact_formatted_categorized/
+    deps:
+      - scripts/format_counterfact.py
+      - ../../data/counterfact_with_categories/train.json
+      - ../../data/counterfact_with_categories/test.json
+    outs:
+      - artifacts/counterfact_formatted_categorized/train.json
+      - artifacts/counterfact_formatted_categorized/test.json
+    
+  swap_hold_out_categories:
+    cmd: python scripts/swap_hold_out_subcategories.py --params params.yaml --in artifacts/counterfact_formatted_categorized/ --out artifacts/counterfact_formatted_categorized_swapped/
+    deps:
+      - scripts/swap_hold_out_subcategories.py
+      - artifacts/counterfact_formatted_categorized/train.json
+      - artifacts/counterfact_formatted_categorized/test.json
+    params:
+      - categories
+    outs:
+      - artifacts/counterfact_formatted_categorized_swapped/train.json
+      - artifacts/counterfact_formatted_categorized_swapped/test.json
+
+  create_categorized_doc_data:
+    cmd: python scripts/generate_documents.py --params params.yaml --in artifacts/counterfact_formatted_categorized_swapped/ --out artifacts/counterfact_doc_data_categorized/
+    deps:
+      - scripts/generate_documents.py 
+      # - ../../src/gmt_data.py
+      # - artifacts/counterfact_formatted_categorized_swapped/train.json
+      - artifacts/counterfact_formatted_categorized_swapped/test.json
+    params:
+      - create_docs
+    outs:
+      # - artifacts/counterfact_doc_data_categorized/train.json
+      # - artifacts/counterfact_doc_data_categorized/test_seen_categories.json
+      - artifacts/counterfact_doc_data_categorized/test_unseen_categories.json

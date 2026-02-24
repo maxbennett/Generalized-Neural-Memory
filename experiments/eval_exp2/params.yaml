@@ -1,0 +1,106 @@
+run_name: "exp2"
+seed: 42 # for seq 4
+
+distributed:
+  cuda_visible_devices: "0"
+  nproc_per_node: 1
+  master_port: 29512
+
+log:
+  wandb_project: "test_name"
+  batch_log_interval: 1
+
+sampling:
+  num_paraphrase_from_facts_to_learn: 1
+  num_paraphrase_from_facts_to_refuse: 2
+  num_true_output_neighbor_from_facts_to_learn: 1
+  num_true_output_neighbor_from_facts_to_refuse: 1
+  num_paraphrase_from_other_facts: 1
+  num_true_output_neighbor_from_other_facts: 0
+  max_total_io_pairs_per_sample: 4
+  num_io_pairs_to_chunk: 2
+  max_new_tokens: 8
+
+loop:
+  completions_batch_sample_count: 1
+  sequence_length: 1
+  unlearning: false
+
+data:
+  val_ood_datasets:
+    - "../../data/counterfact_gnm/data/test/test_unseen_categories_0.json"
+    - "../../data/counterfact_gnm/data/test/test_unseen_categories_1.json"
+    - "../../data/counterfact_gnm/data/test/test_unseen_categories_2.json"
+  val_limit: null
+
+  # -------------------------------------------------
+  # Experiment 2 test-ood
+  # ---
+  eligible_target_types_val_ood:
+    - "fact_subcategories"
+    - "formats"
+    - "refusal_subcategories"
+  holdout_targets_val_ood:
+    - "json"
+    - "yaml"
+    - "csv"
+    - "toml"
+    - "us_cities_or_states"
+    - "non_us_cities_or_states"
+    - "country"
+    - "major_western_european_languages"
+    - "eastern_european_mediterranean_languages"
+    - "asian_middle_eastern_languages_and_pacific"
+    - "tech_industrial_or_gaming_company"
+    - "TV_entertainment_or_news_organization"
+    - "car_company"
+    - "music_or_art_related_occupation"
+    - "sports_related_occupation"
+    - "politics_entertainment_religion_related_occupation"
+    - "us_cities_or_states_refusal"
+    - "non_us_cities_or_states_refusal"
+    - "country_refusal"
+    - "major_western_european_languages_refusal"
+    - "eastern_european_mediterranean_languages_refusal"
+    - "asian_middle_eastern_languages_and_pacific_refusal"
+    - "tech_industrial_or_gaming_company_refusal"
+    - "TV_entertainment_or_news_organization_refusal"
+    - "car_company_refusal"
+    - "music_or_art_related_occupation_refusal"
+    - "sports_related_occupation_refusal"
+    - "politics_entertainment_religion_related_occupation_refusal"
+  holdout_target_values_val_ood: null 
+
+evals:
+  - model: memoryllm_chat
+    run_key: gnm
+    pretty_name: "GNM"
+    model_state_dict_path: "../../models/gnm_all/model.pth"
+  - model: llama3_8b_instruct_rag
+    run_key: rag_trained
+    pretty_name: "Llama3 RAG Trained"
+    model_state_dict_path: "../../models/rag_all/model.pth"
+  - model: llama3_8b_instruct_rag
+    run_key: rag_untrained
+    pretty_name: "Llama3 RAG Untrained"
+    model_state_dict_path: null
+  - model: memoryllm_chat_no_memory
+    run_key: naive_model
+    pretty_name: "Naive Model"
+    model_state_dict_path: null
+  - model: llama3_8b_instruct
+    run_key: llama3_ft
+    pretty_name: "Finetuned Llama3"
+    model_state_dict_path: "../../models/icl_all/model.pth"
+  - model: llama3_8b_instruct
+    run_key: llama3
+    pretty_name: "Llama3"
+    model_state_dict_path: null
+  - model: memoryllm_chat
+    run_key: memoryllm
+    pretty_name: "MemoryLLM"
+    model_state_dict_path: null
+  - model: memoryllm_chat
+    run_key: gnm_ablation
+    pretty_name: "GNM (ablation)"
+    model_state_dict_path: "../../models/gnm_all_ablation/model.pth"

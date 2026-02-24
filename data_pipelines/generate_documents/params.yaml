@@ -1,0 +1,23 @@
+categories:
+  groupings_to_train_on:
+    # - occupation
+    # - organization
+    # - language
+    # - location
+    - subcat_0
+    - subcat_1
+    - subcat_2
+    # - subcat_3
+  groupings_to_hold_out:
+    # - occupation
+    # - organization
+    # - language
+    # - location
+    # - subcat_0
+    # - subcat_1
+    # - subcat_2
+    - subcat_3
+
+create_docs:
+  min_facts_per_doc: 3
+  max_facts_per_doc: 8
