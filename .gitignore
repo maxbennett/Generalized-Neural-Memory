@@ -14,3 +14,7 @@ models/*
 *.bin
 *.ckpt
 *.safetensors
+
+# DVC
+dvc.lock
+*.dvc
