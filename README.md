@@ -1,5 +1,5 @@
 # Generalized Neural Memory
-This is the official implementation of paper **"Tell Me What To Learn: Generalizing Neural Memory to be Controllable in Natural Language"**.
+This is the official implementation of paper **"Tell Me What To Learn: Generalizing Neural Memory to be Controllable in Natural Language"** by Max S. Bennett, Thomas Zollo, Richard Zemel.
 
 This work extends neural memory systems to support controllable, instruction-guided memory updates. We build upon the MemoryLLM architecture and introduce mechanisms for selective fact memorization and refusal based on natural language instructions.
 
