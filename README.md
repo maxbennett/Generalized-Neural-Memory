@@ -10,7 +10,7 @@ This work extends neural memory systems to support controllable, instruction-gui
 
 
 ## Official Links
-[![Static Badge](https://img.shields.io/badge/generalized_neural_memory-paper-green)](https://arxiv.org/abs/2402.04624)
+[![Static Badge](https://img.shields.io/badge/generalized_neural_memory-paper-green)](https://arxiv.org/abs/2602.23201)
 
 [![GNM Models](https://img.shields.io/badge/gnm_all-model-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-gnm-all)
 [![GNM Models](https://img.shields.io/badge/icl_all-model-blue)](https://huggingface.co/maxbennett/generalized-neural-memory-icl-all)
