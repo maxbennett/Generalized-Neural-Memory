@@ -1,0 +1,74 @@
+# Figure 3 retention probe: 700-document rollout over test shard 2.
+run_name: "memoryllm"
+seed: 42 # for seq 4
+
+distributed:
+  cuda_visible_devices: "4,5,6,7"
+  # cuda_visible_devices: "2"
+  nproc_per_node: 4
+  master_port: 29512
+
+log:
+  wandb_project: "gnm_draft_experiments"
+  batch_log_interval: 1
+
+sampling:
+  num_paraphrase_from_facts_to_learn: 4
+  num_paraphrase_from_facts_to_refuse: 0
+  num_true_output_neighbor_from_facts_to_learn: 2
+  num_true_output_neighbor_from_facts_to_refuse: 0
+  num_paraphrase_from_other_facts: 2
+  num_true_output_neighbor_from_other_facts: 0
+  max_total_io_pairs_per_sample: 8
+  num_io_pairs_to_chunk: 1
+  max_new_tokens: 4
+
+loop:
+  completions_batch_sample_count: 1
+  sequence_length: 700
+  unlearning: false
+  probe_first_only: true
+
+data:
+  val_ood_datasets:
+    - "../../data/counterfact/test_unseen_categories_2.json"
+  # val_ood_datasets:
+  # val_ood_datasets:
+  val_limit: null
+  eligible_target_types_val_ood:
+    - "fact_subcategories"
+    - "formats"
+    - "refusal_subcategories"
+  holdout_targets_val_ood:
+    - "json"
+    - "yaml"
+    - "csv"
+    - "toml"
+    - "us_cities_or_states"
+    - "non_us_cities_or_states"
+    - "country"
+    - "major_western_european_languages"
+    - "eastern_european_mediterranean_languages"
+    - "asian_middle_eastern_languages_and_pacific"
+    - "tech_industrial_or_gaming_company"
+    - "TV_entertainment_or_news_organization"
+    - "car_company"
+    - "music_or_art_related_occupation"
+    - "sports_related_occupation"
+    - "politics_entertainment_religion_related_occupation"
+    - "us_cities_or_states_refusal"
+    - "non_us_cities_or_states_refusal"
+    - "country_refusal"
+    - "major_western_european_languages_refusal"
+    - "eastern_european_mediterranean_languages_refusal"
+    - "asian_middle_eastern_languages_and_pacific_refusal"
+    - "tech_industrial_or_gaming_company_refusal"
+    - "TV_entertainment_or_news_organization_refusal"
+    - "car_company_refusal"
+    - "music_or_art_related_occupation_refusal"
+    - "sports_related_occupation_refusal"
+    - "politics_entertainment_religion_related_occupation_refusal"
+  holdout_target_values_val_ood: null 
+
+# evals: unused — the runner/probe supplies the model and run key.
+evals: []

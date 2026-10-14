@@ -1,0 +1,47 @@
+{
+  "compositions": [
+    0.0
+  ],
+  "fact_accuracy": [
+    0.8829407691955566
+  ],
+  "fact_accuracy_matrix": [
+    0.8829407691955566
+  ],
+  "fact_accuracy_over_time": [
+    0.8829407691955566
+  ],
+  "fact_retention": [
+    0.8829407691955566
+  ],
+  "fact_selectivity": [
+    0.17416131496429443
+  ],
+  "fact_selectivity_matrix": [
+    0.17416131496429443
+  ],
+  "fact_specificity": [
+    0.6702355742454529
+  ],
+  "fact_specificity_matrix": [
+    0.6702355742454529
+  ],
+  "flops_per_token": [
+    0.0
+  ],
+  "format_accuracy": [
+    0.0007137758657336235
+  ],
+  "format_retention": [
+    0.0007137758657336235
+  ],
+  "format_selectivity": [
+    NaN
+  ],
+  "loss": [
+    6.157188892364502
+  ],
+  "non_compositions": [
+    0.0
+  ]
+}

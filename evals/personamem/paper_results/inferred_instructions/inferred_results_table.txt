@@ -1,0 +1,89 @@
+| condition | acc% | preserved% | leak% | P(leak|dev)% | Score | n (learn/ignore) |
+|---|---:|---:|---:|---:|---:|---|
+| GNM oracle-explicit | 94.8 | 81.7 | 4.6 | 25.4 | 95.1 | 232/646 |
+| GNM implicit (v3) | 87.9 | 74.6 | 12.4 | 48.8 | 87.8 | 232/646 |
+| GNM inferred-llama3 | 92.7 | 77.4 | 8.2 | 36.3 | 92.2 | 232/646 |
+| GNM inferred-qwen3 | 92.7 | 77.4 | 8.2 | 36.3 | 92.2 | 232/646 |
+| GNM inferred-generic-llama3 | 78.0 | 57.0 | 30.8 | 71.6 | 73.3 | 232/646 |
+| GNM inferred-generic-qwen3 | 75.0 | 55.9 | 34.2 | 77.5 | 70.1 | 232/646 |
+| GNM inferred-intent-llama3 | 83.6 | 71.5 | 15.3 | 53.8 | 84.1 | 232/646 |
+| GNM inferred-intent-qwen3 | 80.6 | 60.4 | 27.2 | 68.8 | 76.5 | 232/646 |
+| GNM inferred-intent-end-llama3 | 84.1 | 72.0 | 14.9 | 53.0 | 84.6 | 232/646 |
+| GNM inferred-purpose-llama3 | 89.2 | 78.2 | 8.4 | 38.3 | 90.4 | 232/646 |
+| GNM inferred-purpose-qwen3 | 87.9 | 75.1 | 10.4 | 41.6 | 88.8 | 232/646 |
+| ICL-FT oracle-explicit | 94.8 | 83.1 | 9.6 | 56.9 | 92.6 | 232/646 |
+| ICL-FT implicit (v3) | 80.6 | 70.6 | 23.2 | 78.9 | 78.6 | 232/646 |
+| ICL-FT inferred-llama3 | 91.4 | 83.3 | 9.1 | 54.6 | 91.1 | 232/646 |
+| ICL-FT inferred-qwen3 | 90.9 | 82.7 | 10.4 | 59.8 | 90.3 | 232/646 |
+| ICL-FT inferred-generic-llama3 | 88.8 | 36.7 | 59.8 | 94.4 | 55.4 | 232/646 |
+| ICL-FT inferred-generic-qwen3 | 89.7 | 25.1 | 72.0 | 96.1 | 42.7 | 232/646 |
+| ICL-FT inferred-intent-llama3 | 82.8 | 71.8 | 21.5 | 76.4 | 80.6 | 232/646 |
+| ICL-FT inferred-intent-qwen3 | 86.2 | 46.3 | 49.2 | 91.6 | 63.9 | 232/646 |
+| ICL-FT inferred-intent-end-llama3 | 81.5 | 72.4 | 20.6 | 74.7 | 80.4 | 232/646 |
+| ICL-FT inferred-purpose-llama3 | 87.9 | 74.9 | 18.9 | 75.3 | 84.4 | 232/646 |
+| ICL-FT inferred-purpose-qwen3 | 84.1 | 77.4 | 15.9 | 70.5 | 84.1 | 232/646 |
+
+Exact McNemar (paired on shared probes):
+  GNM inferred-intent-end-llama3 vs ICL-FT inferred-intent-end-llama3 [acc      ] b=17   c=11   p=0.3449
+  GNM inferred-intent-end-llama3 vs ICL-FT inferred-intent-end-llama3 [leak     ] b=32   c=69   p=0.000296
+  GNM inferred-intent-end-llama3 vs ICL-FT inferred-intent-end-llama3 [preserved] b=94   c=97   p=0.885
+  GNM inferred-intent-end-llama3 vs GNM inferred-intent-llama3 [acc      ] b=11   c=10   p=1
+  GNM inferred-intent-end-llama3 vs GNM inferred-intent-llama3 [leak     ] b=22   c=25   p=0.7709
+  GNM inferred-intent-end-llama3 vs GNM inferred-intent-llama3 [preserved] b=26   c=23   p=0.7754
+  GNM inferred-purpose-llama3 vs ICL-FT inferred-purpose-llama3 [acc      ] b=12   c=9    p=0.6636
+  GNM inferred-purpose-llama3 vs ICL-FT inferred-purpose-llama3 [leak     ] b=28   c=96   p=6.539e-10
+  GNM inferred-purpose-llama3 vs ICL-FT inferred-purpose-llama3 [preserved] b=108  c=87   p=0.1519
+  GNM inferred-purpose-qwen3 vs ICL-FT inferred-purpose-qwen3 [acc      ] b=20   c=11   p=0.1496
+  GNM inferred-purpose-qwen3 vs ICL-FT inferred-purpose-qwen3 [leak     ] b=39   c=75   p=0.0009592
+  GNM inferred-purpose-qwen3 vs ICL-FT inferred-purpose-qwen3 [preserved] b=88   c=103  p=0.3111
+  GNM inferred-purpose-llama3 vs GNM oracle-explicit        [acc      ] b=2    c=15   p=0.00235
+  GNM inferred-purpose-llama3 vs GNM oracle-explicit        [leak     ] b=32   c=8    p=0.0001822
+  GNM inferred-purpose-llama3 vs GNM oracle-explicit        [preserved] b=15   c=38   p=0.00219
+  GNM inferred-purpose-llama3 vs GNM implicit (v3)          [acc      ] b=11   c=8    p=0.6476
+  GNM inferred-purpose-llama3 vs GNM implicit (v3)          [leak     ] b=7    c=33   p=4.228e-05
+  GNM inferred-purpose-llama3 vs GNM implicit (v3)          [preserved] b=35   c=12   p=0.001089
+  GNM inferred-purpose-qwen3 vs GNM implicit (v3)          [acc      ] b=5    c=5    p=1
+  GNM inferred-purpose-qwen3 vs GNM implicit (v3)          [leak     ] b=8    c=21   p=0.02412
+  GNM inferred-purpose-qwen3 vs GNM implicit (v3)          [preserved] b=23   c=20   p=0.7608
+  GNM inferred-generic-llama3 vs ICL-FT inferred-generic-llama3 [acc      ] b=9    c=34   p=0.0001702
+  GNM inferred-generic-llama3 vs ICL-FT inferred-generic-llama3 [leak     ] b=27   c=214  p=2.699e-37
+  GNM inferred-generic-llama3 vs ICL-FT inferred-generic-llama3 [preserved] b=196  c=65   p=1.913e-16
+  GNM inferred-generic-qwen3 vs ICL-FT inferred-generic-qwen3 [acc      ] b=13   c=47   p=1.215e-05
+  GNM inferred-generic-qwen3 vs ICL-FT inferred-generic-qwen3 [leak     ] b=29   c=273  p=6.439e-51
+  GNM inferred-generic-qwen3 vs ICL-FT inferred-generic-qwen3 [preserved] b=245  c=46   p=5.715e-34
+  GNM inferred-intent-llama3 vs GNM oracle-explicit        [acc      ] b=2    c=28   p=8.68e-07
+  GNM inferred-intent-llama3 vs GNM oracle-explicit        [leak     ] b=76   c=7    p=9.431e-16
+  GNM inferred-intent-llama3 vs GNM oracle-explicit        [preserved] b=14   c=80   p=2.12e-12
+  GNM inferred-intent-llama3 vs GNM implicit (v3)          [acc      ] b=15   c=25   p=0.1539
+  GNM inferred-intent-llama3 vs GNM implicit (v3)          [leak     ] b=55   c=36   p=0.05857
+  GNM inferred-intent-llama3 vs GNM implicit (v3)          [preserved] b=42   c=62   p=0.06193
+  GNM inferred-intent-llama3 vs ICL-FT inferred-intent-llama3 [acc      ] b=16   c=14   p=0.8555
+  GNM inferred-intent-llama3 vs ICL-FT inferred-intent-llama3 [leak     ] b=32   c=72   p=0.0001096
+  GNM inferred-intent-llama3 vs ICL-FT inferred-intent-llama3 [preserved] b=94   c=96   p=0.9422
+  GNM inferred-generic-llama3 vs GNM oracle-explicit        [acc      ] b=4    c=43   p=2.781e-09
+  GNM inferred-generic-llama3 vs GNM oracle-explicit        [leak     ] b=175  c=6    p=3.034e-44
+  GNM inferred-generic-llama3 vs GNM oracle-explicit        [preserved] b=13   c=173  p=7.345e-37
+  GNM inferred-generic-llama3 vs GNM inferred-llama3        [acc      ] b=7    c=41   p=6.24e-07
+  GNM inferred-generic-llama3 vs GNM inferred-llama3        [leak     ] b=159  c=13   p=4.228e-33
+  GNM inferred-generic-llama3 vs GNM inferred-llama3        [preserved] b=22   c=154  p=1.385e-25
+  GNM inferred-generic-llama3 vs GNM implicit (v3)          [acc      ] b=15   c=38   p=0.00219
+  GNM inferred-generic-llama3 vs GNM implicit (v3)          [leak     ] b=153  c=34   p=3.159e-19
+  GNM inferred-generic-llama3 vs GNM implicit (v3)          [preserved] b=37   c=151  p=1.525e-17
+  GNM inferred-llama3 vs GNM oracle-explicit        [acc      ] b=2    c=7    p=0.1797
+  GNM inferred-llama3 vs GNM oracle-explicit        [leak     ] b=28   c=5    p=6.619e-05
+  GNM inferred-llama3 vs GNM oracle-explicit        [preserved] b=10   c=38   p=6.17e-05
+  GNM inferred-qwen3 vs GNM oracle-explicit        [acc      ] b=3    c=8    p=0.2266
+  GNM inferred-qwen3 vs GNM oracle-explicit        [leak     ] b=28   c=5    p=6.619e-05
+  GNM inferred-qwen3 vs GNM oracle-explicit        [preserved] b=10   c=38   p=6.17e-05
+  GNM inferred-llama3 vs GNM implicit (v3)          [acc      ] b=13   c=2    p=0.007385
+  GNM inferred-llama3 vs GNM implicit (v3)          [leak     ] b=9    c=36   p=6.575e-05
+  GNM inferred-llama3 vs GNM implicit (v3)          [preserved] b=40   c=22   p=0.03002
+  GNM inferred-llama3 vs ICL-FT inferred-llama3     [acc      ] b=12   c=9    p=0.6636
+  GNM inferred-llama3 vs ICL-FT inferred-llama3     [leak     ] b=31   c=37   p=0.5446
+  GNM inferred-llama3 vs ICL-FT inferred-llama3     [preserved] b=63   c=101  p=0.003729
+  GNM inferred-qwen3 vs ICL-FT inferred-qwen3      [acc      ] b=11   c=7    p=0.4807
+  GNM inferred-qwen3 vs ICL-FT inferred-qwen3      [leak     ] b=31   c=45   p=0.1354
+  GNM inferred-qwen3 vs ICL-FT inferred-qwen3      [preserved] b=68   c=102  p=0.01116
+  ICL-FT inferred-llama3 vs ICL-FT oracle-explicit     [acc      ] b=3    c=11   p=0.05737
+  ICL-FT inferred-llama3 vs ICL-FT oracle-explicit     [leak     ] b=18   c=21   p=0.7493
+  ICL-FT inferred-llama3 vs ICL-FT oracle-explicit     [preserved] b=22   c=21   p=1

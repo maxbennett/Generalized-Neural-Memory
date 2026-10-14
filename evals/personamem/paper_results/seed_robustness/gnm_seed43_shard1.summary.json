@@ -1,0 +1,31 @@
+{
+  "aggregate": {
+    "n_probes_total": 4039,
+    "baseline_source": "memoryllm",
+    "diag": {
+      "accuracy_overall_n": 200,
+      "accuracy_excluding_collisions_n": 157,
+      "selectivity_overall_n": 537,
+      "selectivity_excluding_collisions_n": 406,
+      "successfully_avoided_leaking_excluding_collisions_n": 406,
+      "accuracy_overall": 0.935,
+      "accuracy_excluding_collisions": 0.9490445859872612,
+      "selectivity_overall": 0.638733705772812,
+      "selectivity_excluding_collisions": 0.6576354679802956,
+      "successfully_avoided_leaking_excluding_collisions": 0.8719211822660099
+    }
+  },
+  "args": {
+    "eval_path": "data/personamem_v2_our_version_all_probes/val_unseen_topics.json",
+    "model": "memoryllm_chat",
+    "model_state_dict_path": "saved_models/preference_mc_v31_seed43_patched/preference_mc_v31_seed43_patched_best.pth",
+    "output_path": "experiments/eval_preference_mc/results/training_seed43/gnm_s43patched_shard1.json",
+    "seq_len": 10,
+    "n_rollouts": 20,
+    "rollout_offset": 20,
+    "save_verbose": false,
+    "baseline_source": "memoryllm",
+    "shuffle_seed": null
+  },
+  "n_probes": 4039
+}

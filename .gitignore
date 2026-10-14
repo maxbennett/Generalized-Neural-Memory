@@ -1,0 +1,59 @@
+# model weights (downloaded via download_models.py)
+models/*
+!models/.gitkeep
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.safetensors
+
+# benchmark data (downloaded via download_data.py)
+data/*
+!data/.gitkeep
+!data/baseline_letter_caches/
+!data/baseline_letter_caches/**
+!data/analysis/
+!data/analysis/**
+
+# training / eval outputs
+saved_models/
+wandb/
+**/wandb/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.log
+
+# runtime eval/train outputs (reruns land here; shipped paper runs live in
+# experiments/*/paper_results/)
+evals/*/results/
+train/*/results/
+train/counterfact/artifacts/
+train/counterfact/checkpoints/
+train/counterfact/figures/
+train/counterfact/*_summary.json
+train/*/scripts/training_*.log
+
+# large precomputed per-probe eval records — hosted on HF (download_data.py --results)
+evals/personamem/paper_results/short_horizon/*/results.json
+evals/personamem/paper_results/short_horizon/*/temp_results_*.jsonl
+evals/personamem/paper_results/long_horizon/
+evals/personamem/paper_results/seed_robustness/*_shard?.json
+evals/personamem/paper_results/seed_robustness/icl_ft_seed*/results.json
+evals/personamem/paper_results/seed_robustness/icl_ft_seed*/temp_results_*.jsonl
+evals/personamem/paper_results/implicit_instructions/*/results.json
+evals/personamem/paper_results/implicit_instructions/*/full.json
+evals/personamem/paper_results/implicit_instructions/*/shard_*.json
+evals/personamem/paper_results/implicit_instructions/*/_shards/
+evals/personamem/paper_results/implicit_instructions/*/temp_results_*.jsonl
+evals/personamem/paper_results/inferred_instructions/*_seq1.json
+evals/personamem/paper_results/inferred_instructions/*/results.json
+evals/personamem/paper_results/inferred_instructions/*/temp_results_*.jsonl
+evals/counterfact/paper_results/short_horizon/*/temp_results_*.jsonl
+evals/counterfact/paper_results/memoryagent/*/temp_results_*.jsonl
+evals/counterfact/paper_results/format_generalization/*/temp_results_*.jsonl
+evals/counterfact/paper_results/comp_gen_fact_*/*/temp_results_*.jsonl
+plots/*_expanded.*
+!data/write_invariance_dataset_final.json
+!data/personalization_alignment_dataset.json
+plots/*_values.md

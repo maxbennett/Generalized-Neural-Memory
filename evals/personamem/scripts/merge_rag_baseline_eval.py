@@ -1,0 +1,162 @@
+"""Merge llama3_rag 6-shard eval, build summary, and write into:
+  evals/personamem/paper_results/short_horizon/rag/
+
+The output dir uses collision_mode='any_trained': drop probes whose preference
+letter equals EITHER memoryllm_trained_baseline_letter OR icl_ft_baseline_letter
+(both fields live on the source eval JSON). Records are enriched at merge time
+by hashing (user_query, options) and looking up against the source dataset.
+"""
+import hashlib
+import json
+import sys
+from pathlib import Path
+
+import numpy as np
+
+REPO = Path(__file__).resolve().parents[3]
+SCRIPTS = REPO / "evals/personamem/scripts"
+sys.path.insert(0, str(SCRIPTS))
+
+from build_summary import _matrix_for, _retention_curve, build_metrics, _is_collision_any  # noqa: E402
+
+SHARDS_DIR = REPO / "evals/personamem/results/personamem_rag/_shards"
+OUT_DIR = REPO / "evals/personamem/paper_results/short_horizon/rag"
+SOURCE_EVAL = REPO / "data/personamem/test.json"
+SEQ_LEN = 10
+
+
+def probe_hash(query: str, options: dict) -> str:
+    canonical = f"Q:{query}\nA:{options['A']}\nB:{options['B']}\nC:{options['C']}\nD:{options['D']}"
+    return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+
+def is_collision_any_trained(r: dict) -> bool:
+    pa = r.get("preference_aligned_letter") or r.get("correct_letter")
+    return (pa == r.get("memoryllm_trained_baseline_letter")) or (pa == r.get("icl_ft_baseline_letter"))
+
+
+def summarize(records, collision_mode):
+    n_pre = len(records)
+    if collision_mode == "any":
+        records = [r for r in records if not _is_collision_any(r)]
+    elif collision_mode == "any_trained":
+        records = [r for r in records if not is_collision_any_trained(r)]
+    elif collision_mode != "selected":
+        raise ValueError(collision_mode)
+    metrics = build_metrics("selected")
+    summary = {
+        "n_probes_total": len(records),
+        "n_probes_pre_filter": n_pre,
+        "seq_len": SEQ_LEN,
+        "collision_mode": collision_mode,
+    }
+    for name, (eligible, hit) in metrics.items():
+        matrix, counts = _matrix_for(records, eligible, hit, SEQ_LEN)
+        diag = np.array([matrix[i, i] if counts[i, i] > 0 else 0.0 for i in range(SEQ_LEN)])
+        diag_counts = np.array([counts[i, i] for i in range(SEQ_LEN)])
+        diag_total_hits = sum(matrix[i, i] * counts[i, i] for i in range(SEQ_LEN) if counts[i, i] > 0)
+        diag_total_n = int(diag_counts.sum())
+        full = (diag_total_hits / diag_total_n) if diag_total_n else None
+        i = SEQ_LEN - 1
+        most_recent = float(matrix[i, i]) if counts[i, i] > 0 else None
+        most_recent_n = int(counts[i, i])
+        retention, retention_counts = _retention_curve(matrix, counts, SEQ_LEN)
+        summary[name] = {
+            "full": full,
+            "full_n": diag_total_n,
+            "most_recent": most_recent,
+            "most_recent_n": most_recent_n,
+            "over_time": diag.tolist(),
+            "over_time_counts": diag_counts.tolist(),
+            "retention": retention,
+            "retention_counts": retention_counts,
+            "matrix": matrix.tolist(),
+            "matrix_counts": counts.tolist(),
+        }
+    return summary
+
+
+def main():
+    # 1. Load + concat shard results.json files (skip the per-shard summary.json).
+    records = []
+    for sd in sorted(SHARDS_DIR.glob("shard_*")):
+        if not sd.is_dir():
+            continue
+        rs_path = sd / "results.json"
+        if not rs_path.exists():
+            continue
+        rs = json.load(open(rs_path))
+        records.extend(rs)
+        print(f"[merge] {sd.name}/results.json: {len(rs)} records")
+    print(f"[merge] total: {len(records)}")
+
+    # 2. Enrich with trained-baseline letters.
+    source = json.load(open(SOURCE_EVAL))
+    by_hash = {}
+    for d in source:
+        for p in d.get("input_output_pairs", []):
+            opts = p.get("options")
+            if not opts:
+                continue
+            h = probe_hash(p["user_query"], opts)
+            by_hash[h] = (p.get("memoryllm_trained_baseline_letter"),
+                          p.get("icl_ft_baseline_letter"))
+    n_enriched = 0
+    for r in records:
+        h = probe_hash(r["user_query"], r["options"])
+        if h in by_hash:
+            mtbl, icl = by_hash[h]
+            r["memoryllm_trained_baseline_letter"] = mtbl
+            r["icl_ft_baseline_letter"] = icl
+            n_enriched += 1
+    print(f"[merge] enriched {n_enriched}/{len(records)} records with trained-baseline letters")
+
+    # 3. Write final dir.
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    with open(OUT_DIR / "results.json", "w") as f:
+        json.dump(records, f)
+    summary = summarize(records, "any_trained")
+    with open(OUT_DIR / "summary.json", "w") as f:
+        json.dump(summary, f, indent=2)
+    run_config = {
+        "model": "llama3_8b_instruct_rag_personamem",
+        "wrapper_class": "RAGChatPrefV3Wrapper",
+        "rag_top_k": 4,
+        "rag_max_embed_tokens": 512,
+        "system_prompt_template": "_get_personamem_system_prompt",
+        "model_state_dict_path_for_eval": "(none — untrained Llama-3-8B-Instruct + RAG over remembered docs)",
+        "collision_mode": "any_trained",
+        "trained_baselines_used": ["memoryllm_trained_baseline_letter", "icl_ft_baseline_letter"],
+        "filter_definition": "exclude probes where correct == EITHER memoryllm_trained_baseline OR icl_ft_baseline",
+        "n_probes_pre_filter": summary["n_probes_pre_filter"],
+        "n_probes_post_filter": summary["n_probes_total"],
+        "eval_path": str(SOURCE_EVAL),
+        "seq_len": SEQ_LEN,
+        "n_rollouts": 40,
+        "shards": 6,
+    }
+    with open(OUT_DIR / "run_config.json", "w") as f:
+        json.dump(run_config, f, indent=2)
+    (OUT_DIR / "temp_results_val_ood_epoch_0.jsonl").touch()
+    print(f"[merge] wrote {OUT_DIR}/")
+
+    # 4. Print headline.
+    print()
+    print("=" * 80)
+    print("llama3_rag (Llama-3 + RAG top-4 + PersonaMem prompt) — headline")
+    print("=" * 80)
+    s = summary
+    print(f"\n  n_pre={s['n_probes_pre_filter']}  n_post={s['n_probes_total']}")
+    for m in ["accuracy_overall", "accuracy_excluding_collisions",
+              "selectivity_overall", "selectivity_excluding_collisions",
+              "successfully_avoided_leaking_overall", "successfully_avoided_leaking_excluding_collisions"]:
+        row = s[m]
+        mr = row["most_recent"]
+        full = row["full"]
+        mr_str = f"{mr:.3f}" if mr is not None else "  -  "
+        full_str = f"{full:.3f}" if full is not None else "  -  "
+        print(f"    {m:<48} most_recent={mr_str}  full={full_str}  n_diag={row['full_n']}")
+
+
+if __name__ == "__main__":
+    main()

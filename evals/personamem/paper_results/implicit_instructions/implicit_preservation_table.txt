@@ -1,0 +1,17 @@
+====================================================================================================
+IGNORE probes, diagonal, paper trained_any collision filter (AC4 methodology)
+====================================================================================================
+condition                        acc%  n_ig  preserved%  leak%  drift%  P(leak|dev)%
+GNM paper (explicit+desc)        93.6   657        81.4    6.1    12.5          32.8
+ICL-FT paper (explicit+desc)     91.5   657        82.3   10.5     7.2          59.5
+GNM explicit_bare                94.0   657        80.1    6.8    13.1          34.4
+GNM implicit                     79.6   657        74.0   14.0    12.0          53.8
+
+McNemar GNM explicit_bare vs GNM paper on preserved: b=22  c=13  p=0.1282
+McNemar GNM explicit_bare vs GNM paper on leak     : b=6   c=11  p=0.2253
+P(leak|dev) GNM explicit_bare: 45/131=34.4%  vs paper 40/122=32.8%  p=0.792
+
+McNemar GNM implicit vs GNM paper on preserved: b=66  c=17  p=0.0000
+McNemar GNM implicit vs GNM paper on leak     : b=8   c=60  p=0.0000
+P(leak|dev) GNM implicit: 92/171=53.8%  vs paper 40/122=32.8%  p=0.000
+

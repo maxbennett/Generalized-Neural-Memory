@@ -1,0 +1,46 @@
+# Figure 3 supplemental samples: 1,000-document streams (data/counterfact/test_lag1000_f*.json).
+run_name: "memoryllm"
+seed: 42 # for seq 4
+
+distributed:
+  cuda_visible_devices: "4,5,6,7"
+  # cuda_visible_devices: "2"
+  nproc_per_node: 4
+  master_port: 29512
+
+log:
+  wandb_project: "gnm_draft_experiments"
+  batch_log_interval: 1
+
+sampling:
+  num_paraphrase_from_facts_to_learn: 4
+  num_paraphrase_from_facts_to_refuse: 0
+  num_true_output_neighbor_from_facts_to_learn: 2
+  num_true_output_neighbor_from_facts_to_refuse: 0
+  num_paraphrase_from_other_facts: 2
+  num_true_output_neighbor_from_other_facts: 0
+  max_total_io_pairs_per_sample: 8
+  num_io_pairs_to_chunk: 1
+  max_new_tokens: 4
+
+loop:
+  completions_batch_sample_count: 1
+  sequence_length: 1000
+  unlearning: false
+  probe_first_only: true
+
+data:
+  val_ood_datasets:
+    - "../../data/counterfact/test_lag1000_fFILE.json"
+  # val_ood_datasets:
+  # val_ood_datasets:
+  val_limit: null
+  eligible_target_types_val_ood:
+    - "fact_subcategories"
+    - "formats"
+    - "refusal_subcategories"
+  holdout_targets_val_ood: null
+  holdout_target_values_val_ood: null 
+
+# evals: unused — the runner/probe supplies the model and run key.
+evals: []

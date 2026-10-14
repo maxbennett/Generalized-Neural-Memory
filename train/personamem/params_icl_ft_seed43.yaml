@@ -1,0 +1,104 @@
+run_name: "icl_ft_personamem_seed43"
+seed: 43
+
+log:
+  wandb_project: "preference_selectivity_mc"
+  batch_log_interval: 1
+
+distributed:
+  cuda_visible_devices: "0,1,2,3,4,5"
+  nproc_per_node: 6
+  master_port: 29733
+
+model:
+  # v3-prompt Llama-3 ICL setup with calm optimization.
+  model: llama3_8b_instruct_pref_v3
+  model_state_dict_path: null
+  checkpoint_dict_path: null
+
+sampling:
+  num_paraphrase_from_facts_to_learn: 0
+  num_paraphrase_from_facts_to_refuse: 0
+  num_true_output_neighbor_from_facts_to_learn: 0
+  num_true_output_neighbor_from_facts_to_refuse: 0
+  num_paraphrase_from_other_facts: 0
+  num_true_output_neighbor_from_other_facts: 0
+  max_total_io_pairs_per_sample: 5
+  num_in_future_to_pull_back_future_paraphrase: 0
+  num_in_past_to_pull_forward_true_output_neighbor: 0
+  num_in_past_to_pull_forward_paraphrase_not_target_to_learn: 0
+  num_io_pairs_to_chunk: 5
+  max_new_tokens: 1
+  num_in_future_to_pull_back: 1
+  num_learn_probes_per_cell: 1
+  num_ignore_probes_per_cell: 1
+  num_past_probes_to_sample: 1
+  num_io_pairs_to_chunk_train: 2
+  num_io_pairs_to_chunk_eval: 4
+  # keep learn_loss_weight at 3.0 so the dynamics knob doesn't
+  # conflate with the lr/clip changes.
+  learn_loss_weight: 3.0
+  contrastive_pair: true
+  freeze_descriptor: true
+
+loop:
+  start_epoch: 0
+  starting_global_step: 0
+  plot_every_n_epochs: 1
+  checkpoint_every_n_epochs: 1
+  max_checkpoints: 5
+  completions_batch_sample_count: 1
+  early_stop: true
+  early_stop_patience: 0
+  early_stop_min_delta: 0
+  max_epochs: 30
+  sequence_length: 4
+  sequence_length_validation: 8
+  window_size: 6
+  stride: 6
+  max_risk_score_threshold: 80000
+  unlearning: false
+
+opt:
+  optimizer: "adamw8bit"
+  # lr ramped from 0.1x peak (5e-7) to peak (5e-6) over 1 warmup epoch via
+  # LinearLR, then HOLDS FLAT at 5e-6 (no decay — fairer to the ICL baseline).
+  # CosineAnnealingLR with eta_min == base_lr stays flat at base_lr after warmup.
+  # (A flat 5e-5 with no warmup collapsed to uniform-output by step 10.)
+  learning_rate: 5e-6
+  use_lr_scheduler: true
+  lr_warmup_epochs: 1
+  min_lr: 5e-6
+  # tight clip — Llama-3 fine-tunes typically use 1.0.
+  max_grad_norm: 1.0
+  gradient_accumulation_steps: 1
+  batch_size_per_device: 1
+  weight_decay: 0.01
+
+data:
+  training_datasets:
+    - "./data/personamem/train_icl/train_0.json"
+    - "./data/personamem/train_icl/train_1.json"
+    - "./data/personamem/train_icl/train_2.json"
+    - "./data/personamem/train_icl/train_3.json"
+    - "./data/personamem/train_icl/train_4.json"
+  val_id_path: "./data/personamem/train_icl/dev.json"
+  # test.json here is per-epoch MONITORING only — early stopping and model
+  # selection use val_id_path (dev.json) exclusively.
+  val_ood_datasets:
+    - "./data/personamem/test.json"
+  train_limit: 512
+  val_limit: 200
+  baseline_source: "llama3"
+  eligible_target_types_train:
+    - "preference_probe_mc"
+  eligible_target_types_val_id:
+    - "preference_probe_mc"
+  eligible_target_types_val_ood:
+    - "preference_probe_mc"
+  holdout_targets_train: null
+  holdout_target_values_train: null
+  holdout_targets_val_id: null
+  holdout_target_values_val_id: null
+  holdout_targets_val_ood: null
+  holdout_target_values_val_ood: null

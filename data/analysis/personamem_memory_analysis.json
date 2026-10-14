@@ -1,0 +1,2002 @@
+[
+  {
+    "learning_instruction": "Track only music tastes and listening habits (genres preferred like rock, pop, indie, electronic, classical, jazz, folk, or world music; languages of music listened to including non-English; listening contexts like background, focused, social, or relaxation; specific artists, bands, or composers followed; concerts, festivals, or live shows attended; music formats like vinyl, streaming, or radio) preferences from this conversation.",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I enjoy trying new board games with friends.\nAssistant: Interesting, thanks for telling me. Tell me something else about you.\nUser: I like attending live concerts of my favorite artists.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I like attending live concerts of my favorite artists",
+    "distractor_answer": "I enjoy trying new board games with friends",
+    "target_topic": "Music",
+    "distractor_topic": "Games",
+    "target_source_row_idx": 3726,
+    "distractor_source_row_idx": 1243
+  },
+  {
+    "learning_instruction": "Track only the user's sports interests (sports practiced for fun or fitness like biking or swimming, leagues watched on TV, athletic events attended, motorsports) preferences from this conversation.",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I enjoy biking in safe neighborhood routes.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I enjoy collaborative debates more than avoiding disagreements.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I enjoy biking in safe neighborhood routes",
+    "distractor_answer": "I enjoy collaborative debates more than avoiding disagreements",
+    "target_topic": "Sports",
+    "distractor_topic": "Discussion",
+    "target_source_row_idx": 1213,
+    "distractor_source_row_idx": 4650
+  },
+  {
+    "learning_instruction": "Only remember preferences related to photography practice and interests (camera gear like vintage film cameras, DSLRs, or mirrorless; subjects photographed like travel, nature, architectural details, or portraits; photo organization in albums or digital libraries; photography exhibitions and tours attended; the user's photography style and aesthetic; photography as casual hobby or serious practice).",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I enjoy experimenting with different photo editing styles.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I dealt with loneliness when my closest friend moved to another state.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I enjoy experimenting with different photo editing styles",
+    "distractor_answer": "I dealt with loneliness when my closest friend moved to another state",
+    "target_topic": "Photography",
+    "distractor_topic": "Loneliness",
+    "target_source_row_idx": 4643,
+    "distractor_source_row_idx": 1226
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about the user's sports interests (recreational athletic activities like biking, jogging, or swimming; viewership of professional leagues and major events; motorsports and high-speed sports interest; competitive training and racing; team sports played casually with friends; sporting events attended in person).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: Sometimes I feel undervalued by mainstream literary communities focused on Western art.\nAssistant: Helpful \u2014 what else?\nUser: I watch international football leagues.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I watch international football leagues",
+    "distractor_answer": "Sometimes I feel undervalued by mainstream literary communities focused on Western art",
+    "target_topic": "Sports",
+    "distractor_topic": "Literature",
+    "target_source_row_idx": 492,
+    "distractor_source_row_idx": 1109
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about travel preferences (transit choices like window seats or motorbikes, airport lounges, souvenirs, accommodation comfort).",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I get occasional migraines brought on by extended screen time.\nAssistant: Got it \u2014 what else should I know?\nUser: I prefer urban skylines to mountain landscapes.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I prefer urban skylines to mountain landscapes",
+    "distractor_answer": "I get occasional migraines brought on by extended screen time",
+    "target_topic": "Travel",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 2127,
+    "distractor_source_row_idx": 3309
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about travel preferences and habits (transit and travel modes preferred like window seats, motorbikes, or trains; types of destinations like solo unfamiliar trips, beaches, or cultural sites; travel rituals like blogging, postcards, or photo albums; lodging and accommodation comfort; souvenirs and mementos kept; aquariums, museums, or beach activities while abroad).",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I take many photographs on family trips.\nAssistant: Got it. Anything more?\nUser: I read the newspaper every morning.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I take many photographs on family trips",
+    "distractor_answer": "I read the newspaper every morning",
+    "target_topic": "Travel",
+    "distractor_topic": "News",
+    "target_source_row_idx": 223,
+    "distractor_source_row_idx": 729
+  },
+  {
+    "learning_instruction": "Track only the user's relationship with pets (pet ownership, time spent with cats or dogs, animal shelter volunteering, pet care) preferences from this conversation.",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I keep a small collection of stationery.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I care for a pet cat.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I care for a pet cat",
+    "distractor_answer": "I keep a small collection of stationery",
+    "target_topic": "Pets",
+    "distractor_topic": "Hobbies",
+    "target_source_row_idx": 1394,
+    "distractor_source_row_idx": 1551
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about sports the user plays or follows (cycling, running, swimming, tennis; watching Formula 1, soccer, or hockey; motorsports and competitive events).",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I like swimming during summer vacations.\nAssistant: Helpful \u2014 what else?\nUser: I experienced the death of a close colleague in the line of duty, which prompted deep grief and survivor's guilt.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I like swimming during summer vacations",
+    "distractor_answer": "I experienced the death of a close colleague in the line of duty, which prompted deep grief and survivor's guilt",
+    "target_topic": "Sports",
+    "distractor_topic": "Grief",
+    "target_source_row_idx": 4399,
+    "distractor_source_row_idx": 1056
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about sports and athletic activity (running marathons, cycling, watching soccer or other leagues, outdoor training, competitive athletics).",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I play pickup basketball with my neighbors.\nAssistant: Noted! What else?\nUser: I get occasional migraine headaches triggered by stress.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I play pickup basketball with my neighbors",
+    "distractor_answer": "I get occasional migraine headaches triggered by stress",
+    "target_topic": "Sports",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 1700,
+    "distractor_source_row_idx": 1659
+  },
+  {
+    "learning_instruction": "Track only the user's music preferences (favorite genres like pop, rock, folk or electronic; language of lyrics; listening contexts; preferred artists) preferences from this conversation.",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I've faced cultural identity struggles balancing traditional Japanese values with an American lifestyle.\nAssistant: Got it. Anything more?\nUser: I enjoy classic rock concerts in large stadiums.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I enjoy classic rock concerts in large stadiums",
+    "distractor_answer": "I've faced cultural identity struggles balancing traditional Japanese values with an American lifestyle",
+    "target_topic": "Music",
+    "distractor_topic": "Culture",
+    "target_source_row_idx": 757,
+    "distractor_source_row_idx": 3369
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about sports the user plays or follows (cycling, running, swimming, tennis; watching Formula 1, soccer, or hockey; motorsports and competitive events).",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I struggled with adapting to remote work during the pandemic, which blurred the boundaries between my work and personal time.\nAssistant: Got it. Anything more?\nUser: I follow international Formula 1 racing.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I follow international Formula 1 racing",
+    "distractor_answer": "I struggled with adapting to remote work during the pandemic, which blurred the boundaries between my work and personal time",
+    "target_topic": "Sports",
+    "distractor_topic": "Work",
+    "target_source_row_idx": 3199,
+    "distractor_source_row_idx": 50
+  },
+  {
+    "learning_instruction": "Only remember preferences related to how the user travels (destinations preferred like solo or unfamiliar; travel rituals like blogging or postcards; aquariums, beaches, museums while abroad).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I like long walks in the park.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I collect postcards from different cities.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I collect postcards from different cities",
+    "distractor_answer": "I like long walks in the park",
+    "target_topic": "Travel",
+    "distractor_topic": "Nature",
+    "target_source_row_idx": 3170,
+    "distractor_source_row_idx": 2353
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for travel preferences (transit choices like window seats or motorbikes, airport lounges, souvenirs, accommodation comfort) and disregard all other preferences.",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I had a minor wrist sprain three years ago.\nAssistant: Got it. Anything more?\nUser: I collect postcards from places I visit.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I collect postcards from places I visit",
+    "distractor_answer": "I had a minor wrist sprain three years ago",
+    "target_topic": "Travel",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 4709,
+    "distractor_source_row_idx": 2252
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about photo-taking and photography interests (camera equipment, favorite subjects, how photos are organized or shared, photography tours or shows).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I keep a few family photographs in my living room.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I shop mostly at local farmers' markets.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I keep a few family photographs in my living room",
+    "distractor_answer": "I shop mostly at local farmers' markets",
+    "target_topic": "Photography",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 1923,
+    "distractor_source_row_idx": 437
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for how the user travels (destinations preferred like solo or unfamiliar; travel rituals like blogging or postcards; aquariums, beaches, museums while abroad) and disregard all other preferences.",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I choose vacation spots with religious or historical significance.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I have occasional migraines that I manage with prescription medication.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I choose vacation spots with religious or historical significance",
+    "distractor_answer": "I have occasional migraines that I manage with prescription medication",
+    "target_topic": "Travel",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 1714,
+    "distractor_source_row_idx": 4704
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about what music the user listens to (genres of choice, where and when they listen, types of artists they follow, live music attendance).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I prefer modern music festivals over traditional events.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I had mild asthma during childhood, but I'm rarely symptomatic now.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I prefer modern music festivals over traditional events",
+    "distractor_answer": "I had mild asthma during childhood, but I'm rarely symptomatic now",
+    "target_topic": "Music",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 3929,
+    "distractor_source_row_idx": 16
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about sports and athletic activity (running marathons, cycling, watching soccer or other leagues, outdoor training, competitive athletics).",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I learn Japanese calligraphy.\nAssistant: Got it. Anything more?\nUser: I participate in indoor rock climbing.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I participate in indoor rock climbing",
+    "distractor_answer": "I learn Japanese calligraphy",
+    "target_topic": "Sports",
+    "distractor_topic": "Art",
+    "target_source_row_idx": 479,
+    "distractor_source_row_idx": 4304
+  },
+  {
+    "learning_instruction": "Track only travel style (frequency of trips, types of places visited, travel rituals like keeping a blog or photo album, accommodation preferences) preferences from this conversation.",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I had a difficult breakup at age 27 from a long-term relationship, and it left me anxious about dating again.\nAssistant: Great. What's another thing I should know?\nUser: I keep a collection of postcards from different countries.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I keep a collection of postcards from different countries",
+    "distractor_answer": "I had a difficult breakup at age 27 from a long-term relationship, and it left me anxious about dating again",
+    "target_topic": "Travel",
+    "distractor_topic": "Relationships",
+    "target_source_row_idx": 2085,
+    "distractor_source_row_idx": 1277
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about sports and athletic activity (specific sports played for fun or fitness like cycling, running, swimming, or tennis; pro leagues and teams followed casually or closely like Formula 1, soccer, ice hockey, or cricket; competitive events and races participated in; outdoor vs indoor athletic activity; live spectating, fandom, and sports media consumption).",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I enjoy cooking simple comfort meals.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I play pickup basketball at a nearby court.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I play pickup basketball at a nearby court",
+    "distractor_answer": "I enjoy cooking simple comfort meals",
+    "target_topic": "Sports",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 2578,
+    "distractor_source_row_idx": 1244
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about fashion and personal style (color and pattern preferences; accessories like jewelry, bangles, or scarves; jewelry materials like silver, gold, or platinum; makeup styles from minimalist to avant-garde; fashion trends followed from cities like Paris or New York; designers and brands admired; style aesthetics like streetwear, minimalist, or maximalist; fashion shows and events).",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I favor handmade jewelry with cultural motifs.\nAssistant: Got it \u2014 what else should I know?\nUser: I volunteer for local environmental projects.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I favor handmade jewelry with cultural motifs",
+    "distractor_answer": "I volunteer for local environmental projects",
+    "target_topic": "Fashion",
+    "distractor_topic": "Environment",
+    "target_source_row_idx": 4530,
+    "distractor_source_row_idx": 4450
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's travel style (destinations chosen like cities, beaches, or remote nature; travel frequency and trip length; how the user gets around when traveling; preferred lodging type; travel-related rituals like keeping a journal or collecting postcards; activities they always seek out abroad) and disregard all other preferences.",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I collect quirky souvenir magnets when traveling.\nAssistant: Got it. Anything more?\nUser: I had an appendectomy at age 22.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I collect quirky souvenir magnets when traveling",
+    "distractor_answer": "I had an appendectomy at age 22",
+    "target_topic": "Travel",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 2858,
+    "distractor_source_row_idx": 2843
+  },
+  {
+    "learning_instruction": "Track only the user's fashion sense (jewelry choices like silver vs gold, makeup styles, designers followed, fashion shows or trends) preferences from this conversation.",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I choose imported craft beer over local brews.\nAssistant: Thanks. Is there anything else?\nUser: I like exploring thrift and vintage shops.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I like exploring thrift and vintage shops",
+    "distractor_answer": "I choose imported craft beer over local brews",
+    "target_topic": "Fashion",
+    "distractor_topic": "Beer",
+    "target_source_row_idx": 3565,
+    "distractor_source_row_idx": 4160
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about sports and athletic activity (specific sports played for fun or fitness like cycling, running, swimming, or tennis; pro leagues and teams followed casually or closely like Formula 1, soccer, ice hockey, or cricket; competitive events and races participated in; outdoor vs indoor athletic activity; live spectating, fandom, and sports media consumption).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I passionately watch cricket matches, especially India's national team.\nAssistant: Got it. Anything more?\nUser: I network within women-in-business associations.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I passionately watch cricket matches, especially India's national team",
+    "distractor_answer": "I network within women-in-business associations",
+    "target_topic": "Sports",
+    "distractor_topic": "Business",
+    "target_source_row_idx": 505,
+    "distractor_source_row_idx": 71
+  },
+  {
+    "learning_instruction": "Track only pets and animal companions (pets currently owned like cats, dogs, fish, or reptiles; time spent with pets at home or in the neighborhood; volunteering at animal shelters or rescues; pet care routines and tools; specific affinities for certain breeds or species; childhood or past pets remembered fondly) preferences from this conversation.",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I've been struggling with physical fatigue after years of overwork without extended breaks.\nAssistant: Okay, noted. Anything else important about you?\nUser: I like playing with cats and dogs.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I like playing with cats and dogs",
+    "distractor_answer": "I've been struggling with physical fatigue after years of overwork without extended breaks",
+    "target_topic": "Pets",
+    "distractor_topic": "Health",
+    "target_source_row_idx": 3892,
+    "distractor_source_row_idx": 2533
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about the user's relationship with technology (devices owned and used daily, tech communities followed, vintage gear collected, digital workflows).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I listen to podcasts on diverse topics.\nAssistant: Thanks. Is there anything else?\nUser: I use note-taking apps.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I use note-taking apps",
+    "distractor_answer": "I listen to podcasts on diverse topics",
+    "target_topic": "Technology",
+    "distractor_topic": "Podcasts",
+    "target_source_row_idx": 3553,
+    "distractor_source_row_idx": 4935
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's music preferences (favorite genres and styles; specific artists or bands listened to; languages of lyrics including foreign-language music; live music attendance like concerts or festivals; daily listening rituals; preferred listening contexts like commute, work, or evening relaxation) and disregard all other preferences.",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I enjoy live acoustic music.\nAssistant: Thanks. Is there anything else?\nUser: I felt a cultural disconnect when distant relatives pressured me to be more religiously observant.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I enjoy live acoustic music",
+    "distractor_answer": "I felt a cultural disconnect when distant relatives pressured me to be more religiously observant",
+    "target_topic": "Music",
+    "distractor_topic": "Religion",
+    "target_source_row_idx": 270,
+    "distractor_source_row_idx": 2861
+  },
+  {
+    "learning_instruction": "Track only science and scientific topics (specific science fields followed like astronomy, biology, physics, or chemistry; popular-science reading from books, magazines, or online; science museum visits and exhibits; podcasts, newsletters, and YouTube channels about science; lay interest in research and discoveries) preferences from this conversation.",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I like visiting science museums.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I attend live theater performances occasionally.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I like visiting science museums",
+    "distractor_answer": "I attend live theater performances occasionally",
+    "target_topic": "Science",
+    "distractor_topic": "Entertainment",
+    "target_source_row_idx": 3740,
+    "distractor_source_row_idx": 4421
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about sports the user plays or follows (cycling, running, swimming, tennis; watching Formula 1, soccer, or hockey; motorsports and competitive events).",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I've felt pressure to always be a perfect cultural ambassador, which has created feelings of inauthenticity at times.\nAssistant: Noted! What else?\nUser: I like biking along scenic trails.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I like biking along scenic trails",
+    "distractor_answer": "I've felt pressure to always be a perfect cultural ambassador, which has created feelings of inauthenticity at times",
+    "target_topic": "Sports",
+    "distractor_topic": "Identity",
+    "target_source_row_idx": 2143,
+    "distractor_source_row_idx": 3048
+  },
+  {
+    "learning_instruction": "Track only the user's interest in science (specific scientific fields followed in news or media like astronomy, biology, physics, chemistry, or neuroscience; science museums and exhibits visited; podcasts, newsletters, and YouTube channels about science; popular-science books read by accessible authors; lay engagement with research or experiments; science journalism consumed) preferences from this conversation.",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I'm interested in space and planetary sciences.\nAssistant: Thanks for that. What else comes to mind?\nUser: I've experienced stress from adapting my business operations during the COVID-19 pandemic.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I'm interested in space and planetary sciences",
+    "distractor_answer": "I've experienced stress from adapting my business operations during the COVID-19 pandemic",
+    "target_topic": "Science",
+    "distractor_topic": "Business",
+    "target_source_row_idx": 3964,
+    "distractor_source_row_idx": 4745
+  },
+  {
+    "learning_instruction": "Only remember preferences related to the user's education and learning interests (formal study, learning podcasts, language learning, books on personal development).",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I use a Kindle exclusively for reading.\nAssistant: Thanks for that. What else comes to mind?\nUser: I learn indigenous languages via online courses.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I learn indigenous languages via online courses",
+    "distractor_answer": "I use a Kindle exclusively for reading",
+    "target_topic": "Education",
+    "distractor_topic": "Reading",
+    "target_source_row_idx": 1871,
+    "distractor_source_row_idx": 1748
+  },
+  {
+    "learning_instruction": "Only remember preferences related to the user's photography habits (cameras and gear owned, subjects photographed like travel or architecture, photo albums kept, exhibitions visited).",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I love taking photography during my travels.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I read global economic news daily.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I love taking photography during my travels",
+    "distractor_answer": "I read global economic news daily",
+    "target_topic": "Photography",
+    "distractor_topic": "Investment",
+    "target_source_row_idx": 633,
+    "distractor_source_row_idx": 3311
+  },
+  {
+    "learning_instruction": "Only remember preferences related to gardening (potted plants, herb gardens, urban gardening, balcony plants, kitchen herbs).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I like tending to a small vegetable garden.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I have near-sightedness that requires corrective lenses.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I like tending to a small vegetable garden",
+    "distractor_answer": "I have near-sightedness that requires corrective lenses",
+    "target_topic": "Gardening",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 3877,
+    "distractor_source_row_idx": 399
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about the user's learning and education (academic past including degrees and study experiences; current learning habits like languages, podcasts, or courses; academic pressure remembered or ongoing; book clubs or educational communities; lifelong-learning attitudes).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I have a history of tendonitis in my right wrist from extended computer use.\nAssistant: Thanks. Is there anything else?\nUser: I value educational prestige and Ivy League associations.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I value educational prestige and Ivy League associations",
+    "distractor_answer": "I have a history of tendonitis in my right wrist from extended computer use",
+    "target_topic": "Education",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 252,
+    "distractor_source_row_idx": 446
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about travel style (frequency of trips, types of places visited, travel rituals like keeping a blog or photo album, accommodation preferences).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I sometimes eat instant noodles out of convenience.\nAssistant: Okay, noted. Anything else important about you?\nUser: I avoid purchasing ethnic souvenirs when traveling.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I avoid purchasing ethnic souvenirs when traveling",
+    "distractor_answer": "I sometimes eat instant noodles out of convenience",
+    "target_topic": "Travel",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 2606,
+    "distractor_source_row_idx": 2587
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about photo-taking and photography interests (camera equipment, favorite subjects, how photos are organized or shared, photography tours or shows).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I enjoy photography as a creative outlet.\nAssistant: Noted! What else?\nUser: I'm grappling with unresolved feelings about conflicts with my father during my youth.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I enjoy photography as a creative outlet",
+    "distractor_answer": "I'm grappling with unresolved feelings about conflicts with my father during my youth",
+    "target_topic": "Photography",
+    "distractor_topic": "Relationships",
+    "target_source_row_idx": 4663,
+    "distractor_source_row_idx": 288
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about what music the user listens to (genres of choice, where and when they listen, types of artists they follow, live music attendance).",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I keep a small collection of houseplants.\nAssistant: Thanks. Is there anything else?\nUser: I enjoy country and classic rock music.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I enjoy country and classic rock music",
+    "distractor_answer": "I keep a small collection of houseplants",
+    "target_topic": "Music",
+    "distractor_topic": "Plants",
+    "target_source_row_idx": 2692,
+    "distractor_source_row_idx": 1533
+  },
+  {
+    "learning_instruction": "Track only education and lifelong learning (formal academic background and degrees; ongoing self-education like courses, podcasts, or workshops; learning a foreign language casually like Japanese or Spanish; book clubs and educational support roles; academic pressure or pride from studies; books on personal development; specific learning communities) preferences from this conversation.",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I enjoy attending workshops for skill-building.\nAssistant: Thanks for that. What else comes to mind?\nUser: I appreciate belly dance performances at cultural events.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I enjoy attending workshops for skill-building",
+    "distractor_answer": "I appreciate belly dance performances at cultural events",
+    "target_topic": "Education",
+    "distractor_topic": "Culture",
+    "target_source_row_idx": 3258,
+    "distractor_source_row_idx": 2134
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about sports the user plays or follows (cycling, running, swimming, tennis; watching Formula 1, soccer, or hockey; motorsports and competitive events).",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I go to the cinema on weekends.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I explore skateparks with my kids.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I explore skateparks with my kids",
+    "distractor_answer": "I go to the cinema on weekends",
+    "target_topic": "Sports",
+    "distractor_topic": "Film",
+    "target_source_row_idx": 1463,
+    "distractor_source_row_idx": 1164
+  },
+  {
+    "learning_instruction": "Track only the user's fashion sense (jewelry choices like silver vs gold, makeup styles, designers followed, fashion shows or trends) preferences from this conversation.",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I have seasonal allergic rhinitis triggered by dust and pollen.\nAssistant: Got it \u2014 what else should I know?\nUser: I keep my wardrobe largely composed of dark monochromes.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I keep my wardrobe largely composed of dark monochromes",
+    "distractor_answer": "I have seasonal allergic rhinitis triggered by dust and pollen",
+    "target_topic": "Fashion",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 3175,
+    "distractor_source_row_idx": 4373
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about the user's sports interests (sports practiced for fun or fitness like biking or swimming, leagues watched on TV, athletic events attended, motorsports).",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I collect contemporary abstract art.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I follow skateboarding culture.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I follow skateboarding culture",
+    "distractor_answer": "I collect contemporary abstract art",
+    "target_topic": "Sports",
+    "distractor_topic": "Art",
+    "target_source_row_idx": 2285,
+    "distractor_source_row_idx": 818
+  },
+  {
+    "learning_instruction": "Track only travel preferences (transit choices like window seats or motorbikes, airport lounges, souvenirs, accommodation comfort) preferences from this conversation.",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I have mild lactose intolerance that I manage through my diet choices.\nAssistant: Got it. Anything more?\nUser: I prefer Arctic cruises for vacations.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I prefer Arctic cruises for vacations",
+    "distractor_answer": "I have mild lactose intolerance that I manage through my diet choices",
+    "target_topic": "Travel",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 803,
+    "distractor_source_row_idx": 84
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for travel preferences and habits (transit and travel modes preferred like window seats, motorbikes, or trains; types of destinations like solo unfamiliar trips, beaches, or cultural sites; travel rituals like blogging, postcards, or photo albums; lodging and accommodation comfort; souvenirs and mementos kept; aquariums, museums, or beach activities while abroad) and disregard all other preferences.",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I feel internal conflict between wanting a stable life and craving adventurous experiences abroad.\nAssistant: Thanks for that. What else comes to mind?\nUser: I've long-term dealt with anxiety before big public speaking engagements, even though I'm socially confident.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I feel internal conflict between wanting a stable life and craving adventurous experiences abroad",
+    "distractor_answer": "I've long-term dealt with anxiety before big public speaking engagements, even though I'm socially confident",
+    "target_topic": "Travel",
+    "distractor_topic": "Anxiety",
+    "target_source_row_idx": 2190,
+    "distractor_source_row_idx": 3649
+  },
+  {
+    "learning_instruction": "Track only the user's tech life (consumer electronics owned and used daily; productivity apps and digital workflows; vintage tech collecting or repair as hobby; online forums or communities followed; tech news and gadget launches tracked; e-books vs print and similar format choices) preferences from this conversation.",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I use voice assistants to manage my daily tasks.\nAssistant: Helpful \u2014 what else?\nUser: I experienced burnout in my late 20s from juggling my startup's rapid growth and personal relationships, which led me to think about stress management support.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I use voice assistants to manage my daily tasks",
+    "distractor_answer": "I experienced burnout in my late 20s from juggling my startup's rapid growth and personal relationships, which led me to think about stress management support",
+    "target_topic": "Technology",
+    "distractor_topic": "Health",
+    "target_source_row_idx": 996,
+    "distractor_source_row_idx": 3424
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for scientific topics the user follows (specific fields like astronomy or biology, museums and exhibits, science journalism) and disregard all other preferences.",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I read non-fiction on space exploration.\nAssistant: Thanks for that. What else comes to mind?\nUser: I've felt socially isolated when my peers couldn't relate to my environmental work experiences.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I read non-fiction on space exploration",
+    "distractor_answer": "I've felt socially isolated when my peers couldn't relate to my environmental work experiences",
+    "target_topic": "Science",
+    "distractor_topic": "Relationships",
+    "target_source_row_idx": 3341,
+    "distractor_source_row_idx": 3734
+  },
+  {
+    "learning_instruction": "Track only pets in the user's life (cats, dogs, or other pets owned or cared for, time with neighborhood pets, animal rescue volunteering) preferences from this conversation.",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I have a family history of hypertension on my maternal side.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I love petting dogs.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I love petting dogs",
+    "distractor_answer": "I have a family history of hypertension on my maternal side",
+    "target_topic": "Pets",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 3939,
+    "distractor_source_row_idx": 83
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about fashion and personal style (color preferences, accessories, streetwear vs neutral aesthetics, fashion events).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I wear red lipstick for formal events.\nAssistant: Noted! What else?\nUser: I have occasional acid reflux that I treat with over-the-counter medication.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I wear red lipstick for formal events",
+    "distractor_answer": "I have occasional acid reflux that I treat with over-the-counter medication",
+    "target_topic": "Fashion",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 3635,
+    "distractor_source_row_idx": 1336
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about the user's gardening practice (balcony herb garden, indoor plants, compost bin, urban gardening, kitchen herbs grown).",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I maintain a small garden of tulsi, or holy basil.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I've had recurring stress from pressure to represent both Vietnamese and American cultural expectations equally.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I maintain a small garden of tulsi, or holy basil",
+    "distractor_answer": "I've had recurring stress from pressure to represent both Vietnamese and American cultural expectations equally",
+    "target_topic": "Gardening",
+    "distractor_topic": "Culture",
+    "target_source_row_idx": 4680,
+    "distractor_source_row_idx": 626
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about sports and athletic activity (specific sports played for fun or fitness like cycling, running, swimming, or tennis; pro leagues and teams followed casually or closely like Formula 1, soccer, ice hockey, or cricket; competitive events and races participated in; outdoor vs indoor athletic activity; live spectating, fandom, and sports media consumption).",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I run ultramarathons.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I participate in community gatherings within the Indian diaspora.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I run ultramarathons",
+    "distractor_answer": "I participate in community gatherings within the Indian diaspora",
+    "target_topic": "Sports",
+    "distractor_topic": "Community",
+    "target_source_row_idx": 26,
+    "distractor_source_row_idx": 2826
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for travel style (frequency of trips, types of places visited, travel rituals like keeping a blog or photo album, accommodation preferences) and disregard all other preferences.",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I use a planner for organizing my tasks and appointments.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I look forward to summers in India visiting relatives.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I look forward to summers in India visiting relatives",
+    "distractor_answer": "I use a planner for organizing my tasks and appointments",
+    "target_topic": "Travel",
+    "distractor_topic": "Productivity",
+    "target_source_row_idx": 4288,
+    "distractor_source_row_idx": 2148
+  },
+  {
+    "learning_instruction": "Track only the user's music preferences (favorite genres and styles; specific artists or bands listened to; languages of lyrics including foreign-language music; live music attendance like concerts or festivals; daily listening rituals; preferred listening contexts like commute, work, or evening relaxation) preferences from this conversation.",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I enjoy visiting museums.\nAssistant: Thanks for that. What else comes to mind?\nUser: I collect rare vinyl records from Western jazz musicians.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I collect rare vinyl records from Western jazz musicians",
+    "distractor_answer": "I enjoy visiting museums",
+    "target_topic": "Music",
+    "distractor_topic": "Culture",
+    "target_source_row_idx": 1404,
+    "distractor_source_row_idx": 498
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about sports and athletic activity (running marathons, cycling, watching soccer or other leagues, outdoor training, competitive athletics).",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I've felt burnt out from juggling daily social media postings, activism work, and public speaking engagements.\nAssistant: Interesting, thanks for telling me. Tell me something else about you.\nUser: I prefer high-intensity workouts like CrossFit over wrestling.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I prefer high-intensity workouts like CrossFit over wrestling",
+    "distractor_answer": "I've felt burnt out from juggling daily social media postings, activism work, and public speaking engagements",
+    "target_topic": "Sports",
+    "distractor_topic": "Activism",
+    "target_source_row_idx": 2128,
+    "distractor_source_row_idx": 3721
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about the user's relationship with pets (pet ownership, time spent with cats or dogs, animal shelter volunteering, pet care).",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: The loss of my beloved pet in her mid-20s still surfaces occasionally as sharp grief.\nAssistant: Interesting, thanks for telling me. Tell me something else about you.\nUser: I like watching Ghanaian and Nigerian films.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "The loss of my beloved pet in her mid-20s still surfaces occasionally as sharp grief",
+    "distractor_answer": "I like watching Ghanaian and Nigerian films",
+    "target_topic": "Pets",
+    "distractor_topic": "Movies",
+    "target_source_row_idx": 1188,
+    "distractor_source_row_idx": 4927
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about sports the user plays or follows (cycling, running, swimming, tennis; watching Formula 1, soccer, or hockey; motorsports and competitive events).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I feel guilty about declining to help a friend with a private security matter because of legal restrictions.\nAssistant: Thanks. Is there anything else?\nUser: \u6211\u5728\u957f\u9014\u5f92\u6b65\u65f6\u4f1a\u4f7f\u7528\u884c\u5c71\u6756\u3002\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "\u6211\u5728\u957f\u9014\u5f92\u6b65\u65f6\u4f1a\u4f7f\u7528\u884c\u5c71\u6756",
+    "distractor_answer": "I feel guilty about declining to help a friend with a private security matter because of legal restrictions",
+    "target_topic": "Sports",
+    "distractor_topic": "Safety",
+    "target_source_row_idx": 4555,
+    "distractor_source_row_idx": 1330
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about the user's music preferences (favorite genres and styles; specific artists or bands listened to; languages of lyrics including foreign-language music; live music attendance like concerts or festivals; daily listening rituals; preferred listening contexts like commute, work, or evening relaxation).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I experienced acute stress symptoms after narrowly escaping a violent outbreak during a field visit.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I prefer vinyl records over streaming playlists.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I prefer vinyl records over streaming playlists",
+    "distractor_answer": "I experienced acute stress symptoms after narrowly escaping a violent outbreak during a field visit",
+    "target_topic": "Music",
+    "distractor_topic": "Trauma",
+    "target_source_row_idx": 2420,
+    "distractor_source_row_idx": 2086
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about the user's sports interests (recreational athletic activities like biking, jogging, or swimming; viewership of professional leagues and major events; motorsports and high-speed sports interest; competitive training and racing; team sports played casually with friends; sporting events attended in person).",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I play ice hockey recreationally during winter.\nAssistant: Noted! What else?\nUser: I attend Sunday community events.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I play ice hockey recreationally during winter",
+    "distractor_answer": "I attend Sunday community events",
+    "target_topic": "Sports",
+    "distractor_topic": "Community",
+    "target_source_row_idx": 4329,
+    "distractor_source_row_idx": 4731
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about lifelong learning habits (taking courses, attending lectures, foreign languages picked up, books and podcasts that teach).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I enjoy bubble tea on weekends.\nAssistant: Okay, noted. Anything else important about you?\nUser: I like attending public lectures.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I like attending public lectures",
+    "distractor_answer": "I enjoy bubble tea on weekends",
+    "target_topic": "Education",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 3164,
+    "distractor_source_row_idx": 4715
+  },
+  {
+    "learning_instruction": "Track only the user's music preferences (favorite genres like pop, rock, folk or electronic; language of lyrics; listening contexts; preferred artists) preferences from this conversation.",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I listen to devotional music during festive times.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I enjoy walking in local parks.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I listen to devotional music during festive times",
+    "distractor_answer": "I enjoy walking in local parks",
+    "target_topic": "Music",
+    "distractor_topic": "Nature",
+    "target_source_row_idx": 858,
+    "distractor_source_row_idx": 824
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about the user's fashion sense and style (clothing aesthetic and silhouette preferences; jewelry and accessories chosen daily; makeup styles and beauty norms; designers and fashion houses followed; fashion events attended; trend awareness from specific style capitals).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I use recipes passed down from my family.\nAssistant: Thanks. Is there anything else?\nUser: I prefer minimalist black-and-white fashion aesthetics.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I prefer minimalist black-and-white fashion aesthetics",
+    "distractor_answer": "I use recipes passed down from my family",
+    "target_topic": "Fashion",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 3206,
+    "distractor_source_row_idx": 742
+  },
+  {
+    "learning_instruction": "Track only photography practice and interests (camera gear like vintage film cameras, DSLRs, or mirrorless; subjects photographed like travel, nature, architectural details, or portraits; photo organization in albums or digital libraries; photography exhibitions and tours attended; the user's photography style and aesthetic; photography as casual hobby or serious practice) preferences from this conversation.",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I enjoy photography walks.\nAssistant: Helpful \u2014 what else?\nUser: I speak at leadership conferences.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I enjoy photography walks",
+    "distractor_answer": "I speak at leadership conferences",
+    "target_topic": "Photography",
+    "distractor_topic": "Work",
+    "target_source_row_idx": 2374,
+    "distractor_source_row_idx": 3588
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about music tastes (genres, languages of music, listening contexts like background or relaxation, types of artists).",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I avoid gold and invest in cryptocurrencies.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I love country music concerts.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I love country music concerts",
+    "distractor_answer": "I avoid gold and invest in cryptocurrencies",
+    "target_topic": "Music",
+    "distractor_topic": "Finance",
+    "target_source_row_idx": 2976,
+    "distractor_source_row_idx": 4087
+  },
+  {
+    "learning_instruction": "Track only how the user engages with technology (gadget launches followed, productivity apps used, vintage tech as a hobby, e-readers vs print) preferences from this conversation.",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I keep a structured calendar and project planner.\nAssistant: Thanks. Is there anything else?\nUser: I use noise-cancelling headphones while studying.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I use noise-cancelling headphones while studying",
+    "distractor_answer": "I keep a structured calendar and project planner",
+    "target_topic": "Technology",
+    "distractor_topic": "Productivity",
+    "target_source_row_idx": 149,
+    "distractor_source_row_idx": 3716
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about the user's sports interests (sports practiced for fun or fitness like biking or swimming, leagues watched on TV, athletic events attended, motorsports).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I miss having meaningful debates about history and literature with colleagues.\nAssistant: Okay, noted. Anything else important about you?\nUser: I enjoy cycling on weekends.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I enjoy cycling on weekends",
+    "distractor_answer": "I miss having meaningful debates about history and literature with colleagues",
+    "target_topic": "Sports",
+    "distractor_topic": "Conversation",
+    "target_source_row_idx": 2025,
+    "distractor_source_row_idx": 1900
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about travel preferences and habits (transit and travel modes preferred like window seats, motorbikes, or trains; types of destinations like solo unfamiliar trips, beaches, or cultural sites; travel rituals like blogging, postcards, or photo albums; lodging and accommodation comfort; souvenirs and mementos kept; aquariums, museums, or beach activities while abroad).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I rarely watch TV dramas of any genre.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I've missed opportunities to attend close friends' weddings overseas because of my travel limitations.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I've missed opportunities to attend close friends' weddings overseas because of my travel limitations",
+    "distractor_answer": "I rarely watch TV dramas of any genre",
+    "target_topic": "Travel",
+    "distractor_topic": "Entertainment",
+    "target_source_row_idx": 4667,
+    "distractor_source_row_idx": 2781
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about fashion preferences (trendy vs minimalist styling, accessories like bangles or watches, makeup, designers and fashion events).",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I like coordinating outfits with matching accessories.\nAssistant: Thanks for that. What else comes to mind?\nUser: I'm experiencing emotional exhaustion from juggling business ownership with parenting teenagers.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I like coordinating outfits with matching accessories",
+    "distractor_answer": "I'm experiencing emotional exhaustion from juggling business ownership with parenting teenagers",
+    "target_topic": "Fashion",
+    "distractor_topic": "Parenting",
+    "target_source_row_idx": 611,
+    "distractor_source_row_idx": 4730
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about how the user engages with technology (gadget launches followed, productivity apps used, vintage tech as a hobby, e-readers vs print).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I do yoga or stretching daily.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I frequently attend environmental technology conferences.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I frequently attend environmental technology conferences",
+    "distractor_answer": "I do yoga or stretching daily",
+    "target_topic": "Technology",
+    "distractor_topic": "Health",
+    "target_source_row_idx": 548,
+    "distractor_source_row_idx": 4718
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about pets and animal companions (pets currently owned like cats, dogs, fish, or reptiles; time spent with pets at home or in the neighborhood; volunteering at animal shelters or rescues; pet care routines and tools; specific affinities for certain breeds or species; childhood or past pets remembered fondly).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I love fishing trips with friends.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I volunteer at animal rescues over community festivals.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I volunteer at animal rescues over community festivals",
+    "distractor_answer": "I love fishing trips with friends",
+    "target_topic": "Pets",
+    "distractor_topic": "Outdoors",
+    "target_source_row_idx": 147,
+    "distractor_source_row_idx": 1047
+  },
+  {
+    "learning_instruction": "Track only travel style (frequency of trips, types of places visited, travel rituals like keeping a blog or photo album, accommodation preferences) preferences from this conversation.",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I like to have picnics at countryside parks on weekends.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I enjoy Bollywood films and soundtracks from classic Hindi cinema.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I like to have picnics at countryside parks on weekends",
+    "distractor_answer": "I enjoy Bollywood films and soundtracks from classic Hindi cinema",
+    "target_topic": "Travel",
+    "distractor_topic": "Entertainment",
+    "target_source_row_idx": 4559,
+    "distractor_source_row_idx": 2835
+  },
+  {
+    "learning_instruction": "Track only pets in the user's life (cats, dogs, or other pets owned or cared for, time with neighborhood pets, animal rescue volunteering) preferences from this conversation.",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I like experimenting with new salad recipes.\nAssistant: Got it \u2014 what else should I know?\nUser: I grappled with lingering sadness after my beloved golden retriever from my youth passed away.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I grappled with lingering sadness after my beloved golden retriever from my youth passed away",
+    "distractor_answer": "I like experimenting with new salad recipes",
+    "target_topic": "Pets",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 4182,
+    "distractor_source_row_idx": 1963
+  },
+  {
+    "learning_instruction": "Only remember preferences related to the user's sports interests (sports practiced for fun or fitness like biking or swimming, leagues watched on TV, athletic events attended, motorsports).",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I've experienced occasional burnout from balancing long caf\u00e9 shifts with freelance photography gigs.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I follow European Formula One racing events.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I follow European Formula One racing events",
+    "distractor_answer": "I've experienced occasional burnout from balancing long caf\u00e9 shifts with freelance photography gigs",
+    "target_topic": "Sports",
+    "distractor_topic": "Work",
+    "target_source_row_idx": 578,
+    "distractor_source_row_idx": 3558
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's sports interests (sports practiced for fun or fitness like biking or swimming, leagues watched on TV, athletic events attended, motorsports) and disregard all other preferences.",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I like moderate hiking trails in nearby parks.\nAssistant: Thanks. Is there anything else?\nUser: I have occasional migraine headaches that I manage with prescribed medication.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I like moderate hiking trails in nearby parks",
+    "distractor_answer": "I have occasional migraine headaches that I manage with prescribed medication",
+    "target_topic": "Sports",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 4881,
+    "distractor_source_row_idx": 2690
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about sports and athletic activity (specific sports played for fun or fitness like cycling, running, swimming, or tennis; pro leagues and teams followed casually or closely like Formula 1, soccer, ice hockey, or cricket; competitive events and races participated in; outdoor vs indoor athletic activity; live spectating, fandom, and sports media consumption).",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I enjoy surfing when I travel to coastal areas.\nAssistant: Got it. Anything more?\nUser: I favor standing desks and alternative work setups.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I enjoy surfing when I travel to coastal areas",
+    "distractor_answer": "I favor standing desks and alternative work setups",
+    "target_topic": "Sports",
+    "distractor_topic": "Work",
+    "target_source_row_idx": 4996,
+    "distractor_source_row_idx": 1406
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's interest in science (science museum visits, astronomy newsletters, science podcasts, research topics followed) and disregard all other preferences.",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I keep a calendar of personal milestones.\nAssistant: Great. What's another thing I should know?\nUser: I follow space exploration news.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I follow space exploration news",
+    "distractor_answer": "I keep a calendar of personal milestones",
+    "target_topic": "Science",
+    "distractor_topic": "Productivity",
+    "target_source_row_idx": 1098,
+    "distractor_source_row_idx": 391
+  },
+  {
+    "learning_instruction": "Track only the user's gardening practice (indoor or outdoor gardens kept across seasons; herbs and edibles grown for cooking like basil, mint, rosemary, or thyme; potted plants for decor and air quality; balcony, terrace, or kitchen-window gardening; composting and waste reduction; gardening tools and care routines; gardening as a daily ritual or weekend hobby) preferences from this conversation.",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I enjoy Western classical literature more than manga.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I have a backyard designed with wildflower meadows instead of a manicured lawn.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I have a backyard designed with wildflower meadows instead of a manicured lawn",
+    "distractor_answer": "I enjoy Western classical literature more than manga",
+    "target_topic": "Gardening",
+    "distractor_topic": "Literature",
+    "target_source_row_idx": 299,
+    "distractor_source_row_idx": 1241
+  },
+  {
+    "learning_instruction": "Track only the user's sports interests (sports practiced for fun or fitness like biking or swimming, leagues watched on TV, athletic events attended, motorsports) preferences from this conversation.",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I've developed occasional insomnia during particularly intense football seasons.\nAssistant: Interesting, thanks for telling me. Tell me something else about you.\nUser: I favor bold, industrial interior design styles.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I've developed occasional insomnia during particularly intense football seasons",
+    "distractor_answer": "I favor bold, industrial interior design styles",
+    "target_topic": "Sports",
+    "distractor_topic": "Design",
+    "target_source_row_idx": 4145,
+    "distractor_source_row_idx": 3765
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for sports the user plays or follows (cycling, running, swimming, tennis; watching Formula 1, soccer, or hockey; motorsports and competitive events) and disregard all other preferences.",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I regularly drink matcha lattes.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I regularly go hiking in remote trails.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I regularly go hiking in remote trails",
+    "distractor_answer": "I regularly drink matcha lattes",
+    "target_topic": "Sports",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 1045,
+    "distractor_source_row_idx": 798
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about the user's gardening practice (balcony herb garden, indoor plants, compost bin, urban gardening, kitchen herbs grown).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I appreciate minimalist interior design.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I have more houseplants than outdoor plants.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I have more houseplants than outdoor plants",
+    "distractor_answer": "I appreciate minimalist interior design",
+    "target_topic": "Gardening",
+    "distractor_topic": "Design",
+    "target_source_row_idx": 4155,
+    "distractor_source_row_idx": 2651
+  },
+  {
+    "learning_instruction": "Track only the user's photography habits (cameras and gear owned, subjects photographed like travel or architecture, photo albums kept, exhibitions visited) preferences from this conversation.",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I read most of my news from digital-only subscription services.\nAssistant: Helpful \u2014 what else?\nUser: I like photography during travels.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I like photography during travels",
+    "distractor_answer": "I read most of my news from digital-only subscription services",
+    "target_topic": "Photography",
+    "distractor_topic": "News",
+    "target_source_row_idx": 1108,
+    "distractor_source_row_idx": 298
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about sports and athletic activity (specific sports played for fun or fitness like cycling, running, swimming, or tennis; pro leagues and teams followed casually or closely like Formula 1, soccer, ice hockey, or cricket; competitive events and races participated in; outdoor vs indoor athletic activity; live spectating, fandom, and sports media consumption).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I enjoy swimming at community pools.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I like watching nature documentaries.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I enjoy swimming at community pools",
+    "distractor_answer": "I like watching nature documentaries",
+    "target_topic": "Sports",
+    "distractor_topic": "Nature",
+    "target_source_row_idx": 277,
+    "distractor_source_row_idx": 1473
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about music tastes and listening habits (genres preferred like rock, pop, indie, electronic, classical, jazz, folk, or world music; languages of music listened to including non-English; listening contexts like background, focused, social, or relaxation; specific artists, bands, or composers followed; concerts, festivals, or live shows attended; music formats like vinyl, streaming, or radio).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I have knee pain from a past sports injury in college.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I like attending local music festivals.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I like attending local music festivals",
+    "distractor_answer": "I have knee pain from a past sports injury in college",
+    "target_topic": "Music",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 3795,
+    "distractor_source_row_idx": 1727
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about fashion preferences (trendy vs minimalist styling, accessories like bangles or watches, makeup, designers and fashion events).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I follow a few fashion influencers on social media for style inspiration.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I regularly follow local celebrity news.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I follow a few fashion influencers on social media for style inspiration",
+    "distractor_answer": "I regularly follow local celebrity news",
+    "target_topic": "Fashion",
+    "distractor_topic": "Entertainment",
+    "target_source_row_idx": 1341,
+    "distractor_source_row_idx": 1876
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about music tastes and listening habits (genres preferred like rock, pop, indie, electronic, classical, jazz, folk, or world music; languages of music listened to including non-English; listening contexts like background, focused, social, or relaxation; specific artists, bands, or composers followed; concerts, festivals, or live shows attended; music formats like vinyl, streaming, or radio).",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I enjoy stargazing in quiet places.\nAssistant: Noted! What else?\nUser: I enjoy loud punk rock concerts.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I enjoy loud punk rock concerts",
+    "distractor_answer": "I enjoy stargazing in quiet places",
+    "target_topic": "Music",
+    "distractor_topic": "Astronomy",
+    "target_source_row_idx": 3959,
+    "distractor_source_row_idx": 1281
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about the user's tech life (consumer electronics owned and used daily; productivity apps and digital workflows; vintage tech collecting or repair as hobby; online forums or communities followed; tech news and gadget launches tracked; e-books vs print and similar format choices).",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I recognize the importance of Catholic traditions in my cultural identity.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I adopt digital note-taking tools over handwritten journals.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I adopt digital note-taking tools over handwritten journals",
+    "distractor_answer": "I recognize the importance of Catholic traditions in my cultural identity",
+    "target_topic": "Technology",
+    "distractor_topic": "Religion",
+    "target_source_row_idx": 254,
+    "distractor_source_row_idx": 4964
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about the user's sports interests (sports practiced for fun or fitness like biking or swimming, leagues watched on TV, athletic events attended, motorsports).",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I enjoy ice hockey games in winter.\nAssistant: Helpful \u2014 what else?\nUser: I brew my own beer at home.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I enjoy ice hockey games in winter",
+    "distractor_answer": "I brew my own beer at home",
+    "target_topic": "Sports",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 3441,
+    "distractor_source_row_idx": 1554
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about fashion and personal style (color preferences, accessories, streetwear vs neutral aesthetics, fashion events).",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I enjoy European mythological theatre productions.\nAssistant: Great. What's another thing I should know?\nUser: I favor bright, patterned African fabrics.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I favor bright, patterned African fabrics",
+    "distractor_answer": "I enjoy European mythological theatre productions",
+    "target_topic": "Fashion",
+    "distractor_topic": "Theatre",
+    "target_source_row_idx": 2257,
+    "distractor_source_row_idx": 3462
+  },
+  {
+    "learning_instruction": "Only remember preferences related to photography practice and interests (camera gear like vintage film cameras, DSLRs, or mirrorless; subjects photographed like travel, nature, architectural details, or portraits; photo organization in albums or digital libraries; photography exhibitions and tours attended; the user's photography style and aesthetic; photography as casual hobby or serious practice).",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I take photographs during my travels.\nAssistant: Interesting, thanks for telling me. Tell me something else about you.\nUser: I lost a grandparent who was a strong emotional figure in my life, and it caused me deep grief.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I take photographs during my travels",
+    "distractor_answer": "I lost a grandparent who was a strong emotional figure in my life, and it caused me deep grief",
+    "target_topic": "Photography",
+    "distractor_topic": "Grief",
+    "target_source_row_idx": 3679,
+    "distractor_source_row_idx": 1212
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about sports and athletic activity (running marathons, cycling, watching soccer or other leagues, outdoor training, competitive athletics).",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I enjoy surfing during summer vacations.\nAssistant: Interesting, thanks for telling me. Tell me something else about you.\nUser: I collect commemorative coins from my travels.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I enjoy surfing during summer vacations",
+    "distractor_answer": "I collect commemorative coins from my travels",
+    "target_topic": "Sports",
+    "distractor_topic": "Collectibles",
+    "target_source_row_idx": 2131,
+    "distractor_source_row_idx": 494
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about the user's sports interests (sports practiced for fun or fitness like biking or swimming, leagues watched on TV, athletic events attended, motorsports).",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I have mild exercise-induced asthma.\nAssistant: Thanks for that. What else comes to mind?\nUser: I like attending live sports events of any kind.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I like attending live sports events of any kind",
+    "distractor_answer": "I have mild exercise-induced asthma",
+    "target_topic": "Sports",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 2767,
+    "distractor_source_row_idx": 648
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for pets in the user's life (cats, dogs, or other pets owned or cared for, time with neighborhood pets, animal rescue volunteering) and disregard all other preferences.",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I drink matcha lattes more often than tea.\nAssistant: Great. What's another thing I should know?\nUser: I love dogs and spend time at dog parks.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I love dogs and spend time at dog parks",
+    "distractor_answer": "I drink matcha lattes more often than tea",
+    "target_topic": "Pets",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 1137,
+    "distractor_source_row_idx": 3702
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about sports the user plays or follows (cycling, running, swimming, tennis; watching Formula 1, soccer, or hockey; motorsports and competitive events).",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I find comfort in listening to rain.\nAssistant: Great. What's another thing I should know?\nUser: I collect sports memorabilia, especially baseball cards.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I collect sports memorabilia, especially baseball cards",
+    "distractor_answer": "I find comfort in listening to rain",
+    "target_topic": "Sports",
+    "distractor_topic": "Nature",
+    "target_source_row_idx": 2376,
+    "distractor_source_row_idx": 2536
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's fashion sense (jewelry choices like silver vs gold, makeup styles, designers followed, fashion shows or trends) and disregard all other preferences.",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I prefer cold brew coffee over tea.\nAssistant: Thanks. Is there anything else?\nUser: I wear comfortable sneakers for my daily errands.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I wear comfortable sneakers for my daily errands",
+    "distractor_answer": "I prefer cold brew coffee over tea",
+    "target_topic": "Fashion",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 4004,
+    "distractor_source_row_idx": 4982
+  },
+  {
+    "learning_instruction": "Track only the user's travel style (destinations chosen like cities, beaches, or remote nature; travel frequency and trip length; how the user gets around when traveling; preferred lodging type; travel-related rituals like keeping a journal or collecting postcards; activities they always seek out abroad) preferences from this conversation.",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I enjoy stargazing on clear nights.\nAssistant: Great. What's another thing I should know?\nUser: I favor caf\u00e9-hopping in urban downtowns.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I favor caf\u00e9-hopping in urban downtowns",
+    "distractor_answer": "I enjoy stargazing on clear nights",
+    "target_topic": "Travel",
+    "distractor_topic": "Astronomy",
+    "target_source_row_idx": 2718,
+    "distractor_source_row_idx": 3165
+  },
+  {
+    "learning_instruction": "Track only sports and athletic activity (specific sports played for fun or fitness like cycling, running, swimming, or tennis; pro leagues and teams followed casually or closely like Formula 1, soccer, ice hockey, or cricket; competitive events and races participated in; outdoor vs indoor athletic activity; live spectating, fandom, and sports media consumption) preferences from this conversation.",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I enjoy skateboarding in urban environments.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I maintain regular exercise habits.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I enjoy skateboarding in urban environments",
+    "distractor_answer": "I maintain regular exercise habits",
+    "target_topic": "Sports",
+    "distractor_topic": "Health",
+    "target_source_row_idx": 1301,
+    "distractor_source_row_idx": 3522
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about photo-taking and photography interests (camera equipment, favorite subjects, how photos are organized or shared, photography tours or shows).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I'm taking photography courses.\nAssistant: Helpful \u2014 what else?\nUser: I collect sports memorabilia.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I'm taking photography courses",
+    "distractor_answer": "I collect sports memorabilia",
+    "target_topic": "Photography",
+    "distractor_topic": "Collecting",
+    "target_source_row_idx": 65,
+    "distractor_source_row_idx": 2007
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's sports interests (recreational athletic activities like biking, jogging, or swimming; viewership of professional leagues and major events; motorsports and high-speed sports interest; competitive training and racing; team sports played casually with friends; sporting events attended in person) and disregard all other preferences.",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I love visiting farmers' markets.\nAssistant: Got it. Anything more?\nUser: I enjoy following Formula 1 racing.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I enjoy following Formula 1 racing",
+    "distractor_answer": "I love visiting farmers' markets",
+    "target_topic": "Sports",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 1352,
+    "distractor_source_row_idx": 3976
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about the user's music preferences (favorite genres and styles; specific artists or bands listened to; languages of lyrics including foreign-language music; live music attendance like concerts or festivals; daily listening rituals; preferred listening contexts like commute, work, or evening relaxation).",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I struggle with balancing time between my business and my children's school needs, and sometimes I feel guilty for not being present enough.\nAssistant: Interesting, thanks for telling me. Tell me something else about you.\nUser: I tune into African diaspora community radio stations.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I tune into African diaspora community radio stations",
+    "distractor_answer": "I struggle with balancing time between my business and my children's school needs, and sometimes I feel guilty for not being present enough",
+    "target_topic": "Music",
+    "distractor_topic": "Parenting",
+    "target_source_row_idx": 817,
+    "distractor_source_row_idx": 4365
+  },
+  {
+    "learning_instruction": "Only remember preferences related to the user's sports interests (sports practiced for fun or fitness like biking or swimming, leagues watched on TV, athletic events attended, motorsports).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I skateboard for fun.\nAssistant: Okay, noted. Anything else important about you?\nUser: I enjoy trying fusion street food from food trucks.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I skateboard for fun",
+    "distractor_answer": "I enjoy trying fusion street food from food trucks",
+    "target_topic": "Sports",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 686,
+    "distractor_source_row_idx": 1683
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about scientific topics the user follows (specific fields like astronomy or biology, museums and exhibits, science journalism).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I love podcasts about space exploration.\nAssistant: Great. What's another thing I should know?\nUser: I visit family elders regularly out of respect.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I love podcasts about space exploration",
+    "distractor_answer": "I visit family elders regularly out of respect",
+    "target_topic": "Science",
+    "distractor_topic": "Family",
+    "target_source_row_idx": 826,
+    "distractor_source_row_idx": 3398
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for travel style (frequency of trips, types of places visited, travel rituals like keeping a blog or photo album, accommodation preferences) and disregard all other preferences.",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I've taken solo backpacking trips through Europe.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I have a family history of type 2 diabetes on my paternal side.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I've taken solo backpacking trips through Europe",
+    "distractor_answer": "I have a family history of type 2 diabetes on my paternal side",
+    "target_topic": "Travel",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 1326,
+    "distractor_source_row_idx": 2444
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about the user's sports interests (sports practiced for fun or fitness like biking or swimming, leagues watched on TV, athletic events attended, motorsports).",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I keep framed family portraits in prominent spots at home.\nAssistant: Noted! What else?\nUser: I've witnessed incivility in community sports events and I worry about rising tensions affecting kids.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I've witnessed incivility in community sports events and I worry about rising tensions affecting kids",
+    "distractor_answer": "I keep framed family portraits in prominent spots at home",
+    "target_topic": "Sports",
+    "distractor_topic": "Family",
+    "target_source_row_idx": 2704,
+    "distractor_source_row_idx": 240
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about gardening (potted plants, herb gardens, urban gardening, balcony plants, kitchen herbs).",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I like listening to podcasts while commuting.\nAssistant: Helpful \u2014 what else?\nUser: I take pride in my well-tended flower garden.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I take pride in my well-tended flower garden",
+    "distractor_answer": "I like listening to podcasts while commuting",
+    "target_topic": "Gardening",
+    "distractor_topic": "Entertainment",
+    "target_source_row_idx": 741,
+    "distractor_source_row_idx": 3736
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about sports and athletic activity (running marathons, cycling, watching soccer or other leagues, outdoor training, competitive athletics).",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I thrive in fast-paced project environments.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I follow American football more closely than cricket.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I follow American football more closely than cricket",
+    "distractor_answer": "I thrive in fast-paced project environments",
+    "target_topic": "Sports",
+    "distractor_topic": "Work",
+    "target_source_row_idx": 3166,
+    "distractor_source_row_idx": 713
+  },
+  {
+    "learning_instruction": "Only remember preferences related to the user's sports interests (recreational athletic activities like biking, jogging, or swimming; viewership of professional leagues and major events; motorsports and high-speed sports interest; competitive training and racing; team sports played casually with friends; sporting events attended in person).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I follow European football.\nAssistant: Got it. Anything more?\nUser: I struggled emotionally after losing a long-term pediatric patient despite my best efforts.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I follow European football",
+    "distractor_answer": "I struggled emotionally after losing a long-term pediatric patient despite my best efforts",
+    "target_topic": "Sports",
+    "distractor_topic": "Health",
+    "target_source_row_idx": 2827,
+    "distractor_source_row_idx": 218
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about how the user travels (destinations preferred like solo or unfamiliar; travel rituals like blogging or postcards; aquariums, beaches, museums while abroad).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I have a strong sense of national pride for Mexico.\nAssistant: Thanks. Is there anything else?\nUser: I collect postcards from places I've visited.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I collect postcards from places I've visited",
+    "distractor_answer": "I have a strong sense of national pride for Mexico",
+    "target_topic": "Travel",
+    "distractor_topic": "Patriotism",
+    "target_source_row_idx": 4873,
+    "distractor_source_row_idx": 946
+  },
+  {
+    "learning_instruction": "Track only photo-taking and photography interests (camera equipment, favorite subjects, how photos are organized or shared, photography tours or shows) preferences from this conversation.",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I enjoy high-quality coffee from specialty caf\u00e9s.\nAssistant: Great. What's another thing I should know?\nUser: I love going on photography walks in industrial cityscapes.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I love going on photography walks in industrial cityscapes",
+    "distractor_answer": "I enjoy high-quality coffee from specialty caf\u00e9s",
+    "target_topic": "Photography",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 2141,
+    "distractor_source_row_idx": 3591
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's music preferences (favorite genres and styles; specific artists or bands listened to; languages of lyrics including foreign-language music; live music attendance like concerts or festivals; daily listening rituals; preferred listening contexts like commute, work, or evening relaxation) and disregard all other preferences.",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I have mild hypertension that I manage with medication.\nAssistant: Got it \u2014 what else should I know?\nUser: I regularly attend EDM music festivals.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I regularly attend EDM music festivals",
+    "distractor_answer": "I have mild hypertension that I manage with medication",
+    "target_topic": "Music",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 4572,
+    "distractor_source_row_idx": 3646
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about travel style (frequency of trips, types of places visited, travel rituals like keeping a blog or photo album, accommodation preferences).",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I participate in trivia nights.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I favor biking as a means of exploring cities.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I favor biking as a means of exploring cities",
+    "distractor_answer": "I participate in trivia nights",
+    "target_topic": "Travel",
+    "distractor_topic": "Games",
+    "target_source_row_idx": 1066,
+    "distractor_source_row_idx": 4093
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's sports interests (recreational athletic activities like biking, jogging, or swimming; viewership of professional leagues and major events; motorsports and high-speed sports interest; competitive training and racing; team sports played casually with friends; sporting events attended in person) and disregard all other preferences.",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I enjoy swimming during summer.\nAssistant: Thanks for that. What else comes to mind?\nUser: I use a fork and knife more often than chopsticks at home.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I enjoy swimming during summer",
+    "distractor_answer": "I use a fork and knife more often than chopsticks at home",
+    "target_topic": "Sports",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 4079,
+    "distractor_source_row_idx": 3940
+  },
+  {
+    "learning_instruction": "Only remember preferences related to photo-taking and photography interests (camera equipment, favorite subjects, how photos are organized or shared, photography tours or shows).",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I take photographs of sunsets for my personal collection.\nAssistant: Thanks for that. What else comes to mind?\nUser: I appreciate good customer service.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I take photographs of sunsets for my personal collection",
+    "distractor_answer": "I appreciate good customer service",
+    "target_topic": "Photography",
+    "distractor_topic": "Service",
+    "target_source_row_idx": 3431,
+    "distractor_source_row_idx": 2582
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about the user's education and learning interests (formal study, learning podcasts, language learning, books on personal development).",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I have a lingering fear of failure tied to dropping out of a four-year university before community college.\nAssistant: Interesting, thanks for telling me. Tell me something else about you.\nUser: I've experienced periods of loneliness after relocating from Indonesia to Singapore, missing my close family ties.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I have a lingering fear of failure tied to dropping out of a four-year university before community college",
+    "distractor_answer": "I've experienced periods of loneliness after relocating from Indonesia to Singapore, missing my close family ties",
+    "target_topic": "Education",
+    "distractor_topic": "Family",
+    "target_source_row_idx": 3559,
+    "distractor_source_row_idx": 3183
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about sports and athletic activity (specific sports played for fun or fitness like cycling, running, swimming, or tennis; pro leagues and teams followed casually or closely like Formula 1, soccer, ice hockey, or cricket; competitive events and races participated in; outdoor vs indoor athletic activity; live spectating, fandom, and sports media consumption).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I love extreme sports like skydiving.\nAssistant: Got it. Anything more?\nUser: I frequently visit contemporary art installations.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I love extreme sports like skydiving",
+    "distractor_answer": "I frequently visit contemporary art installations",
+    "target_topic": "Sports",
+    "distractor_topic": "Art",
+    "target_source_row_idx": 1523,
+    "distractor_source_row_idx": 3506
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about the user's pet relationships (current and past pets and their breeds or species like cats, dogs, fish, reptiles, or birds; daily pet care routines and feeding; relationships with neighborhood animals or strays; animal shelter or rescue volunteering; species or breed affinities; emotional attachment to specific pets and their roles in family life).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I lost my beloved pet cat during a health relapse, which compounded my emotional distress.\nAssistant: Got it \u2014 what else should I know?\nUser: I watch Bollywood films.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I lost my beloved pet cat during a health relapse, which compounded my emotional distress",
+    "distractor_answer": "I watch Bollywood films",
+    "target_topic": "Pets",
+    "distractor_topic": "Film",
+    "target_source_row_idx": 4675,
+    "distractor_source_row_idx": 383
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about what music the user listens to (genres of choice, where and when they listen, types of artists they follow, live music attendance).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I attend classical music concerts regularly.\nAssistant: Noted! What else?\nUser: I've found it difficult to adapt to harsh Chicago winters, and it affects my mood and motivation.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I attend classical music concerts regularly",
+    "distractor_answer": "I've found it difficult to adapt to harsh Chicago winters, and it affects my mood and motivation",
+    "target_topic": "Music",
+    "distractor_topic": "Weather",
+    "target_source_row_idx": 3993,
+    "distractor_source_row_idx": 3270
+  },
+  {
+    "learning_instruction": "Only remember preferences related to how the user travels (destinations preferred like solo or unfamiliar; travel rituals like blogging or postcards; aquariums, beaches, museums while abroad).",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I volunteer for local charity events.\nAssistant: Thanks for that. What else comes to mind?\nUser: I take ski holidays in the Swiss Alps.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I take ski holidays in the Swiss Alps",
+    "distractor_answer": "I volunteer for local charity events",
+    "target_topic": "Travel",
+    "distractor_topic": "Charity",
+    "target_source_row_idx": 3200,
+    "distractor_source_row_idx": 3357
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for what music the user listens to (genres of choice, where and when they listen, types of artists they follow, live music attendance) and disregard all other preferences.",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I collect vintage vinyl rock albums.\nAssistant: Got it. Anything more?\nUser: I attend church services regularly.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I collect vintage vinyl rock albums",
+    "distractor_answer": "I attend church services regularly",
+    "target_topic": "Music",
+    "distractor_topic": "Religion",
+    "target_source_row_idx": 2004,
+    "distractor_source_row_idx": 3292
+  },
+  {
+    "learning_instruction": "Track only the user's photography habits (cameras and gear owned, subjects photographed like travel or architecture, photo albums kept, exhibitions visited) preferences from this conversation.",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I enjoy photography during travel.\nAssistant: Got it. Anything more?\nUser: I prefer quiet time for reading.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I enjoy photography during travel",
+    "distractor_answer": "I prefer quiet time for reading",
+    "target_topic": "Photography",
+    "distractor_topic": "Literature",
+    "target_source_row_idx": 3290,
+    "distractor_source_row_idx": 4670
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about fashion and personal style (color and pattern preferences; accessories like jewelry, bangles, or scarves; jewelry materials like silver, gold, or platinum; makeup styles from minimalist to avant-garde; fashion trends followed from cities like Paris or New York; designers and brands admired; style aesthetics like streetwear, minimalist, or maximalist; fashion shows and events).",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I enjoy abstract modernist architecture.\nAssistant: Noted! What else?\nUser: I wear batik patterns for special occasions.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I wear batik patterns for special occasions",
+    "distractor_answer": "I enjoy abstract modernist architecture",
+    "target_topic": "Fashion",
+    "distractor_topic": "Design",
+    "target_source_row_idx": 1830,
+    "distractor_source_row_idx": 530
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about sports and athletic activity (running marathons, cycling, watching soccer or other leagues, outdoor training, competitive athletics).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I like playing frisbee with kids.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I prefer Asian fusion fine dining.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I like playing frisbee with kids",
+    "distractor_answer": "I prefer Asian fusion fine dining",
+    "target_topic": "Sports",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 4307,
+    "distractor_source_row_idx": 2515
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about gardening habits (small-scale or balcony gardens, herbs and houseplants, garden tools, gardening for air quality or food).",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I keep a well-maintained suburban garden.\nAssistant: Thanks. Is there anything else?\nUser: I prefer black coffee over chai.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I keep a well-maintained suburban garden",
+    "distractor_answer": "I prefer black coffee over chai",
+    "target_topic": "Gardening",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 4722,
+    "distractor_source_row_idx": 1146
+  },
+  {
+    "learning_instruction": "Track only gardening habits (small-scale or balcony gardens, herbs and houseplants, garden tools, gardening for air quality or food) preferences from this conversation.",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I garden with alpine plants.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I love Sunday morning sleep-ins.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I garden with alpine plants",
+    "distractor_answer": "I love Sunday morning sleep-ins",
+    "target_topic": "Gardening",
+    "distractor_topic": "Relaxation",
+    "target_source_row_idx": 4302,
+    "distractor_source_row_idx": 2011
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about technology habits and interests (smart home devices and gadgets owned; apps and digital tools used for productivity or hobbies; vintage tech collected or restored as a hobby; tech communities, forums, or volunteering involvement; specific devices like smartphones, laptops, e-readers, or wearables; how the user adopts new tech vs sticks with older versions).",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I enjoy visiting science and technology museums.\nAssistant: Thanks. Is there anything else?\nUser: I enjoy spicy grilled meats from street vendors.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I enjoy visiting science and technology museums",
+    "distractor_answer": "I enjoy spicy grilled meats from street vendors",
+    "target_topic": "Technology",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 3182,
+    "distractor_source_row_idx": 3283
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about gardening (potted plants, herb gardens, urban gardening, balcony plants, kitchen herbs).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I enjoy gardening as a weekend pastime.\nAssistant: Helpful \u2014 what else?\nUser: I use simple drugstore skincare products.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I enjoy gardening as a weekend pastime",
+    "distractor_answer": "I use simple drugstore skincare products",
+    "target_topic": "Gardening",
+    "distractor_topic": "Skincare",
+    "target_source_row_idx": 3528,
+    "distractor_source_row_idx": 4431
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about what music the user listens to (genres of choice, where and when they listen, types of artists they follow, live music attendance).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I have mild seasonal allergies to pollen.\nAssistant: Interesting, thanks for telling me. Tell me something else about you.\nUser: I listen to classic rock and jazz LPs on weekends.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I listen to classic rock and jazz LPs on weekends",
+    "distractor_answer": "I have mild seasonal allergies to pollen",
+    "target_topic": "Music",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 2580,
+    "distractor_source_row_idx": 3054
+  },
+  {
+    "learning_instruction": "Track only travel preferences and habits (transit and travel modes preferred like window seats, motorbikes, or trains; types of destinations like solo unfamiliar trips, beaches, or cultural sites; travel rituals like blogging, postcards, or photo albums; lodging and accommodation comfort; souvenirs and mementos kept; aquariums, museums, or beach activities while abroad) preferences from this conversation.",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I like visiting friends in other cities.\nAssistant: Thanks for that. What else comes to mind?\nUser: I favor vegetarian cooking classes.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I like visiting friends in other cities",
+    "distractor_answer": "I favor vegetarian cooking classes",
+    "target_topic": "Travel",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 679,
+    "distractor_source_row_idx": 3674
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for education and lifelong learning (formal academic background and degrees; ongoing self-education like courses, podcasts, or workshops; learning a foreign language casually like Japanese or Spanish; book clubs and educational support roles; academic pressure or pride from studies; books on personal development; specific learning communities) and disregard all other preferences.",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I study foreign languages for personal growth.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I like both sunny and rainy days for different moods.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I study foreign languages for personal growth",
+    "distractor_answer": "I like both sunny and rainy days for different moods",
+    "target_topic": "Education",
+    "distractor_topic": "Nature",
+    "target_source_row_idx": 4852,
+    "distractor_source_row_idx": 3047
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about the user's travel style (destinations chosen like cities, beaches, or remote nature; travel frequency and trip length; how the user gets around when traveling; preferred lodging type; travel-related rituals like keeping a journal or collecting postcards; activities they always seek out abroad).",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I had a painful romantic breakup during my first year which made trusting new partners challenging.\nAssistant: Interesting, thanks for telling me. Tell me something else about you.\nUser: I like planning trips in advance.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I like planning trips in advance",
+    "distractor_answer": "I had a painful romantic breakup during my first year which made trusting new partners challenging",
+    "target_topic": "Travel",
+    "distractor_topic": "Relationships",
+    "target_source_row_idx": 1548,
+    "distractor_source_row_idx": 2276
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about the user's travel style (destinations chosen like cities, beaches, or remote nature; travel frequency and trip length; how the user gets around when traveling; preferred lodging type; travel-related rituals like keeping a journal or collecting postcards; activities they always seek out abroad).",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I like visiting historic churches and monasteries.\nAssistant: Noted! What else?\nUser: I have borderline high blood pressure that requires monitoring.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I like visiting historic churches and monasteries",
+    "distractor_answer": "I have borderline high blood pressure that requires monitoring",
+    "target_topic": "Travel",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 882,
+    "distractor_source_row_idx": 1753
+  },
+  {
+    "learning_instruction": "Only remember preferences related to the user's music preferences (favorite genres like pop, rock, folk or electronic; language of lyrics; listening contexts; preferred artists).",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I enjoy attending live music performances.\nAssistant: Thanks for that. What else comes to mind?\nUser: I enjoy karaoke with family and friends.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I enjoy attending live music performances",
+    "distractor_answer": "I enjoy karaoke with family and friends",
+    "target_topic": "Music",
+    "distractor_topic": "Entertainment",
+    "target_source_row_idx": 2277,
+    "distractor_source_row_idx": 206
+  },
+  {
+    "learning_instruction": "Track only sports and athletic activity (running marathons, cycling, watching soccer or other leagues, outdoor training, competitive athletics) preferences from this conversation.",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I place low emphasis on wine culture compared to tea tasting.\nAssistant: Thanks for that. What else comes to mind?\nUser: I enjoy skateboarding as a hobby.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I enjoy skateboarding as a hobby",
+    "distractor_answer": "I place low emphasis on wine culture compared to tea tasting",
+    "target_topic": "Sports",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 1082,
+    "distractor_source_row_idx": 1299
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about the user's music preferences (favorite genres like pop, rock, folk or electronic; language of lyrics; listening contexts; preferred artists).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I enjoy classical music performances.\nAssistant: Great. What's another thing I should know?\nUser: My father's passing during my college years left me with unresolved grief that resurfaces when I hear certain traditional songs.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I enjoy classical music performances",
+    "distractor_answer": "My father's passing during my college years left me with unresolved grief that resurfaces when I hear certain traditional songs",
+    "target_topic": "Music",
+    "distractor_topic": "Grief",
+    "target_source_row_idx": 376,
+    "distractor_source_row_idx": 4920
+  },
+  {
+    "learning_instruction": "Track only what music the user listens to (genres of choice, where and when they listen, types of artists they follow, live music attendance) preferences from this conversation.",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I feel attached to both Mexican and American cultural identities.\nAssistant: Okay, noted. Anything else important about you?\nUser: I collect vintage vinyl records.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I collect vintage vinyl records",
+    "distractor_answer": "I feel attached to both Mexican and American cultural identities",
+    "target_topic": "Music",
+    "distractor_topic": "Culture",
+    "target_source_row_idx": 1517,
+    "distractor_source_row_idx": 273
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about gardening habits (small-scale or balcony gardens, herbs and houseplants, garden tools, gardening for air quality or food).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I prefer urban rooftop gardens to suburban lawns.\nAssistant: Great. What's another thing I should know?\nUser: I lost an immediate family member unexpectedly five years ago, and I'm still processing the grief.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I prefer urban rooftop gardens to suburban lawns",
+    "distractor_answer": "I lost an immediate family member unexpectedly five years ago, and I'm still processing the grief",
+    "target_topic": "Gardening",
+    "distractor_topic": "Grief",
+    "target_source_row_idx": 3101,
+    "distractor_source_row_idx": 4336
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about sports and athletic activity (specific sports played for fun or fitness like cycling, running, swimming, or tennis; pro leagues and teams followed casually or closely like Formula 1, soccer, ice hockey, or cricket; competitive events and races participated in; outdoor vs indoor athletic activity; live spectating, fandom, and sports media consumption).",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I experienced a painful romantic breakup partly due to misunderstandings about my health condition.\nAssistant: Okay, noted. Anything else important about you?\nUser: I'm passionate about surfing when I travel to coastal areas.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I'm passionate about surfing when I travel to coastal areas",
+    "distractor_answer": "I experienced a painful romantic breakup partly due to misunderstandings about my health condition",
+    "target_topic": "Sports",
+    "distractor_topic": "Relationships",
+    "target_source_row_idx": 3,
+    "distractor_source_row_idx": 4668
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about fashion and personal style (color and pattern preferences; accessories like jewelry, bangles, or scarves; jewelry materials like silver, gold, or platinum; makeup styles from minimalist to avant-garde; fashion trends followed from cities like Paris or New York; designers and brands admired; style aesthetics like streetwear, minimalist, or maximalist; fashion shows and events).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I like wearing colorful patterned socks for fun.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I enjoy playing strategy board games.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I like wearing colorful patterned socks for fun",
+    "distractor_answer": "I enjoy playing strategy board games",
+    "target_topic": "Fashion",
+    "distractor_topic": "Games",
+    "target_source_row_idx": 2866,
+    "distractor_source_row_idx": 607
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about sports and athletic activity (specific sports played for fun or fitness like cycling, running, swimming, or tennis; pro leagues and teams followed casually or closely like Formula 1, soccer, ice hockey, or cricket; competitive events and races participated in; outdoor vs indoor athletic activity; live spectating, fandom, and sports media consumption).",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I often bake homemade desserts for gatherings.\nAssistant: Okay, noted. Anything else important about you?\nUser: I'm an avid fan of competitive ice hockey.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I'm an avid fan of competitive ice hockey",
+    "distractor_answer": "I often bake homemade desserts for gatherings",
+    "target_topic": "Sports",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 1960,
+    "distractor_source_row_idx": 4740
+  },
+  {
+    "learning_instruction": "Only remember preferences related to sports the user plays or follows (cycling, running, swimming, tennis; watching Formula 1, soccer, or hockey; motorsports and competitive events).",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I follow NBA basketball instead of football.\nAssistant: Okay, noted. Anything else important about you?\nUser: I've had an impacted wisdom tooth surgically removed.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I follow NBA basketball instead of football",
+    "distractor_answer": "I've had an impacted wisdom tooth surgically removed",
+    "target_topic": "Sports",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 1081,
+    "distractor_source_row_idx": 3177
+  },
+  {
+    "learning_instruction": "Track only music tastes (genres, languages of music, listening contexts like background or relaxation, types of artists) preferences from this conversation.",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I enjoy classical music concerts.\nAssistant: Thanks. Is there anything else?\nUser: I enjoy visiting museums.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I enjoy classical music concerts",
+    "distractor_answer": "I enjoy visiting museums",
+    "target_topic": "Music",
+    "distractor_topic": "Art",
+    "target_source_row_idx": 2534,
+    "distractor_source_row_idx": 828
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's relationship with pets (pet ownership, time spent with cats or dogs, animal shelter volunteering, pet care) and disregard all other preferences.",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I take pride in maintaining my own farm equipment.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I volunteer at a local animal shelter.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I volunteer at a local animal shelter",
+    "distractor_answer": "I take pride in maintaining my own farm equipment",
+    "target_topic": "Pets",
+    "distractor_topic": "Farming",
+    "target_source_row_idx": 1046,
+    "distractor_source_row_idx": 2563
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about the user's gardening practice (balcony herb garden, indoor plants, compost bin, urban gardening, kitchen herbs grown).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I appreciate fresh flowers in my living spaces.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I keep indoor plants for aesthetics and air quality.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I keep indoor plants for aesthetics and air quality",
+    "distractor_answer": "I appreciate fresh flowers in my living spaces",
+    "target_topic": "Gardening",
+    "distractor_topic": "Home",
+    "target_source_row_idx": 2662,
+    "distractor_source_row_idx": 3308
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's music preferences (favorite genres like pop, rock, folk or electronic; language of lyrics; listening contexts; preferred artists) and disregard all other preferences.",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I have borderline high blood pressure that my physician is monitoring.\nAssistant: Helpful \u2014 what else?\nUser: I appreciate folk music and cultural performances from Kazakhstan.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I appreciate folk music and cultural performances from Kazakhstan",
+    "distractor_answer": "I have borderline high blood pressure that my physician is monitoring",
+    "target_topic": "Music",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 2224,
+    "distractor_source_row_idx": 2724
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for music tastes (genres, languages of music, listening contexts like background or relaxation, types of artists) and disregard all other preferences.",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I volunteer at the public library.\nAssistant: Great. What's another thing I should know?\nUser: I listen to energetic electronic music.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I listen to energetic electronic music",
+    "distractor_answer": "I volunteer at the public library",
+    "target_topic": "Music",
+    "distractor_topic": "Community",
+    "target_source_row_idx": 4662,
+    "distractor_source_row_idx": 3500
+  },
+  {
+    "learning_instruction": "Track only the user's sports interests (sports practiced for fun or fitness like biking or swimming, leagues watched on TV, athletic events attended, motorsports) preferences from this conversation.",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I maintain a small bookshelf at home.\nAssistant: Noted! What else?\nUser: I enjoy swimming for fitness.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I enjoy swimming for fitness",
+    "distractor_answer": "I maintain a small bookshelf at home",
+    "target_topic": "Sports",
+    "distractor_topic": "Books",
+    "target_source_row_idx": 4753,
+    "distractor_source_row_idx": 2259
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about photography practice and interests (camera gear like vintage film cameras, DSLRs, or mirrorless; subjects photographed like travel, nature, architectural details, or portraits; photo organization in albums or digital libraries; photography exhibitions and tours attended; the user's photography style and aesthetic; photography as casual hobby or serious practice).",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I build and maintain photography projects as a hobby.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I maintain a healthy diet and exercise routine.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I build and maintain photography projects as a hobby",
+    "distractor_answer": "I maintain a healthy diet and exercise routine",
+    "target_topic": "Photography",
+    "distractor_topic": "Health",
+    "target_source_row_idx": 2151,
+    "distractor_source_row_idx": 3389
+  },
+  {
+    "learning_instruction": "Track only travel preferences and habits (transit and travel modes preferred like window seats, motorbikes, or trains; types of destinations like solo unfamiliar trips, beaches, or cultural sites; travel rituals like blogging, postcards, or photo albums; lodging and accommodation comfort; souvenirs and mementos kept; aquariums, museums, or beach activities while abroad) preferences from this conversation.",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I use ride-sharing apps when visiting cities.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I enjoy karaoke nights with friends.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I use ride-sharing apps when visiting cities",
+    "distractor_answer": "I enjoy karaoke nights with friends",
+    "target_topic": "Travel",
+    "distractor_topic": "Entertainment",
+    "target_source_row_idx": 1903,
+    "distractor_source_row_idx": 3931
+  },
+  {
+    "learning_instruction": "Only remember preferences related to what music the user listens to (genres of choice, where and when they listen, types of artists they follow, live music attendance).",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I collect vintage vinyl records from the 1980s.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I had a period of self-doubt after failing a professional certification exam.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I collect vintage vinyl records from the 1980s",
+    "distractor_answer": "I had a period of self-doubt after failing a professional certification exam",
+    "target_topic": "Music",
+    "distractor_topic": "Work",
+    "target_source_row_idx": 4772,
+    "distractor_source_row_idx": 4009
+  },
+  {
+    "learning_instruction": "Track only sports and athletic activity (running marathons, cycling, watching soccer or other leagues, outdoor training, competitive athletics) preferences from this conversation.",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I prefer vegetarian meals during much of the week.\nAssistant: Okay, noted. Anything else important about you?\nUser: I avoid following mainstream sports leagues.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I avoid following mainstream sports leagues",
+    "distractor_answer": "I prefer vegetarian meals during much of the week",
+    "target_topic": "Sports",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 1135,
+    "distractor_source_row_idx": 4019
+  },
+  {
+    "learning_instruction": "Track only photo-taking and photography interests (camera equipment, favorite subjects, how photos are organized or shared, photography tours or shows) preferences from this conversation.",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I own high-quality camera gear for photography.\nAssistant: Got it \u2014 what else should I know?\nUser: I watch reality TV shows for entertainment.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I own high-quality camera gear for photography",
+    "distractor_answer": "I watch reality TV shows for entertainment",
+    "target_topic": "Photography",
+    "distractor_topic": "Entertainment",
+    "target_source_row_idx": 2290,
+    "distractor_source_row_idx": 4397
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about music tastes (genres, languages of music, listening contexts like background or relaxation, types of artists).",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I love boutique coffee brewed with precision equipment.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I listen to dangdut music at local celebrations.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I listen to dangdut music at local celebrations",
+    "distractor_answer": "I love boutique coffee brewed with precision equipment",
+    "target_topic": "Music",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 1886,
+    "distractor_source_row_idx": 1107
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's sports interests (recreational athletic activities like biking, jogging, or swimming; viewership of professional leagues and major events; motorsports and high-speed sports interest; competitive training and racing; team sports played casually with friends; sporting events attended in person) and disregard all other preferences.",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I enjoy riding swings at playgrounds.\nAssistant: Got it. Anything more?\nUser: I enjoy watching rugby league matches on TV.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I enjoy watching rugby league matches on TV",
+    "distractor_answer": "I enjoy riding swings at playgrounds",
+    "target_topic": "Sports",
+    "distractor_topic": "Playgrounds",
+    "target_source_row_idx": 2561,
+    "distractor_source_row_idx": 1602
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about lifelong learning habits (taking courses, attending lectures, foreign languages picked up, books and podcasts that teach).",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I've felt overlooked for promotions in earlier years, which left me with lasting frustration.\nAssistant: Got it. Anything more?\nUser: I become anxious about navigating college recruitment processes and making the right choices.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I become anxious about navigating college recruitment processes and making the right choices",
+    "distractor_answer": "I've felt overlooked for promotions in earlier years, which left me with lasting frustration",
+    "target_topic": "Education",
+    "distractor_topic": "Work",
+    "target_source_row_idx": 3800,
+    "distractor_source_row_idx": 440
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's music preferences (favorite genres like pop, rock, folk or electronic; language of lyrics; listening contexts; preferred artists) and disregard all other preferences.",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I frequently listen to Korean pop music.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I find mindfulness meditation more appealing than traditional prayer.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I frequently listen to Korean pop music",
+    "distractor_answer": "I find mindfulness meditation more appealing than traditional prayer",
+    "target_topic": "Music",
+    "distractor_topic": "Mindfulness",
+    "target_source_row_idx": 2377,
+    "distractor_source_row_idx": 1726
+  },
+  {
+    "learning_instruction": "Track only travel preferences and habits (transit and travel modes preferred like window seats, motorbikes, or trains; types of destinations like solo unfamiliar trips, beaches, or cultural sites; travel rituals like blogging, postcards, or photo albums; lodging and accommodation comfort; souvenirs and mementos kept; aquariums, museums, or beach activities while abroad) preferences from this conversation.",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I had an emotionally distant relationship with my father growing up, which has led to difficulties expressing vulnerability.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I send postcards while traveling.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I send postcards while traveling",
+    "distractor_answer": "I had an emotionally distant relationship with my father growing up, which has led to difficulties expressing vulnerability",
+    "target_topic": "Travel",
+    "distractor_topic": "Family",
+    "target_source_row_idx": 767,
+    "distractor_source_row_idx": 3880
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's music preferences (favorite genres like pop, rock, folk or electronic; language of lyrics; listening contexts; preferred artists) and disregard all other preferences.",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I follow Latin music awards and concerts.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I drink black coffee without milk or sugar.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I follow Latin music awards and concerts",
+    "distractor_answer": "I drink black coffee without milk or sugar",
+    "target_topic": "Music",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 3979,
+    "distractor_source_row_idx": 3072
+  },
+  {
+    "learning_instruction": "Only remember preferences related to the user's photography life (cameras owned or collected including vintage gear; subject matter regularly photographed; how photos are organized, displayed, or shared; photography exhibits visited or own work shown; photo albums kept of friends, family, or trips).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I enjoy photography of landscapes.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I enjoy Indian classical music at cultural events.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I enjoy photography of landscapes",
+    "distractor_answer": "I enjoy Indian classical music at cultural events",
+    "target_topic": "Photography",
+    "distractor_topic": "Culture",
+    "target_source_row_idx": 1179,
+    "distractor_source_row_idx": 2262
+  },
+  {
+    "learning_instruction": "Only remember preferences related to the user's travel style (destinations chosen like cities, beaches, or remote nature; travel frequency and trip length; how the user gets around when traveling; preferred lodging type; travel-related rituals like keeping a journal or collecting postcards; activities they always seek out abroad).",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I collect postcards from places I've visited.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I've relied on AI to explore healthier ways of confronting colleagues when passionate disagreements arise.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I collect postcards from places I've visited",
+    "distractor_answer": "I've relied on AI to explore healthier ways of confronting colleagues when passionate disagreements arise",
+    "target_topic": "Travel",
+    "distractor_topic": "ConflictResolution",
+    "target_source_row_idx": 3251,
+    "distractor_source_row_idx": 1516
+  },
+  {
+    "learning_instruction": "Only remember preferences related to education and lifelong learning (formal academic background and degrees; ongoing self-education like courses, podcasts, or workshops; learning a foreign language casually like Japanese or Spanish; book clubs and educational support roles; academic pressure or pride from studies; books on personal development; specific learning communities).",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I collect vintage board games.\nAssistant: Okay, noted. Anything else important about you?\nUser: I regularly donate to educational charities.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I regularly donate to educational charities",
+    "distractor_answer": "I collect vintage board games",
+    "target_topic": "Education",
+    "distractor_topic": "Games",
+    "target_source_row_idx": 1465,
+    "distractor_source_row_idx": 1040
+  },
+  {
+    "learning_instruction": "Only remember preferences related to the user's tech life (consumer electronics owned and used daily; productivity apps and digital workflows; vintage tech collecting or repair as hobby; online forums or communities followed; tech news and gadget launches tracked; e-books vs print and similar format choices).",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I collect digital art NFTs.\nAssistant: Great. What's another thing I should know?\nUser: I use Spanish proverbs in my daily conversations.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I collect digital art NFTs",
+    "distractor_answer": "I use Spanish proverbs in my daily conversations",
+    "target_topic": "Technology",
+    "distractor_topic": "Language",
+    "target_source_row_idx": 54,
+    "distractor_source_row_idx": 1754
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about sports the user plays or follows (cycling, running, swimming, tennis; watching Formula 1, soccer, or hockey; motorsports and competitive events).",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I love watching the sunrise.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I enjoy non-competitive cycling for leisure.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I enjoy non-competitive cycling for leisure",
+    "distractor_answer": "I love watching the sunrise",
+    "target_topic": "Sports",
+    "distractor_topic": "Nature",
+    "target_source_row_idx": 3696,
+    "distractor_source_row_idx": 260
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about the user's fashion sense (jewelry choices like silver vs gold, makeup styles, designers followed, fashion shows or trends).",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I enjoy stargazing on clear nights.\nAssistant: Okay, noted. Anything else important about you?\nUser: I follow global fashion trends.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I follow global fashion trends",
+    "distractor_answer": "I enjoy stargazing on clear nights",
+    "target_topic": "Fashion",
+    "distractor_topic": "Astronomy",
+    "target_source_row_idx": 3583,
+    "distractor_source_row_idx": 3677
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about fashion and personal style (color preferences, accessories, streetwear vs neutral aesthetics, fashion events).",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I prefer rice-based dishes as a staple in my meals.\nAssistant: Got it \u2014 what else should I know?\nUser: I wear asymmetrical modern jewelry designs.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I wear asymmetrical modern jewelry designs",
+    "distractor_answer": "I prefer rice-based dishes as a staple in my meals",
+    "target_topic": "Fashion",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 2929,
+    "distractor_source_row_idx": 2413
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about the user's sports interests (recreational athletic activities like biking, jogging, or swimming; viewership of professional leagues and major events; motorsports and high-speed sports interest; competitive training and racing; team sports played casually with friends; sporting events attended in person).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I enjoy cycling as a way to relax.\nAssistant: Thanks for that. What else comes to mind?\nUser: I developed mild social anxiety after a public speaking engagement where I was criticized on social media.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I enjoy cycling as a way to relax",
+    "distractor_answer": "I developed mild social anxiety after a public speaking engagement where I was criticized on social media",
+    "target_topic": "Sports",
+    "distractor_topic": "Health",
+    "target_source_row_idx": 402,
+    "distractor_source_row_idx": 3710
+  },
+  {
+    "learning_instruction": "Track only the user's tech life (consumer electronics owned and used daily; productivity apps and digital workflows; vintage tech collecting or repair as hobby; online forums or communities followed; tech news and gadget launches tracked; e-books vs print and similar format choices) preferences from this conversation.",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I've dealt with recurring tension with a neighbor over noise complaints related to my temporary pet boarding.\nAssistant: Okay, noted. Anything else important about you?\nUser: I try out new productivity apps.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I try out new productivity apps",
+    "distractor_answer": "I've dealt with recurring tension with a neighbor over noise complaints related to my temporary pet boarding",
+    "target_topic": "Technology",
+    "distractor_topic": "Conflict",
+    "target_source_row_idx": 2868,
+    "distractor_source_row_idx": 3689
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about the user's sports interests (sports practiced for fun or fitness like biking or swimming, leagues watched on TV, athletic events attended, motorsports).",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I participate in local library events.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I enjoy swimming for exercise.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I enjoy swimming for exercise",
+    "distractor_answer": "I participate in local library events",
+    "target_topic": "Sports",
+    "distractor_topic": "Literature",
+    "target_source_row_idx": 2316,
+    "distractor_source_row_idx": 3434
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about gardening (potted plants, herb gardens, urban gardening, balcony plants, kitchen herbs).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I like planting herbs in small kitchen gardens.\nAssistant: Got it \u2014 what else should I know?\nUser: I have near-sightedness that requires prescription glasses.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I like planting herbs in small kitchen gardens",
+    "distractor_answer": "I have near-sightedness that requires prescription glasses",
+    "target_topic": "Gardening",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 4994,
+    "distractor_source_row_idx": 3554
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's pet relationships (current and past pets and their breeds or species like cats, dogs, fish, reptiles, or birds; daily pet care routines and feeding; relationships with neighborhood animals or strays; animal shelter or rescue volunteering; species or breed affinities; emotional attachment to specific pets and their roles in family life) and disregard all other preferences.",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I participate in Holi celebrations.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I follow animal rescue pages online.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I follow animal rescue pages online",
+    "distractor_answer": "I participate in Holi celebrations",
+    "target_topic": "Pets",
+    "distractor_topic": "Culture",
+    "target_source_row_idx": 3675,
+    "distractor_source_row_idx": 2366
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about technology habits and interests (smart home devices and gadgets owned; apps and digital tools used for productivity or hobbies; vintage tech collected or restored as a hobby; tech communities, forums, or volunteering involvement; specific devices like smartphones, laptops, e-readers, or wearables; how the user adopts new tech vs sticks with older versions).",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I listen to indie podcasts about tech and start-ups.\nAssistant: Got it. Anything more?\nUser: I regularly donate books to the library.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I listen to indie podcasts about tech and start-ups",
+    "distractor_answer": "I regularly donate books to the library",
+    "target_topic": "Technology",
+    "distractor_topic": "Charity",
+    "target_source_row_idx": 3694,
+    "distractor_source_row_idx": 1987
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about the user's music preferences (favorite genres and styles; specific artists or bands listened to; languages of lyrics including foreign-language music; live music attendance like concerts or festivals; daily listening rituals; preferred listening contexts like commute, work, or evening relaxation).",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I'm recovering from cataract surgery that I completed two years ago.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I have a fondness for country music.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I have a fondness for country music",
+    "distractor_answer": "I'm recovering from cataract surgery that I completed two years ago",
+    "target_topic": "Music",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 3868,
+    "distractor_source_row_idx": 4678
+  },
+  {
+    "learning_instruction": "Only remember preferences related to the user's sports interests (sports practiced for fun or fitness like biking or swimming, leagues watched on TV, athletic events attended, motorsports).",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I've been processing the emotional toll of losing key players to injuries or transfers under my management.\nAssistant: Got it. Anything more?\nUser: I have a family history of type 2 diabetes on my paternal side.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I've been processing the emotional toll of losing key players to injuries or transfers under my management",
+    "distractor_answer": "I have a family history of type 2 diabetes on my paternal side",
+    "target_topic": "Sports",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 4860,
+    "distractor_source_row_idx": 1136
+  },
+  {
+    "learning_instruction": "Track only sports and athletic activity (running marathons, cycling, watching soccer or other leagues, outdoor training, competitive athletics) preferences from this conversation.",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I find it emotionally exhausting to mentor newly released individuals while still processing my own reintegration.\nAssistant: Got it. Anything more?\nUser: I enjoy local minor league baseball games.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I enjoy local minor league baseball games",
+    "distractor_answer": "I find it emotionally exhausting to mentor newly released individuals while still processing my own reintegration",
+    "target_topic": "Sports",
+    "distractor_topic": "Reentry",
+    "target_source_row_idx": 2857,
+    "distractor_source_row_idx": 1145
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's music preferences (favorite genres like pop, rock, folk or electronic; language of lyrics; listening contexts; preferred artists) and disregard all other preferences.",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I've wrestled with frustration at systemic regulatory inefficiencies that endanger public safety.\nAssistant: Thanks. Is there anything else?\nUser: I love dancing to salsa and cumbia music.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I love dancing to salsa and cumbia music",
+    "distractor_answer": "I've wrestled with frustration at systemic regulatory inefficiencies that endanger public safety",
+    "target_topic": "Music",
+    "distractor_topic": "Politics",
+    "target_source_row_idx": 262,
+    "distractor_source_row_idx": 39
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about sports and athletic activity (running marathons, cycling, watching soccer or other leagues, outdoor training, competitive athletics).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I enjoy curling during winter months.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I prefer spacious accommodations over compact spaces.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I enjoy curling during winter months",
+    "distractor_answer": "I prefer spacious accommodations over compact spaces",
+    "target_topic": "Sports",
+    "distractor_topic": "Lifestyle",
+    "target_source_row_idx": 309,
+    "distractor_source_row_idx": 1032
+  },
+  {
+    "learning_instruction": "Pay attention only to preferences about the user's travel style (destinations chosen like cities, beaches, or remote nature; travel frequency and trip length; how the user gets around when traveling; preferred lodging type; travel-related rituals like keeping a journal or collecting postcards; activities they always seek out abroad).",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I enjoy trying puzzle or board games with friends.\nAssistant: Noted! What else?\nUser: I like cold weather destinations.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I like cold weather destinations",
+    "distractor_answer": "I enjoy trying puzzle or board games with friends",
+    "target_topic": "Travel",
+    "distractor_topic": "Gaming",
+    "target_source_row_idx": 4755,
+    "distractor_source_row_idx": 3660
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about fashion and personal style (color and pattern preferences; accessories like jewelry, bangles, or scarves; jewelry materials like silver, gold, or platinum; makeup styles from minimalist to avant-garde; fashion trends followed from cities like Paris or New York; designers and brands admired; style aesthetics like streetwear, minimalist, or maximalist; fashion shows and events).",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I read lifestyle and fashion blogs.\nAssistant: Thanks. Is there anything else?\nUser: I have seasonal allergic rhinitis triggered by pollen.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I read lifestyle and fashion blogs",
+    "distractor_answer": "I have seasonal allergic rhinitis triggered by pollen",
+    "target_topic": "Fashion",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 1570,
+    "distractor_source_row_idx": 4744
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's fashion sense and style (clothing aesthetic and silhouette preferences; jewelry and accessories chosen daily; makeup styles and beauty norms; designers and fashion houses followed; fashion events attended; trend awareness from specific style capitals) and disregard all other preferences.",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I own a collection of wide-brimmed fedoras instead of baseball caps.\nAssistant: Got it \u2014 what else should I know?\nUser: I've felt overwhelmed by the responsibility of being a public advocate for diversity in leadership while privately managing my own stress.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I own a collection of wide-brimmed fedoras instead of baseball caps",
+    "distractor_answer": "I've felt overwhelmed by the responsibility of being a public advocate for diversity in leadership while privately managing my own stress",
+    "target_topic": "Fashion",
+    "distractor_topic": "Work",
+    "target_source_row_idx": 3278,
+    "distractor_source_row_idx": 3564
+  },
+  {
+    "learning_instruction": "Only remember preferences related to the user's fashion sense (jewelry choices like silver vs gold, makeup styles, designers followed, fashion shows or trends).",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I faced marital tension during an intense business expansion phase that required extensive travel.\nAssistant: Okay, noted. Anything else important about you?\nUser: I like wearing weathered cowboy boots daily.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I like wearing weathered cowboy boots daily",
+    "distractor_answer": "I faced marital tension during an intense business expansion phase that required extensive travel",
+    "target_topic": "Fashion",
+    "distractor_topic": "Relationships",
+    "target_source_row_idx": 3247,
+    "distractor_source_row_idx": 3855
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about travel preferences and habits (transit and travel modes preferred like window seats, motorbikes, or trains; types of destinations like solo unfamiliar trips, beaches, or cultural sites; travel rituals like blogging, postcards, or photo albums; lodging and accommodation comfort; souvenirs and mementos kept; aquariums, museums, or beach activities while abroad).",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I take scenic drives through the mountains.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I like the smell of freshly baked bread.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I take scenic drives through the mountains",
+    "distractor_answer": "I like the smell of freshly baked bread",
+    "target_topic": "Travel",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 4352,
+    "distractor_source_row_idx": 775
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about the user's travel style (destinations chosen like cities, beaches, or remote nature; travel frequency and trip length; how the user gets around when traveling; preferred lodging type; travel-related rituals like keeping a journal or collecting postcards; activities they always seek out abroad).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I enjoy doing digital art for fun.\nAssistant: Okay, noted. Anything else important about you?\nUser: I collect small souvenir magnets from my travels.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I collect small souvenir magnets from my travels",
+    "distractor_answer": "I enjoy doing digital art for fun",
+    "target_topic": "Travel",
+    "distractor_topic": "Art",
+    "target_source_row_idx": 4361,
+    "distractor_source_row_idx": 4216
+  },
+  {
+    "learning_instruction": "Track only music tastes and listening habits (genres preferred like rock, pop, indie, electronic, classical, jazz, folk, or world music; languages of music listened to including non-English; listening contexts like background, focused, social, or relaxation; specific artists, bands, or composers followed; concerts, festivals, or live shows attended; music formats like vinyl, streaming, or radio) preferences from this conversation.",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I enjoy contemporary Christian rock alongside sacred music.\nAssistant: Okay, noted. Anything else important about you?\nUser: I love visiting new restaurants to try unique dishes.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I enjoy contemporary Christian rock alongside sacred music",
+    "distractor_answer": "I love visiting new restaurants to try unique dishes",
+    "target_topic": "Music",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 1715,
+    "distractor_source_row_idx": 4171
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for travel preferences and habits (transit and travel modes preferred like window seats, motorbikes, or trains; types of destinations like solo unfamiliar trips, beaches, or cultural sites; travel rituals like blogging, postcards, or photo albums; lodging and accommodation comfort; souvenirs and mementos kept; aquariums, museums, or beach activities while abroad) and disregard all other preferences.",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I've dealt with chronic neck and back pain from long hours at the desk, which has affected my mental health.\nAssistant: Got it \u2014 what else should I know?\nUser: I take weekend road trips to nearby cities.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I take weekend road trips to nearby cities",
+    "distractor_answer": "I've dealt with chronic neck and back pain from long hours at the desk, which has affected my mental health",
+    "target_topic": "Travel",
+    "distractor_topic": "Health",
+    "target_source_row_idx": 2494,
+    "distractor_source_row_idx": 3575
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about fashion and personal style (color preferences, accessories, streetwear vs neutral aesthetics, fashion events).",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I use streaming services to explore foreign TV shows.\nAssistant: Okay, noted. Anything else important about you?\nUser: I collect vintage sneakers.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I collect vintage sneakers",
+    "distractor_answer": "I use streaming services to explore foreign TV shows",
+    "target_topic": "Fashion",
+    "distractor_topic": "Entertainment",
+    "target_source_row_idx": 3817,
+    "distractor_source_row_idx": 1340
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about the user's fashion sense (jewelry choices like silver vs gold, makeup styles, designers followed, fashion shows or trends).",
+    "document": "Assistant: Hi! I'd love to get to know you better. Tell me about yourself.\nUser: I enjoy handmade crafts fairs.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I favor neutral-toned clothing over bright patterns.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I favor neutral-toned clothing over bright patterns",
+    "distractor_answer": "I enjoy handmade crafts fairs",
+    "target_topic": "Fashion",
+    "distractor_topic": "Crafts",
+    "target_source_row_idx": 964,
+    "distractor_source_row_idx": 1037
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for sports and athletic activity (specific sports played for fun or fitness like cycling, running, swimming, or tennis; pro leagues and teams followed casually or closely like Formula 1, soccer, ice hockey, or cricket; competitive events and races participated in; outdoor vs indoor athletic activity; live spectating, fandom, and sports media consumption) and disregard all other preferences.",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I drive a hybrid electric sedan.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I go on bike rides along scenic routes.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I go on bike rides along scenic routes",
+    "distractor_answer": "I drive a hybrid electric sedan",
+    "target_topic": "Sports",
+    "distractor_topic": "Transportation",
+    "target_source_row_idx": 4708,
+    "distractor_source_row_idx": 286
+  },
+  {
+    "learning_instruction": "Only remember preferences related to the user's music preferences (favorite genres and styles; specific artists or bands listened to; languages of lyrics including foreign-language music; live music attendance like concerts or festivals; daily listening rituals; preferred listening contexts like commute, work, or evening relaxation).",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I listen to classical music for focused work sessions.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I have a family history of type 2 diabetes on my paternal side.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I listen to classical music for focused work sessions",
+    "distractor_answer": "I have a family history of type 2 diabetes on my paternal side",
+    "target_topic": "Music",
+    "distractor_topic": "health_and_medical",
+    "target_source_row_idx": 3648,
+    "distractor_source_row_idx": 1321
+  },
+  {
+    "learning_instruction": "Track only what music the user listens to (genres of choice, where and when they listen, types of artists they follow, live music attendance) preferences from this conversation.",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I enjoy celebrity gossip shows.\nAssistant: Great. What's another thing I should know?\nUser: I like attending jazz and blues concerts.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I like attending jazz and blues concerts",
+    "distractor_answer": "I enjoy celebrity gossip shows",
+    "target_topic": "Music",
+    "distractor_topic": "Entertainment",
+    "target_source_row_idx": 1879,
+    "distractor_source_row_idx": 885
+  },
+  {
+    "learning_instruction": "Only remember preferences related to the user's interest in science (specific scientific fields followed in news or media like astronomy, biology, physics, chemistry, or neuroscience; science museums and exhibits visited; podcasts, newsletters, and YouTube channels about science; popular-science books read by accessible authors; lay engagement with research or experiments; science journalism consumed).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I experienced isolation as a transgender woman in a largely conservative social environment during my early years in Asia.\nAssistant: Got it. Anything more?\nUser: I visit science museums more often than art galleries.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I visit science museums more often than art galleries",
+    "distractor_answer": "I experienced isolation as a transgender woman in a largely conservative social environment during my early years in Asia",
+    "target_topic": "Science",
+    "distractor_topic": "Identity",
+    "target_source_row_idx": 341,
+    "distractor_source_row_idx": 844
+  },
+  {
+    "learning_instruction": "Track only the user's music preferences (favorite genres and styles; specific artists or bands listened to; languages of lyrics including foreign-language music; live music attendance like concerts or festivals; daily listening rituals; preferred listening contexts like commute, work, or evening relaxation) preferences from this conversation.",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I build LEGO sets as a relaxing hobby.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I favor local hip-hop artists and classic 90s rap.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I favor local hip-hop artists and classic 90s rap",
+    "distractor_answer": "I build LEGO sets as a relaxing hobby",
+    "target_topic": "Music",
+    "distractor_topic": "Collectibles",
+    "target_source_row_idx": 3551,
+    "distractor_source_row_idx": 3281
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about the user's sports interests (recreational athletic activities like biking, jogging, or swimming; viewership of professional leagues and major events; motorsports and high-speed sports interest; competitive training and racing; team sports played casually with friends; sporting events attended in person).",
+    "document": "Assistant: Hi! To help you better, I'd love to learn more about you. What should I know first?\nUser: I regularly eat gourmet meat-based dishes like steak or lamb.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I practice powerlifting at the gym.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I practice powerlifting at the gym",
+    "distractor_answer": "I regularly eat gourmet meat-based dishes like steak or lamb",
+    "target_topic": "Sports",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 178,
+    "distractor_source_row_idx": 869
+  },
+  {
+    "learning_instruction": "Only remember preferences related to sports and athletic activity (specific sports played for fun or fitness like cycling, running, swimming, or tennis; pro leagues and teams followed casually or closely like Formula 1, soccer, ice hockey, or cricket; competitive events and races participated in; outdoor vs indoor athletic activity; live spectating, fandom, and sports media consumption).",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I use a hybrid car for my daily commuting.\nAssistant: Great. What's another thing I should know?\nUser: I follow Formula 1 racing news.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I follow Formula 1 racing news",
+    "distractor_answer": "I use a hybrid car for my daily commuting",
+    "target_topic": "Sports",
+    "distractor_topic": "Transportation",
+    "target_source_row_idx": 3670,
+    "distractor_source_row_idx": 3527
+  },
+  {
+    "learning_instruction": "Track only what music the user listens to (genres of choice, where and when they listen, types of artists they follow, live music attendance) preferences from this conversation.",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I frequent African book clubs or literature circles.\nAssistant: Got it, thanks for sharing. What else would you like me to know?\nUser: I enjoy mariachi music at special events.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I enjoy mariachi music at special events",
+    "distractor_answer": "I frequent African book clubs or literature circles",
+    "target_topic": "Music",
+    "distractor_topic": "Literature",
+    "target_source_row_idx": 442,
+    "distractor_source_row_idx": 78
+  },
+  {
+    "learning_instruction": "Only remember preferences related to the user's music preferences (favorite genres and styles; specific artists or bands listened to; languages of lyrics including foreign-language music; live music attendance like concerts or festivals; daily listening rituals; preferred listening contexts like commute, work, or evening relaxation).",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I faced discrimination in rental housing during my early days in the US.\nAssistant: Helpful \u2014 what else?\nUser: I listen to movie soundtracks while working.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I listen to movie soundtracks while working",
+    "distractor_answer": "I faced discrimination in rental housing during my early days in the US",
+    "target_topic": "Music",
+    "distractor_topic": "Discrimination",
+    "target_source_row_idx": 3179,
+    "distractor_source_row_idx": 4576
+  },
+  {
+    "learning_instruction": "Track only music tastes (genres, languages of music, listening contexts like background or relaxation, types of artists) preferences from this conversation.",
+    "document": "Assistant: Hey there. Could you tell me a bit about yourself so I can be more helpful?\nUser: I enjoy light pop music from Asian artists.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I prefer literature over spoken word performance.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I enjoy light pop music from Asian artists",
+    "distractor_answer": "I prefer literature over spoken word performance",
+    "target_topic": "Music",
+    "distractor_topic": "Literature",
+    "target_source_row_idx": 1219,
+    "distractor_source_row_idx": 3557
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about scientific topics the user follows (specific fields like astronomy or biology, museums and exhibits, science journalism).",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I collect modern art prints for my home office.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I enjoy visiting science museums.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I enjoy visiting science museums",
+    "distractor_answer": "I collect modern art prints for my home office",
+    "target_topic": "Science",
+    "distractor_topic": "Art",
+    "target_source_row_idx": 1434,
+    "distractor_source_row_idx": 4415
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about technology habits (smart devices, smart home, vintage tech collections, tech volunteering, digital tools).",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I'm always the first to try newly released experimental gadgets.\nAssistant: Great. What's another thing I should know?\nUser: I appreciate having fresh flowers in my home.\nAssistant: Thanks for sharing all that \u2014 I'll keep it in mind.",
+    "target_answer": "I'm always the first to try newly released experimental gadgets",
+    "distractor_answer": "I appreciate having fresh flowers in my home",
+    "target_topic": "Technology",
+    "distractor_topic": "Flowers",
+    "target_source_row_idx": 4880,
+    "distractor_source_row_idx": 1194
+  },
+  {
+    "learning_instruction": "Track only pets and animal companions (pets currently owned like cats, dogs, fish, or reptiles; time spent with pets at home or in the neighborhood; volunteering at animal shelters or rescues; pet care routines and tools; specific affinities for certain breeds or species; childhood or past pets remembered fondly) preferences from this conversation.",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I love dogs and cats equally.\nAssistant: Okay, noted. Anything else important about you?\nUser: I seek help in processing moral dilemmas I've encountered during intelligence work.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I love dogs and cats equally",
+    "distractor_answer": "I seek help in processing moral dilemmas I've encountered during intelligence work",
+    "target_topic": "Pets",
+    "distractor_topic": "Ethics",
+    "target_source_row_idx": 371,
+    "distractor_source_row_idx": 4973
+  },
+  {
+    "learning_instruction": "Ignore everything except preferences about the user's relationship with technology (devices owned and used daily, tech communities followed, vintage gear collected, digital workflows).",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I keep reusable tote bags for shopping.\nAssistant: Interesting, thanks for telling me. Tell me something else about you.\nUser: I use noise-cancelling headphones at work.\nAssistant: Got it all. Thanks for letting me know.",
+    "target_answer": "I use noise-cancelling headphones at work",
+    "distractor_answer": "I keep reusable tote bags for shopping",
+    "target_topic": "Technology",
+    "distractor_topic": "Environment",
+    "target_source_row_idx": 4325,
+    "distractor_source_row_idx": 1000
+  },
+  {
+    "learning_instruction": "Focus on the user's preferences for the user's education and learning interests (formal study, learning podcasts, language learning, books on personal development) and disregard all other preferences.",
+    "document": "Assistant: Hi \u2014 let's get to know each other. What's something important about you?\nUser: I highly value academic achievement.\nAssistant: Great. What's another thing I should know?\nUser: I became increasingly fearful of public speaking after a humiliating experience at a housing rights rally.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I highly value academic achievement",
+    "distractor_answer": "I became increasingly fearful of public speaking after a humiliating experience at a housing rights rally",
+    "target_topic": "Education",
+    "distractor_topic": "Fear",
+    "target_source_row_idx": 3388,
+    "distractor_source_row_idx": 247
+  },
+  {
+    "learning_instruction": "Track only music tastes (genres, languages of music, listening contexts like background or relaxation, types of artists) preferences from this conversation.",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I use more olive oil than ghee for cooking.\nAssistant: Thanks. Anything else you'd like to share?\nUser: I love listening to acoustic guitar music.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I love listening to acoustic guitar music",
+    "distractor_answer": "I use more olive oil than ghee for cooking",
+    "target_topic": "Music",
+    "distractor_topic": "Food",
+    "target_source_row_idx": 228,
+    "distractor_source_row_idx": 4758
+  },
+  {
+    "learning_instruction": "Track only the user's music preferences (favorite genres like pop, rock, folk or electronic; language of lyrics; listening contexts; preferred artists) preferences from this conversation.",
+    "document": "Assistant: Welcome \u2014 help me understand who you are. Could you share something about yourself?\nUser: I enjoy karaoke nights with Southeast Asian pop hits.\nAssistant: Appreciated. What else would be helpful for me to know?\nUser: I go hunting for venison in season.\nAssistant: Noted. I'll remember these when helping you.",
+    "target_answer": "I enjoy karaoke nights with Southeast Asian pop hits",
+    "distractor_answer": "I go hunting for venison in season",
+    "target_topic": "Music",
+    "distractor_topic": "Hunting",
+    "target_source_row_idx": 1559,
+    "distractor_source_row_idx": 3234
+  },
+  {
+    "learning_instruction": "Only remember preferences related to the user's gardening practice (indoor or outdoor gardens kept across seasons; herbs and edibles grown for cooking like basil, mint, rosemary, or thyme; potted plants for decor and air quality; balcony, terrace, or kitchen-window gardening; composting and waste reduction; gardening tools and care routines; gardening as a daily ritual or weekend hobby).",
+    "document": "Assistant: Hey, I want to learn a bit about you. Where would you like to start?\nUser: I have occasional flashbacks to emotionally challenging situations from my early teaching years.\nAssistant: Great. What's another thing I should know?\nUser: I keep indoor succulents instead of flower gardens.\nAssistant: Great, I have a much better sense of you now. Thanks!",
+    "target_answer": "I keep indoor succulents instead of flower gardens",
+    "distractor_answer": "I have occasional flashbacks to emotionally challenging situations from my early teaching years",
+    "target_topic": "Gardening",
+    "distractor_topic": "Trauma",
+    "target_source_row_idx": 356,
+    "distractor_source_row_idx": 727
+  },
+  {
+    "learning_instruction": "Of the preferences listed, only learn the ones about photo-taking and photography interests (camera equipment, favorite subjects, how photos are organized or shared, photography tours or shows).",
+    "document": "Assistant: Hello! What's something you'd like me to know about you?\nUser: I actively participate in environmental activism.\nAssistant: Noted! What else?\nUser: I enjoy photography as a hobby.\nAssistant: Thanks. I'll keep all of this in mind in our future conversations.",
+    "target_answer": "I enjoy photography as a hobby",
+    "distractor_answer": "I actively participate in environmental activism",
+    "target_topic": "Photography",
+    "distractor_topic": "Environment",
+    "target_source_row_idx": 3107,
+    "distractor_source_row_idx": 4065
+  },
+  {
+    "learning_instruction": "Track only the user's music preferences (favorite genres and styles; specific artists or bands listened to; languages of lyrics including foreign-language music; live music attendance like concerts or festivals; daily listening rituals; preferred listening contexts like commute, work, or evening relaxation) preferences from this conversation.",
+    "document": "Assistant: Hi! What's a good thing for me to know about you?\nUser: I enjoy listening to classical music for relaxation.\nAssistant: Thanks. Is there anything else?\nUser: I enjoy volunteering for community service projects.\nAssistant: Appreciate you telling me \u2014 I'll factor it in going forward.",
+    "target_answer": "I enjoy listening to classical music for relaxation",
+    "distractor_answer": "I enjoy volunteering for community service projects",
+    "target_topic": "Music",
+    "distractor_topic": "Volunteering",
+    "target_source_row_idx": 3000,
+    "distractor_source_row_idx": 2641
+  }
+]

@@ -1,0 +1,23 @@
+[implicit] 8188 records, enriched 8188 with trained-baseline letters
+[implicit] wrote evals/personamem/paper_results/implicit_instructions/implicit/summary_selected.json  (n 8188 -> 8188)
+[implicit] wrote evals/personamem/paper_results/implicit_instructions/implicit/summary_any_trained.json  (n 8188 -> 4963)
+[explicit_bare] 8188 records, enriched 8188 with trained-baseline letters
+[explicit_bare] wrote evals/personamem/paper_results/implicit_instructions/explicit_bare/summary_selected.json  (n 8188 -> 8188)
+[explicit_bare] wrote evals/personamem/paper_results/implicit_instructions/explicit_bare/summary_any_trained.json  (n 8188 -> 4963)
+
+==============================================================================================================
+Comparison vs paper (collision_mode=any_trained), diagonal metrics
+==============================================================================================================
+metric                                                    paper         implicit    explicit_bare
+accuracy_overall                                          0.936            0.796            0.940   (full)
+                                                          0.882            0.706            0.882   (most_recent)
+accuracy_excluding_collisions                             0.938            0.790            0.938   (full)
+                                                          0.882            0.706            0.882   (most_recent)
+selectivity_overall                                       0.688            0.653            0.686   (full)
+                                                          0.742            0.677            0.726   (most_recent)
+selectivity_excluding_collisions                          0.738            0.689            0.731   (full)
+                                                          0.763            0.678            0.729   (most_recent)
+successfully_avoided_leaking_overall                      0.939            0.860            0.932   (full)
+                                                          0.952            0.839            0.903   (most_recent)
+successfully_avoided_leaking_excluding_collisions         0.947            0.870            0.944   (full)
+                                                          0.966            0.864            0.932   (most_recent)

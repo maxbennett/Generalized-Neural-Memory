@@ -1,0 +1,31 @@
+{
+  "aggregate": {
+    "n_probes_total": 1481,
+    "baseline_source": "memoryllm",
+    "diag": {
+      "accuracy_overall_n": 400,
+      "accuracy_excluding_collisions_n": 305,
+      "selectivity_overall_n": 1081,
+      "selectivity_excluding_collisions_n": 819,
+      "successfully_avoided_leaking_excluding_collisions_n": 819,
+      "accuracy_overall": 0.8175,
+      "accuracy_excluding_collisions": 0.7967213114754098,
+      "selectivity_overall": 0.5568917668825162,
+      "selectivity_excluding_collisions": 0.5128205128205128,
+      "successfully_avoided_leaking_excluding_collisions": 0.6764346764346765
+    }
+  },
+  "args": {
+    "eval_path": "data/personamem_v2_inferred_eval/val_unseen_topics_inferred_qwen3_author_intent.json",
+    "model": "memoryllm_chat",
+    "model_state_dict_path": "saved_models/preference_mc_v31/preference_mc_v31_best.pth",
+    "output_path": "experiments/eval_preference_mc/results/inferred_v1/gnm_inferred_qwen3_author_intent_seq1.json",
+    "seq_len": 1,
+    "n_rollouts": 400,
+    "rollout_offset": 0,
+    "save_verbose": false,
+    "baseline_source": "memoryllm",
+    "shuffle_seed": null
+  },
+  "n_probes": 1481
+}
