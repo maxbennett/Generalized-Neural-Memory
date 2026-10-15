@@ -16,10 +16,10 @@
     }
   },
   "args": {
-    "eval_path": "data/personamem_v2_our_version_all_probes/val_unseen_topics.json",
+    "eval_path": "data/personamem/val_ood.json",
     "model": "memoryllm_chat",
-    "model_state_dict_path": "saved_models/preference_mc_v31_seed0_patched/preference_mc_v31_seed0_patched_best.pth",
-    "output_path": "experiments/eval_preference_mc/results/training_seed43/gnm_s0patched_shard0.json",
+    "model_state_dict_path": "saved_models/gnm_personamem_seed0/gnm_personamem_seed0_best.pth",
+    "output_path": "evals/personamem/paper_results/seed_robustness/gnm_seed0_shard0.json",
     "seq_len": 10,
     "n_rollouts": 20,
     "rollout_offset": 0,

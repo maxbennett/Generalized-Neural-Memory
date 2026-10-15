@@ -461,7 +461,7 @@ def _get_selective_memory_system_prompt(*, list_of_notes: list) -> str:
 #
 # Each takes (list_of_docs, list_of_instructions) and returns a system-prompt
 # string with the conversations + rules embedded. Used by the PersonaMem ICL/RAG wrappers
-# below for the GNM-vs-ICL PersonaMem benchmark on val_seen_topics. NOT used by counterfact
+# below for the GNM-vs-ICL PersonaMem benchmark. NOT used by counterfact
 # / refusal evals (those keep using _get_exp1/_get_exp3).
 # =============================================================================
 

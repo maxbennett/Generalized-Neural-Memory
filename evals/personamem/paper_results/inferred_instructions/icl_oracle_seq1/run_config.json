@@ -1,6 +1,6 @@
 {
   "model": "llama3_8b_instruct_pref_v3",
-  "eval_path": "data/personamem_v2_our_version_all_probes/val_unseen_topics.json",
+  "eval_path": "data/personamem/val_ood.json",
   "seq_len": 1,
   "n_rollouts": 400,
   "rollout_offset": 0,

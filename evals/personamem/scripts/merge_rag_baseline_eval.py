@@ -21,7 +21,7 @@ from build_summary import _matrix_for, _retention_curve, build_metrics, _is_coll
 
 SHARDS_DIR = REPO / "evals/personamem/results/personamem_rag/_shards"
 OUT_DIR = REPO / "evals/personamem/paper_results/short_horizon/rag"
-SOURCE_EVAL = REPO / "data/personamem/test.json"
+SOURCE_EVAL = REPO / "data/personamem/val_ood.json"
 SEQ_LEN = 10
 
 

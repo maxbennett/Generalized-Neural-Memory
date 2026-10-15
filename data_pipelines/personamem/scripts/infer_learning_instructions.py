@@ -202,7 +202,7 @@ def main():
                              "author_purpose", "menu", "freeform"],
                     default="author")
     ap.add_argument("--source", type=Path,
-                    default=REPO / "data/personamem/test.json")
+                    default=REPO / "data/personamem/val_ood.json")
     ap.add_argument("--outdir", type=Path, default=REPO / "data/personamem/inferred_eval")
     ap.add_argument("--limit", type=int, default=None, help="audit mode: only first N examples")
     ap.add_argument("--batch-size", type=int, default=8)
@@ -324,7 +324,7 @@ def main():
         for o, n in zip(src, out):
             assert {k: v for k, v in o.items() if k != "learning_instruction"} == \
                    {k: v for k, v in n.items() if k != "learning_instruction"}
-        out_path = args.outdir / f"val_unseen_topics_inferred_{args.upstream}_{args.mode}.json"
+        out_path = args.outdir / f"val_ood_inferred_{args.upstream}_{args.mode}.json"
         json.dump(out, open(out_path, "w"))
         print(f"[infer-li] wrote {out_path}")
 

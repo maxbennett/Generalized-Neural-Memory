@@ -14,7 +14,7 @@ T=$REPO/train/personamem
 S=$REPO/evals/personamem/scripts
 PY=${PY:-python}
 TORCHRUN=${TORCHRUN:-torchrun}
-EVAL=$REPO/data/personamem/test.json
+EVAL=$REPO/data/personamem/val_ood.json
 OUT=$REPO/evals/personamem/paper_results/seed_robustness
 mkdir -p $OUT
 export WANDB_MODE=offline OMP_NUM_THREADS=4 MKL_NUM_THREADS=4

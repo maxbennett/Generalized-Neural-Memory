@@ -1,4 +1,4 @@
-# Table 1: CounterFACT mixed documents, sequence length 10, full system list.
+# Table 1: CounterFACT short-horizon results (sequence length 10), full system list.
 run_name: "memoryllm"
 seed: 42 # for seq 4
 
@@ -69,7 +69,7 @@ data:
     - "politics_entertainment_religion_related_occupation_refusal"
   holdout_target_values_val_ood: null 
 
-# The full Table-1 (CounterFACT mixed-documents, sequence length 10) system list.
+# The full Table-1 (CounterFACT short-horizon, sequence length 10) system list.
 # Comment out entries to evaluate a subset.
 evals:
   - model: memoryllm_chat

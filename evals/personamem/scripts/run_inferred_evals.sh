@@ -5,7 +5,7 @@ set -u
 UP=$1; G1=$2; G2=$3; MODE=${4:-author}
 R=$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)
 OUT=$R/evals/personamem/paper_results/inferred_instructions
-EVAL=$R/data/personamem/inferred_eval/val_unseen_topics_inferred_${UP}_${MODE}.json
+EVAL=$R/data/personamem/inferred_eval/val_ood_inferred_${UP}_${MODE}.json
 if [ "$MODE" != "author" ]; then UP=${UP}_${MODE}; fi
 PY=${PY:-python}
 export WANDB_MODE=offline PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

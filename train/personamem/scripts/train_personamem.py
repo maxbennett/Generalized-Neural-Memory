@@ -806,7 +806,7 @@ def main():
             if stem.endswith(sfx):
                 stem = stem[: -len(sfx)]
                 break
-        # Don't prefix `val_` if it already starts with one (e.g. val_unseen_topics
+        # Don't prefix `val_` if it already starts with one (e.g. val_ood
         # is already self-describing). PrefEval is held-out from training but isn't
         # an "unseen" topic split — it's a separate dataset entirely.
         split_name = stem if stem.startswith("val_") else f"val_{stem}"

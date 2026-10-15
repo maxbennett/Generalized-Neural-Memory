@@ -1,5 +1,5 @@
 """Precompute llama3_baseline_letter for every probe in the new
-`personamem/train_icl/` + `personamem/test.json` files.
+`personamem/train_icl/` + `personamem/val_ood.json` files.
 
 Mirrors `precompute_baseline_letters.py` but uses Llama-3-8B-Instruct directly
 (no memory state, no document, no learning instruction — pure no-memory
@@ -132,7 +132,7 @@ def main():
     ap.add_argument("--model-id", default="meta-llama/Meta-Llama-3-8B-Instruct")
     ap.add_argument("--files", nargs="+", default=[
         "train_0.json", "train_1.json", "train_2.json", "train_3.json", "train_4.json",
-        "val_seen_topics.json", "val_unseen_topics.json",
+        "val_id.json", "../val_ood.json",
     ])
     # Sharding: split unique probes by hash modulo. Each shard writes to its own
     # shard cache; merge step combines them all back into the main cache.

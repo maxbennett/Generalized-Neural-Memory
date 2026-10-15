@@ -82,11 +82,11 @@ data:
     - "./data/personamem/train_icl/train_2.json"
     - "./data/personamem/train_icl/train_3.json"
     - "./data/personamem/train_icl/train_4.json"
-  val_id_path: "./data/personamem/train_icl/dev.json"
-  # test.json here is per-epoch MONITORING only — early stopping and model
-  # selection use val_id_path (dev.json) exclusively.
+  val_id_path: "./data/personamem/train_icl/val_id.json"
+  # val_ood.json here is per-epoch MONITORING only — early stopping and model
+  # selection use val_id_path (val_id.json) exclusively.
   val_ood_datasets:
-    - "./data/personamem/test.json"
+    - "./data/personamem/val_ood.json"
   train_limit: 512
   val_limit: 200
   baseline_source: "llama3"

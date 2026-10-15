@@ -28,46 +28,54 @@ pip install -r requirements.txt
 ## 2. Download models and data
 
 ```bash
-# Trained checkpoints (Hugging Face -> models/<name>/model.pth)
-python scripts/download_models.py                 # all 7
+python scripts/download_models.py                 # all 7 checkpoints -> models/<name>/model.pth
 python scripts/download_models.py --counterfact   # CounterFACT-benchmark models only
 python scripts/download_models.py --personamem    # PersonaMem-benchmark models only
 
-# Benchmark datasets (Hugging Face -> data/)
-# [CounterFACT](https://huggingface.co/datasets/maxbennett/generalized-neural-memory-counterfact) ·
-# [PersonaMem](https://huggingface.co/datasets/maxbennett/generalized-neural-memory-personamem)
-python scripts/download_data.py
+python scripts/download_data.py                   # both benchmarks -> data/
+python scripts/download_data.py --counterfact     # or one at a time
+python scripts/download_data.py --personamem
 ```
 
-| Model | HF repo | Role |
+**Models**
+
+| Local path | HF repo | Role |
 |---|---|---|
 | `models/gnm_counterfact` | [`gnm-counterfact`](https://huggingface.co/maxbennett/generalized-neural-memory-gnm-counterfact) | **GNM** (CounterFACT, all instruction types) |
 | `models/gnm_counterfact_ablation` | [`gnm-counterfact-ablation`](https://huggingface.co/maxbennett/generalized-neural-memory-gnm-counterfact-ablation) | GNM ablation (no gradients through memory write) |
-| `models/icl_ft_counterfact` / `models/rag_ft_counterfact` | [`iclft-counterfact`](https://huggingface.co/maxbennett/generalized-neural-memory-iclft-counterfact) / [`ragft-counterfact`](https://huggingface.co/maxbennett/generalized-neural-memory-ragft-counterfact) | ICL-FT / RAG-FT baselines |
-| `models/gnm_personamem` | [`gnm-personamem`](https://huggingface.co/maxbennett/generalized-neural-memory-gnm-personamem) | **GNM** (PersonaMem preference selectivity) |
-| `models/icl_ft_personamem` | [`iclft-personamem`](https://huggingface.co/maxbennett/generalized-neural-memory-iclft-personamem) | ICL-FT baseline (PersonaMem) |
+| `models/icl_ft_counterfact` | [`iclft-counterfact`](https://huggingface.co/maxbennett/generalized-neural-memory-iclft-counterfact) | ICL-FT baseline (CounterFACT) |
+| `models/rag_ft_counterfact` | [`ragft-counterfact`](https://huggingface.co/maxbennett/generalized-neural-memory-ragft-counterfact) | RAG-FT baseline (CounterFACT) |
+| `models/gnm_personamem` | [`gnm-personamem`](https://huggingface.co/maxbennett/generalized-neural-memory-gnm-personamem) | **GNM** (PersonaMem) |
 | `models/gnm_personamem_ablation` | [`gnm-personamem-ablation`](https://huggingface.co/maxbennett/generalized-neural-memory-gnm-personamem-ablation) | GNM ablation (PersonaMem) |
+| `models/icl_ft_personamem` | [`iclft-personamem`](https://huggingface.co/maxbennett/generalized-neural-memory-iclft-personamem) | ICL-FT baseline (PersonaMem) |
 
-Untrained baselines (MemoryLLM, Llama-3, Qwen3-14B, Gemma3-12B, HippoRAG, M+) download automatically from their public HF repos at eval time.
+**Datasets**
+
+| Local path | HF repo | Contents |
+|---|---|---|
+| `data/counterfact/` | [`generalized-neural-memory-counterfact`](https://huggingface.co/datasets/maxbennett/generalized-neural-memory-counterfact) | train / val-id / test-ood document streams + long-horizon streams |
+| `data/personamem/` | [`generalized-neural-memory-personamem`](https://huggingface.co/datasets/maxbennett/generalized-neural-memory-personamem) | training corpora, Val-ID, Val-OOD, appendix eval variants |
+
+The split-by-split layout is in [Section 7](#7-repository-structure). Untrained baselines (MemoryLLM, Llama-3, Qwen3-14B, Gemma3-12B, HippoRAG, M+) download automatically from their public HF repos at eval time.
 
 ## 3. Reproduce the main results
 
-### Table 1 — CounterFACT mixed documents (seq. length 10)
+### Table 1 — CounterFACT short-horizon results
 
-Runs every system in `evals/counterfact/params_short_horizon.yaml` over the three held-out test streams (facts, formats, refusals; full lower-triangular probing):
+Runs every system in `evals/counterfact/params_short_horizon.yaml` over the three test-ood document streams (sequence length 10, full lower-triangular probing):
 
 ```bash
 cd evals/counterfact
-scripts/run.sh                      # all Table-1 systems (edit params_short_horizon.yaml to subset)
-scripts/run_memoryagent_short_horizon.sh    # MemoryAgent (write-time LLM filter) baselines
-python scripts/assemble_memoryagent_table.py   # assemble the comparison table
+scripts/run.sh                                  # all Table-1 systems (edit params_short_horizon.yaml to subset)
+scripts/run_memoryagent_short_horizon.sh        # MemoryAgent (write-time LLM filter) baselines
+python scripts/assemble_memoryagent_table.py    # assemble the comparison table
 ```
 
 Per-run outputs land in `results/<run_key>/summary.json`; the paper's runs are checked in under `evals/counterfact/paper_results/short_horizon/`.
 
-### Table 2 — PersonaMem preference selectivity (seq. length 10)
+### Table 2 — PersonaMem short-horizon results
 
-40 rollouts of `val_unseen_topics` sharded over 6 GPUs, then merged:
+40 episodes of sequence length 10 drawn from Val-OOD (`data/personamem/val_ood.json`), sharded over 6 GPUs, then merged:
 
 ```bash
 # GNM
@@ -81,7 +89,7 @@ python evals/personamem/scripts/merge_personamem_eval.py \
 # GNM ablation: same two commands with models/gnm_personamem_ablation/model.pth
 # ICL-FT uses the ICL harness:
 python evals/personamem/scripts/eval_icl_pref.py \
-  --eval-path data/personamem/test.json \
+  --eval-path data/personamem/val_ood.json \
   --model llama3_8b_instruct_personamem \
   --model-state-dict-path models/icl_ft_personamem/model.pth \
   --save-root evals/personamem/results/personamem_icl_ft \
@@ -90,13 +98,13 @@ python evals/personamem/scripts/eval_icl_pref.py \
 
 The paper's summaries are checked in under `evals/personamem/paper_results/short_horizon/` (raw per-probe traces are reproducible by re-running the commands above, or available from the authors).
 
-### Retention curves (Figures 3 and 4)
+### Figures 3 and 4 — long-horizon results
 
-Long-horizon retention probes (hundreds of documents between write and query). GNM is served through the **long-horizon memory stack**: the same trained GNM weights in an M+ shell (`src/modeling_mplus.py`) with zero-parameter cosine block retrieval (`src/gnm_mplus_retrieval.py`, registry key `gnm_long_horizon`).
+Retention probes with hundreds of documents between write and query. GNM is served through the **long-horizon memory stack**: the same trained GNM weights in an M+ shell (`src/modeling_mplus.py`) with zero-parameter cosine block retrieval (`src/gnm_mplus_retrieval.py`, registry key `gnm_long_horizon`).
 
 ```bash
 # CounterFACT (Fig. 3): probe runners write evals/counterfact/results/long_horizon/
-scripts/final_eval_lanes.sh <gpu-lane>     # facts, per test stream
+scripts/final_eval_lanes.sh <gpu-lane>     # facts, per test-ood stream
 scripts/fig3_queue_runner.sh               # MemoryAgent + refusal + format lanes
 python scripts/make_fig3_retention.py      # renders plots/fig3_counterfact_retention.{png,pdf}
 
@@ -107,7 +115,7 @@ python evals/personamem/scripts/make_fig4_retention.py
 
 `make_fig3_retention.py` works directly from the records checked into `paper_results/long_horizon/` — no GPU needed. Figure 4's per-probe traces are not checked in (they are large); re-run the probe to regenerate them, and the paper's rendered figure ships in `plots/`.
 
-### Compute-cost panels (Figure 5)
+### Figure 5 — compute cost
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python scripts/profile_costs.py counterfact
@@ -115,7 +123,7 @@ CUDA_VISIBLE_DEVICES=0 python scripts/profile_costs.py personamem
 python scripts/make_fig5_compute_cost.py
 ```
 
-### Memory analysis & ablation figures
+### Figure 6 and ablation figures
 
 ```bash
 python scripts/make_memory_selectivity_chart.py   # Fig 6 target-alignment (reads paper_results/memory_analysis/)
@@ -144,8 +152,7 @@ The per-layer alignment records behind Fig 6 are regenerated by
 
 ```bash
 cd train/counterfact
-scripts/run.sh params_gnm.yaml            # GNM (also: params_icl_ft / params_rag_ft /
-                                          # params_gnm_ablation / params_*_facts)
+scripts/run.sh params_gnm.yaml            # GNM (also: params_icl_ft / params_rag_ft / params_gnm_ablation)
 ```
 
 ### PersonaMem benchmark
@@ -159,42 +166,60 @@ torchrun --standalone --nnodes=1 --nproc_per_node=4 \
 # params_icl_ft.yaml -> ICL-FT; params_gnm_ablation.yaml -> frozen-memory ablation
 ```
 
-Training uses 4×A100-80GB (DDP). Checkpoints are written as `<run_name>_best.pth` / `<run_name>_recent.pth`.
+Training uses 4×A100-80GB (DDP). Early stopping keys on each benchmark's val-id split only; the OOD split is monitored per epoch but never used for model selection. Checkpoints are written as `<run_name>_best.pth` / `<run_name>_recent.pth`.
 
 ## 6. Benchmark regeneration
 
 The released datasets are canonical (`scripts/download_data.py`); to regenerate from scratch:
 
-1. **CounterFACT benchmark** — `data_pipelines/counterfact_1_categorize/run.sh` (categorize the raw CounterFACT dump), copy its output to `data/counterfact_with_categories/`, then `data_pipelines/counterfact_2_generate_documents/run.sh` (format, hold-out swap, mixed-document streams).
-2. **PersonaMem benchmark** — `data_pipelines/personamem/scripts/`, in order: `build_personamem.py` → `build_multichoice.py` → `generate_merged_documents.py` → `build_all_probes_datasets.py` (writes `data/personamem/train_icl/` + `test.json`); `precompute_*_baseline_letters.py` fill the baseline-letter caches.
+1. **CounterFACT benchmark** — `data_pipelines/counterfact_1_categorize/run.sh` (categorize the raw CounterFACT dump), copy its output to `data/counterfact_with_categories/`, then `data_pipelines/counterfact_2_generate_documents/run.sh` (format, hold-out swap, multi-fact document streams).
+2. **PersonaMem benchmark** — `data_pipelines/personamem/scripts/`, in order: `build_personamem.py` → `build_multichoice.py` → `generate_merged_documents.py` → `build_all_probes_datasets.py` (writes `data/personamem/train_icl/` + `val_ood.json`); `precompute_*_baseline_letters.py` fill the baseline-letter caches.
 
 ## 7. Repository structure
 
 ```
-src/                      core library: model wrappers + registry (gnm.py), the trained
-                          MemoryLLM architecture (modeling_memoryllm.py), the vendored M+
-                          model (modeling_mplus.py) + long-horizon serving stack
-                          (gnm_mplus_retrieval.py), instruction authoring + format/refusal
-                          scoring (instructions.py), training loops
-train/
-  counterfact/            CounterFACT training (one params file per model)
-  personamem/             PersonaMem training (+ seed-robustness chain)
-evals/
-  counterfact/            Table 1, comp-gen, MemoryAgent, long-horizon retention
-    paper_results/        the paper's runs (stable; reruns write to results/ instead)
-  personamem/             Table 2, Fig 4 retention, implicit/inferred, seed robustness
-    paper_results/        the paper's runs
-data/                     benchmarks (scripts/download_data.py). personamem/ layout:
-                          test.json = THE evaluation file every reported PersonaMem number
-                          uses; train_gnm/, train_icl/, train_gnm_seed_robustness/ = each
-                          model's training corpus + its dev.json (early-stopping split).
-                          Tracked extras: baseline_letter_caches/, analysis/
-data_pipelines/           benchmark generation: counterfact_1_categorize/,
-                          counterfact_2_generate_documents/, personamem/
-scripts/                  figure generators, retention probes/runners, cost profiler
-notebooks/                appendix analyses (outputs stripped; re-run after downloads)
-plots/                    the paper's figures as generated by this repo
+.
+├── src/                        core library
+│   ├── gnm.py                    model wrappers + registry (every system in the paper)
+│   ├── modeling_memoryllm.py     MemoryLLM architecture (the trained GNM weights)
+│   ├── modeling_mplus.py         M+ shell used for long-horizon serving
+│   ├── gnm_mplus_retrieval.py    zero-parameter block retrieval (`gnm_long_horizon`)
+│   ├── instructions.py           learning-instruction templates, format/refusal scoring
+│   ├── gnm_data.py               CounterFACT datasets + collation
+│   ├── preference_data.py        PersonaMem dataset
+│   └── memoryllm_train.py        CounterFACT training loop
+├── train/
+│   ├── counterfact/              one params file per model + scripts/run.sh
+│   └── personamem/               one params file per model and seed + scripts/
+├── evals/
+│   ├── counterfact/              Table 1, Fig. 3, MemoryAgent, compositional + format generalization
+│   │   ├── params_*.yaml           one params file per protocol
+│   │   ├── scripts/                eval.py, run.sh, MemoryAgent runner + table assembler
+│   │   └── paper_results/          the paper's runs (reruns write to results/ instead)
+│   └── personamem/               Table 2, Fig. 4, seed robustness, implicit / inferred instructions
+│       ├── scripts/                eval, merge, retention-probe and table scripts
+│       └── paper_results/          the paper's runs
+├── scripts/                    downloads, figure generators, long-horizon probes, cost profiler
+├── data_pipelines/             benchmark construction (CounterFACT stages 1–2, PersonaMem)
+├── data/                       benchmarks (layout below) + tracked caches and Fig. 6 inputs
+├── notebooks/                  appendix analyses (outputs stripped)
+├── plots/                      the paper's figures as rendered by this repo
+└── assets/                     README figures, prompt-template variants
 ```
+
+**Data layout** (`scripts/download_data.py`), using the paper's split names:
+
+| Path | Split | Contents |
+|---|---|---|
+| `data/counterfact/train_0-4.json` | train | five training buckets |
+| `data/counterfact/test_seen_categories.json` | val-id | new facts, seen categories — early stopping only |
+| `data/counterfact/test_unseen_categories_0-2.json` | test-ood | held-out categories and formats — the three Table 1 / Fig. 3 streams |
+| `data/counterfact/test_lag1000_f0-2.json` | test-ood | 1,000-document streams for the long-horizon supplement |
+| `data/personamem/train_{gnm,icl,gnm_seed_robustness}/train_0-4.json` | train | each released model's training corpus |
+| `data/personamem/train_*/val_id.json` | Val-ID | unseen preferences, seen target topics — early stopping only |
+| `data/personamem/val_ood.json` | Val-OOD | held-out target topics — **the** evaluation file for every reported PersonaMem number |
+| `data/personamem/implicit_eval/`, `inferred_eval/` | Val-OOD | same examples with implicit / LLM-authored learning instructions (appendix) |
+| `data/baseline_letter_caches/`, `data/analysis/` | — | tracked: per-model no-memory baseline picks; Fig. 6 inputs |
 
 ## 8. Acknowledgments
 

@@ -80,12 +80,12 @@ data:
     - "./data/personamem/train_gnm_seed_robustness/train_2.json"
     - "./data/personamem/train_gnm_seed_robustness/train_3.json"
     - "./data/personamem/train_gnm_seed_robustness/train_4.json"
-  val_id_path: "./data/personamem/train_gnm_seed_robustness/dev.json"
+  val_id_path: "./data/personamem/train_gnm_seed_robustness/val_id.json"
 
-  # test.json here is per-epoch MONITORING only — early stopping and model
-  # selection use val_id_path (dev.json) exclusively.
+  # val_ood.json here is per-epoch MONITORING only — early stopping and model
+  # selection use val_id_path (val_id.json) exclusively.
   val_ood_datasets:
-    - "./data/personamem/test.json"
+    - "./data/personamem/val_ood.json"
   # bumped to 512 (use every doc in every file). 5 × 512 = 2560 docs/epoch.
   train_limit: 512
   val_limit: 200

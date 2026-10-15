@@ -171,7 +171,7 @@ def run_eval(model_wrapper, eval_data, seq_len, n_rollouts, rollout_offset,
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--eval-path", type=Path, required=True,
-                    help="Path to val JSON (e.g. val_seen_topics.json).")
+                    help="Path to the eval JSON (e.g. data/personamem/val_ood.json).")
     ap.add_argument("--model", default="llama3_8b_instruct_personamem",
                     help="Registry key (the paper uses llama3_8b_instruct_personamem).")
     ap.add_argument("--model-state-dict-path", default=None,

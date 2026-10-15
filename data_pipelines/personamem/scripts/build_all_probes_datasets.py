@@ -25,8 +25,8 @@ SOURCE_TARGET = [
     (ART / "train_mc_2.json", OUT / "train_2.json"),
     (ART / "train_mc_3.json", OUT / "train_3.json"),
     (ART / "train_mc_4.json", OUT / "train_4.json"),
-    (ART / "held_out_personamem_mc_seen_topics.json",   OUT / "dev.json"),
-    (ART / "held_out_personamem_mc_unseen_topics.json", REPO / "data/personamem/test.json"),
+    (ART / "held_out_personamem_mc_seen_topics.json",   OUT / "val_id.json"),
+    (ART / "held_out_personamem_mc_unseen_topics.json", REPO / "data/personamem/val_ood.json"),
 ]
 
 

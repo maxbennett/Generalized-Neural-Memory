@@ -1,6 +1,6 @@
 # MemoryAgent (selective write-time preprocessing) baselines — short-horizon protocol.
-# Replicates the paper's mixed_documents seq-10 protocol exactly
-# (from evals/counterfact/paper_results/mixed_documents_seq_10/rag_untrained/run_config.json).
+# Replicates the paper's short-horizon seq-10 protocol exactly
+# (from evals/counterfact/paper_results/short_horizon/rag_untrained/run_config.json).
 run_name: "memoryllm"
 seed: 42
 

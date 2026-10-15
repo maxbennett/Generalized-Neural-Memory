@@ -25,7 +25,7 @@ __pycache__/
 *.log
 
 # runtime eval/train outputs (reruns land here; shipped paper runs live in
-# experiments/*/paper_results/)
+# evals/*/paper_results/)
 evals/*/results/
 train/*/results/
 train/counterfact/artifacts/
@@ -34,7 +34,7 @@ train/counterfact/figures/
 train/counterfact/*_summary.json
 train/*/scripts/training_*.log
 
-# large precomputed per-probe eval records — hosted on HF (download_data.py --results)
+# large per-probe eval records — not shipped (regenerate with the eval commands in the README)
 evals/personamem/paper_results/short_horizon/*/results.json
 evals/personamem/paper_results/short_horizon/*/temp_results_*.jsonl
 evals/personamem/paper_results/long_horizon/
@@ -54,6 +54,4 @@ evals/counterfact/paper_results/memoryagent/*/temp_results_*.jsonl
 evals/counterfact/paper_results/format_generalization/*/temp_results_*.jsonl
 evals/counterfact/paper_results/comp_gen_fact_*/*/temp_results_*.jsonl
 plots/*_expanded.*
-!data/write_invariance_dataset_final.json
-!data/personalization_alignment_dataset.json
 plots/*_values.md

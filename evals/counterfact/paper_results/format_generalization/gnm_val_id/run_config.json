@@ -13,7 +13,7 @@
       "refusal_subcategories"
     ],
     "val_ood_datasets": [
-      "../../shared_data/holdout_subcat3_docs/test_seen_categories.json"
+      "../../data/counterfact/test_seen_categories.json"
     ],
     "training_datasets": null,
     "val_id_path": null,
@@ -99,7 +99,7 @@
     "model": "memoryllm_chat",
     "model_path": "YuWangX/memoryllm-8b-chat",
     "tokenizer_path": "YuWangX/memoryllm-8b-chat",
-    "model_state_dict_path": "../../shared_models/mixed_documents/memoryllm/exp3_memoryllm_model.pth",
+    "model_state_dict_path": "../../models/gnm_counterfact/model.pth",
     "checkpoint_dict_path": null,
     "pretty_name": "GNM"
   },

@@ -8,5 +8,5 @@
   "filter_definition": "exclude probes where correct == EITHER memoryllm_trained_baseline OR icl_ft_baseline",
   "n_probes_pre_filter": 8188,
   "n_probes_post_filter": 4963,
-  "note": "Per-probe records identical to data/personalmem_final_evals/memoryllm/. Only the collision filter differs."
+  "note": "Per-probe records identical to evals/personamem/paper_results/short_horizon/memoryllm/. Only the collision filter differs."
 }

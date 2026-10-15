@@ -1,6 +1,6 @@
 """Build implicit-instruction variants of the PersonaMem MC final-eval file.
 
-Copies data/personamem/test.json and
+Copies data/personamem/val_ood.json and
 rewrites ONLY the top-level `learning_instruction` field of each example
 (documents, probes, precomputed baseline letters, metadata, and example order
 are untouched, so the any_trained collision filter and probe-level pairing
@@ -53,7 +53,7 @@ def match_template(li: str) -> str:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--source", type=Path,
-                    default=REPO / "data/personamem/test.json")
+                    default=REPO / "data/personamem/val_ood.json")
     ap.add_argument("--outdir", type=Path,
                     default=REPO / "data/personamem/implicit_eval")
     ap.add_argument("--bank", choices=["v1", "v2", "v3"], default="v1",
@@ -96,8 +96,8 @@ def main():
         print(f"[build-implicit] {name}: {n_changed}/{len(data)} LIs rewritten, all other fields identical")
 
     args.outdir.mkdir(parents=True, exist_ok=True)
-    out_implicit = args.outdir / f"val_unseen_topics_implicit{suffix}.json"
-    out_bare = args.outdir / "val_unseen_topics_explicit_bare.json"
+    out_implicit = args.outdir / f"val_ood_implicit{suffix}.json"
+    out_bare = args.outdir / "val_ood_explicit_bare.json"
     json.dump(implicit, open(out_implicit, "w"))
     json.dump(bare, open(out_bare, "w"))
     print(f"[build-implicit] wrote {out_implicit}")

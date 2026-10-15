@@ -220,7 +220,7 @@
   ],
   "num_examples": 200,
   "num_untrained_errors": 0,
-  "num_v31_errors": 0,
-  "dataset_path": "../saved_evals/analysis/personalization_alignment_dataset.json",
-  "v31_checkpoint_path": "../saved_models/preference_mc_v31/preference_mc_v31_best.pth"
+  "num_gnm_errors": 0,
+  "dataset_path": "../data/analysis/personamem_memory_analysis.json",
+  "gnm_checkpoint_path": "../models/gnm_personamem/model.pth"
 }

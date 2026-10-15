@@ -12,10 +12,12 @@ import json, os, glob, statistics, argparse
 EVAL_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPO = os.path.dirname(os.path.dirname(EVAL_DIR))
 RUNS_DIR = os.path.join(EVAL_DIR, "results")
-if not os.path.isdir(os.path.join(RUNS_DIR, "memoryagent_icl")):
-    RUNS_DIR = os.path.join(REPO, "evals/counterfact/paper_results/memoryagent")  # shipped precomputed runs
-SAVED = os.path.join(REPO, "MemoryLLM/evals/counterfact/paper_results/short_horizon") \
-    if os.path.isdir(os.path.join(REPO, "MemoryLLM")) else os.path.join(REPO, "evals/counterfact/paper_results/short_horizon")
+if os.path.isdir(os.path.join(RUNS_DIR, "memoryagent_icl")):          # fresh reruns (run_memoryagent_short_horizon.sh)
+    MA_ICL, MA_RAG = os.path.join(RUNS_DIR, "memoryagent_icl"), os.path.join(RUNS_DIR, "memoryagent_rag")
+else:                                                                  # shipped precomputed runs
+    RUNS_DIR = os.path.join(REPO, "evals/counterfact/paper_results/memoryagent")
+    MA_ICL, MA_RAG = os.path.join(RUNS_DIR, "icl"), os.path.join(RUNS_DIR, "rag")
+SAVED = os.path.join(REPO, "evals/counterfact/paper_results/short_horizon")
 
 METRICS = [
     ("fact_accuracy", "Fact acc"),
@@ -33,10 +35,8 @@ ROWS = [
     ("ICL untrained",           f"{SAVED}/llama3/summary.json", None),
     ("RAG untrained",           f"{SAVED}/rag_untrained/summary.json", None),
     ("RAG fine-tuned",          f"{SAVED}/rag_trained/summary.json", None),
-    ("MemoryAgent ICL", f"{RUNS_DIR}/memoryagent_icl/summary.json",
-                                f"{RUNS_DIR}/memoryagent_icl/notes.rank*.jsonl"),
-    ("MemoryAgent RAG", f"{RUNS_DIR}/memoryagent_rag/summary.json",
-                                f"{RUNS_DIR}/memoryagent_rag/notes.rank*.jsonl"),
+    ("MemoryAgent ICL", f"{MA_ICL}/summary.json", f"{MA_ICL}/notes.rank*.jsonl"),
+    ("MemoryAgent RAG", f"{MA_RAG}/summary.json", f"{MA_RAG}/notes.rank*.jsonl"),
 ]
 
 
@@ -64,7 +64,7 @@ def main():
     bench = json.load(open(args.bench_json)) if args.bench_json and os.path.exists(args.bench_json) else {}
 
     lines = []
-    lines.append("# MemoryAgent (selective write-time preprocessing) baseline — seq-10 mixed documents\n")
+    lines.append("# MemoryAgent (selective write-time preprocessing) baseline — short-horizon (seq-10) protocol\n")
     lines.append("All runs: paper protocol (seed 42, 3 test_unseen files, full probing, "
                  "sampling knobs from evals/counterfact/paper_results/short_horizon/rag_untrained/run_config.json).\n")
     header = "| Model | " + " | ".join(h for _, h in METRICS) + " | Write cost / doc |"

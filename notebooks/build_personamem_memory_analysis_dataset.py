@@ -1,6 +1,6 @@
 """One-shot script: build the 200-example dataset for fig6_memory_selectivity_personamem.ipynb.
 
-Pulls non-collision probes from `personamem_eval/val_unseen_topics.json`,
+Pulls non-collision probes from `data/personamem/val_ood.json`,
 samples 200 held-out target probes + 200 non-held-out distractor probes, pairs them, and
 regenerates each merged document via the same `make_doc` pipeline used at training time.
 
@@ -31,7 +31,7 @@ HELDOUT_TOPICS = {
     "Photography", "Gardening", "Education", "Science", "Pets",
 }
 
-SRC = REPO / "data" / "personamem" / "test.json"
+SRC = REPO / "data" / "personamem" / "val_ood.json"
 OUT = REPO / "data" / "personamem_memory_analysis.json"
 
 USER_RE = re.compile(r"^User:\s*(.*)$", re.M)

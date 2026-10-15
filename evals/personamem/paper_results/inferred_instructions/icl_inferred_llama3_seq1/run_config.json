@@ -1,6 +1,6 @@
 {
   "model": "llama3_8b_instruct_pref_v3",
-  "eval_path": "data/personamem_v2_inferred_eval/val_unseen_topics_inferred_llama3_author.json",
+  "eval_path": "data/personamem/inferred_eval/val_ood_inferred_llama3_author.json",
   "seq_len": 1,
   "n_rollouts": 400,
   "rollout_offset": 0,

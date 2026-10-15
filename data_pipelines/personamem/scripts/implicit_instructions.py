@@ -19,7 +19,7 @@ Design constraints per variant:
     would bleed into Technology).
 
 Keys = the 10 HELDOUT_TOPICS (the only instruction targets in
-data/personamem/test.json).
+data/personamem/val_ood.json).
 Variant 0 of Travel mirrors the motivating utterance above.
 """
 

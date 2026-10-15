@@ -1,6 +1,6 @@
 #!/bin/bash
 # Stage 2 of CounterFACT benchmark regeneration: format the categorized facts,
-# swap in the held-out subcategories, and generate the mixed-document streams.
+# swap in the held-out subcategories, and generate the multi-fact document streams.
 # Expects the stage-1 output copied to data/counterfact_with_categories/
 # (see README). Run from this directory.
 set -eu

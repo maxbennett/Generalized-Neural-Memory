@@ -1,5 +1,5 @@
 {
-  "model_state_dict_path_for_eval": "data/personalmem_final_evals/memoryllm_trained_frozen_memory/results.json",
+  "model_state_dict_path_for_eval": "evals/personamem/paper_results/short_horizon/gnm_ablation/results.json",
   "collision_mode": "any_trained",
   "trained_baselines_used": [
     "memoryllm_trained_baseline_letter",
@@ -8,6 +8,6 @@
   "filter_definition": "exclude probes where correct == EITHER memoryllm_trained_baseline OR icl_ft_baseline",
   "n_probes_pre_filter": 8188,
   "n_probes_post_filter": 4963,
-  "ablation": "freeze_memorize_grads (v34)",
-  "note": "Per-probe records identical to data/personalmem_final_evals/<run>/. Only the collision filter differs."
+  "ablation": "freeze_memorize_grads",
+  "note": "Per-probe records identical to evals/personamem/paper_results/short_horizon/<run>/. Only the collision filter differs."
 }

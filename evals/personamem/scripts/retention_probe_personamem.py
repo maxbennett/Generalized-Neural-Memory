@@ -1,6 +1,6 @@
 """Lag-protocol PersonaMem MC eval (the counterfact seq-400 analog).
 
-One 400-doc stream (the paper's 400-example unseen-topics file, in file order or
+One 400-doc stream (the paper's 400-example Val-OOD file, in file order or
 a seeded permutation of rollout composition); memorize sequentially; at check
 states probe the MC pairs of docs at controlled lags. Works with the vanilla
 trained model (memoryllm_chat) and the long-horizon M+ shell

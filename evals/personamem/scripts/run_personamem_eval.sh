@@ -1,5 +1,5 @@
 #!/bin/bash
-# PersonaMem (Table 2) eval: 40 rollouts of val_unseen_topics at seq_len=10,
+# PersonaMem (Table 2) eval: 40 episodes of Val-OOD (data/personamem/val_ood.json) at seq_len=10,
 # sharded [7,7,7,7,6,6] across 6 GPUs. This is the exact protocol used for the
 # paper's PersonaMem numbers (GNM, ICL-FT, and the ablation all use it).
 #
@@ -22,7 +22,7 @@ BASELINE=${4:-memoryllm}
 REPO=$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)
 PY=${PY:-python}
 SCRIPT=$REPO/evals/personamem/scripts/eval_personamem.py
-EVAL_PATH=$REPO/data/personamem/test.json
+EVAL_PATH=$REPO/data/personamem/val_ood.json
 [ "$CKPT" != "null" ] && CKPT=$REPO/$CKPT
 SHARDS_DIR=$REPO/$OUT/_shards
 mkdir -p "$SHARDS_DIR"

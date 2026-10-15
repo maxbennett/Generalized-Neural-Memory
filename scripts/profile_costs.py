@@ -63,7 +63,7 @@ def load_experiment():
         instr = [lis[s][0] for s in range(60)]
         pair = next(p for p in iop[0][0] if not p.get("should_refuse"))
         return docs, instr, {"pair": pair}
-    d = json.load(open(os.path.join(REPO, "data/personamem/test.json")))
+    d = json.load(open(os.path.join(REPO, "data/personamem/val_ood.json")))
     docs = [ex["document"] for ex in d[:60]]
     instr = [ex["learning_instruction"] for ex in d[:60]]
     return docs, instr, {"mc": d[0]["input_output_pairs"][0]}

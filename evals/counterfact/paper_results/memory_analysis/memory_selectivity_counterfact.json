@@ -221,6 +221,6 @@
   "num_examples": 200,
   "num_gnm_errors": 0,
   "num_ablation_errors": 0,
-  "dataset_path": "../data/write_invariance_dataset_final.json",
-  "gnm_checkpoint_path": "../shared_models/mixed_documents/memoryllm/exp3_memoryllm_model.pth"
+  "dataset_path": "../data/analysis/counterfact_memory_analysis.json",
+  "gnm_checkpoint_path": "../models/gnm_counterfact/model.pth"
 }

@@ -16,10 +16,10 @@
     }
   },
   "args": {
-    "eval_path": "data/personamem_v2_inferred_eval/val_unseen_topics_inferred_llama3_author_purpose.json",
+    "eval_path": "data/personamem/inferred_eval/val_ood_inferred_llama3_author_purpose.json",
     "model": "memoryllm_chat",
-    "model_state_dict_path": "saved_models/preference_mc_v31/preference_mc_v31_best.pth",
-    "output_path": "experiments/eval_preference_mc/results/inferred_v1/gnm_inferred_llama3_author_purpose_seq1.json",
+    "model_state_dict_path": "models/gnm_personamem/model.pth",
+    "output_path": "evals/personamem/paper_results/inferred_instructions/gnm_inferred_llama3_author_purpose_seq1.json",
     "seq_len": 1,
     "n_rollouts": 400,
     "rollout_offset": 0,

@@ -12,9 +12,9 @@
       "fact_subcategories"
     ],
     "val_ood_datasets": [
-      "../../shared_data/holdout_subcat3_docs/test_unseen_categories_0.json",
-      "../../shared_data/holdout_subcat3_docs/test_unseen_categories_1.json",
-      "../../shared_data/holdout_subcat3_docs/test_unseen_categories_2.json"
+      "../../data/counterfact/test_unseen_categories_0.json",
+      "../../data/counterfact/test_unseen_categories_1.json",
+      "../../data/counterfact/test_unseen_categories_2.json"
     ],
     "training_datasets": null,
     "val_id_path": null,
@@ -49,7 +49,7 @@
     "model": "memoryllm_chat",
     "model_path": "YuWangX/memoryllm-8b-chat",
     "tokenizer_path": "YuWangX/memoryllm-8b-chat",
-    "model_state_dict_path": "../../shared_models/mixed_documents/memoryllm/exp3_memoryllm_model.pth",
+    "model_state_dict_path": "../../models/gnm_counterfact/model.pth",
     "checkpoint_dict_path": null,
     "pretty_name": "GNM"
   },

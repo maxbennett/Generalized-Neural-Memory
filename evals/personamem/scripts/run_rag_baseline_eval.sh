@@ -1,13 +1,13 @@
 #!/bin/bash
 # 6-shard eval of Llama-3 RAG (PersonaMem prompt + top-4 retrieval) on
-# data/personamem/test.json. Mirrors the 40-rollout split
+# data/personamem/val_ood.json. Mirrors the 40-rollout split
 # [7,7,7,7,6,6] used for the PersonaMem evals.
 set -uo pipefail
 
 REPO=$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)
 PY=${PY:-python}
 SCRIPT=$REPO/evals/personamem/scripts/eval_icl_pref.py
-EVAL_PATH=$REPO/data/personamem/test.json
+EVAL_PATH=$REPO/data/personamem/val_ood.json
 OUT_DIR=$REPO/evals/personamem/results/personamem_rag
 SHARDS_DIR=$OUT_DIR/_shards
 mkdir -p "$SHARDS_DIR"

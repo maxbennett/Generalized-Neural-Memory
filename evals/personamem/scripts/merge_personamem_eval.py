@@ -23,7 +23,7 @@ sys.path.insert(0, str(SCRIPTS))
 
 from build_summary import _matrix_for, _retention_curve, build_metrics, _is_collision_any  # noqa: E402
 
-SOURCE_EVAL = REPO / "data/personamem/test.json"
+SOURCE_EVAL = REPO / "data/personamem/val_ood.json"
 SEQ_LEN = 10
 
 

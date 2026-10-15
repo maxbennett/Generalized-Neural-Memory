@@ -15,7 +15,7 @@
       "refusal_subcategories"
     ],
     "val_ood_datasets": [
-      "../../shared_data/holdout_subcat3_docs/train_0.json"
+      "../../data/counterfact/train_0.json"
     ],
     "training_datasets": null,
     "val_id_path": null,
@@ -69,7 +69,7 @@
     "model": "llama3_8b_instruct",
     "model_path": "meta-llama/Meta-Llama-3-8B-Instruct",
     "tokenizer_path": "meta-llama/Meta-Llama-3-8B-Instruct",
-    "model_state_dict_path": "../../shared_models/mixed_documents/icl/exp3_icl_model.pth",
+    "model_state_dict_path": "../../models/icl_ft_counterfact/model.pth",
     "checkpoint_dict_path": null,
     "pretty_name": "Finetuned Llama3"
   },

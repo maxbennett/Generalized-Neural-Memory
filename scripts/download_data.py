@@ -5,7 +5,6 @@ configs expect.
   python download_data.py                # both benchmarks
   python download_data.py --counterfact  # CounterFACT benchmark + eval streams
   python download_data.py --personamem   # PersonaMem benchmark (train + eval)
-  python download_data.py --results      # also fetch precomputed paper results
 """
 
 import argparse
