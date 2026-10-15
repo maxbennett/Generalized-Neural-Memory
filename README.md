@@ -201,7 +201,8 @@ The released datasets are canonical (`scripts/download_data.py`); to regenerate 
 │       └── paper_results/          the paper's runs
 ├── scripts/                    downloads, figure generators, long-horizon probes, cost profiler
 ├── data_pipelines/             benchmark construction (CounterFACT stages 1–2, PersonaMem)
-├── data/                       benchmarks (layout below) + tracked caches and Fig. 6 inputs
+├── models/                     checkpoint skeleton, filled by scripts/download_models.py
+├── data/                       benchmark skeleton, filled by scripts/download_data.py (layout below) + tracked caches and Fig. 6 inputs
 ├── notebooks/                  appendix analyses (outputs stripped)
 ├── plots/                      the paper's figures as rendered by this repo
 └── assets/                     README figures, prompt-template variants

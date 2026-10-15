@@ -1,19 +1,22 @@
-# model weights (downloaded via download_models.py)
-models/*
-!models/.gitkeep
+# model weights (downloaded via scripts/download_models.py); the models/<name>/ skeleton is tracked
+models/*/*
+!models/*/.gitkeep
 *.pt
 *.pth
 *.bin
 *.ckpt
 *.safetensors
 
-# benchmark data (downloaded via download_data.py)
-data/*
-!data/.gitkeep
-!data/baseline_letter_caches/
-!data/baseline_letter_caches/**
-!data/analysis/
-!data/analysis/**
+# benchmark data (downloaded via scripts/download_data.py); the directory skeleton is tracked
+data/counterfact/*
+!data/counterfact/.gitkeep
+data/personamem/*
+!data/personamem/.gitkeep
+!data/personamem/*/
+data/personamem/*/*
+!data/personamem/*/.gitkeep
+data/raw/
+data/counterfact_with_categories/
 
 # training / eval outputs
 saved_models/
