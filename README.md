@@ -237,13 +237,6 @@ The MemoryAgent baselines use Llama-3-8B-Instruct as a write-time filter; the Hi
   year      = {2026},
   url       = {https://arxiv.org/abs/2602.23201}
 }
-
-@inproceedings{wang2024memoryllm,
-  title     = {MemoryLLM: Towards Self-Updatable Large Language Models},
-  author    = {Wang, Yu and Gao, Yifan and Chen, Xiusi and Jiang, Haoming and Li, Shiyang and Yang, Jingfeng and Yin, Qingyu and Li, Zheng and Li, Xian and Yin, Bing and Shang, Jingbo and McAuley, Julian},
-  booktitle = {International Conference on Machine Learning (ICML)},
-  year      = {2024}
-}
 ```
 
 ## License
