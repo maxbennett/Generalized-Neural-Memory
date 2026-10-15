@@ -3,12 +3,12 @@
 One subdirectory per system. Files are raw outputs of `scripts/retention_probe.py`;
 `scripts/make_fig3_retention.py` pools them into the figure. Naming:
 `<system>[_variant]_f<shard>.json`, where `f0/f1/f2` is the held-out test shard
-(`data/counterfact/test_unseen_categories_{0,1,2}.json`) — the figure pools all three.
+(`data/counterfact/test_ood_{0,1,2}.json`) — the figure pools all three.
 
 | File family | Rollout | Feeds (record key) |
 |---|---|---|
 | `<sys>_f?.json` | 700-document rollout, fact-dense probe sampling | Facts panels: Score / Accuracy / Selectivity (`probes`, `sel`, `spec`) |
-| `<sys>_flag1000_f?.json` | 1,000-document streams (`data/counterfact/test_lag1000_f*.json`) | same Facts panels — extra samples at every lag |
+| `<sys>_flag1000_f?.json` | 1,000-document streams (`data/counterfact/test_ood_1000doc_*.json`) | same Facts panels — extra samples at every lag |
 | `<sys>_refusal_f?.json` | 700-doc rollout with refusal-targeted probe sampling enabled and a denser late-state ladder | Refusal (F1) panel (`refusals`) |
 | `<sys>_refusal_s100?_f?.json` | variance-seed reruns of the refusal rollout (collate seeds 1001–1004; MemoryAgent: 1001 only) | pooled into the same Refusal panel — refusal events are sparse, so the reruns supply its statistical power |
 

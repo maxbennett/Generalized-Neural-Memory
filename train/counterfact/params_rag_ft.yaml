@@ -66,10 +66,10 @@ data:
     - "../../data/counterfact/train_3.json"
     - "../../data/counterfact/train_4.json"
   val_ood_datasets:
-    - "../../data/counterfact/test_unseen_categories_0.json"
-    # - "../../data/counterfact/test_unseen_categories_1.json"
-    # - "../../data/counterfact/test_unseen_categories_2.json"
-  val_id_path:  "../../data/counterfact/test_seen_categories.json"
+    - "../../data/counterfact/test_ood_0.json"
+    # - "../../data/counterfact/test_ood_1.json"
+    # - "../../data/counterfact/test_ood_2.json"
+  val_id_path:  "../../data/counterfact/val_id.json"
   train_limit: 400
   val_limit: null
   # -------------------------------------------------

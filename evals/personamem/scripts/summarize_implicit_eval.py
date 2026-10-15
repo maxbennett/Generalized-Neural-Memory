@@ -88,7 +88,7 @@ def summarize(records, collision_mode):
 
 
 def main():
-    conditions = sys.argv[1:] or ["implicit", "explicit_bare"]
+    conditions = sys.argv[1:] or ["implicit_v3"]   # the paper's bank; v1 / v2 / explicit_bare were development iterations
 
     source = json.load(open(SOURCE_EVAL))
     by_hash = {}

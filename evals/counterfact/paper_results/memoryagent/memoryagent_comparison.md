@@ -1,6 +1,6 @@
 # MemoryAgent (selective write-time preprocessing) baseline — short-horizon (seq-10) protocol
 
-All runs: paper protocol (seed 42, 3 test_unseen files, full probing, sampling knobs from evals/counterfact/paper_results/short_horizon/rag_untrained/run_config.json).
+All runs: paper protocol (seed 42, 3 test-ood files, full probing, sampling knobs from evals/counterfact/paper_results/short_horizon/rag_untrained/run_config.json).
 
 | Model | Fact acc | Fact sel | Format acc | Format sel | Refusal recall | Refusal acc | Write cost / doc |
 |---|---|---|---|---|---|---|---|

@@ -65,7 +65,7 @@ def main():
 
     lines = []
     lines.append("# MemoryAgent (selective write-time preprocessing) baseline — short-horizon (seq-10) protocol\n")
-    lines.append("All runs: paper protocol (seed 42, 3 test_unseen files, full probing, "
+    lines.append("All runs: paper protocol (seed 42, 3 test-ood files, full probing, "
                  "sampling knobs from evals/counterfact/paper_results/short_horizon/rag_untrained/run_config.json).\n")
     header = "| Model | " + " | ".join(h for _, h in METRICS) + " | Write cost / doc |"
     sep = "|" + "---|" * (len(METRICS) + 2)

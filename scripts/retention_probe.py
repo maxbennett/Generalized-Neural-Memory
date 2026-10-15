@@ -103,10 +103,10 @@ def gen_refusal(wrapper, p, device):
 def main():
     model_key, fi, sd_path = sys.argv[1], sys.argv[2], sys.argv[3]
     device = torch.device("cuda:0")
-    if fi.startswith("lag1000_"):
-        val_json = os.path.join(REPO, f"data/counterfact/test_{fi}.json")
-    else:
-        val_json = os.path.join(REPO, f"data/counterfact/test_unseen_categories_{fi}.json")
+    if fi.startswith("lag1000_f"):      # 1,000-document streams: fi = lag1000_f0 / f1 / f2
+        val_json = os.path.join(REPO, f"data/counterfact/test_ood_1000doc_{fi[len('lag1000_f'):]}.json")
+    else:                                # the three test-ood streams: fi = 0 / 1 / 2
+        val_json = os.path.join(REPO, f"data/counterfact/test_ood_{fi}.json")
 
     import random
     import numpy as np

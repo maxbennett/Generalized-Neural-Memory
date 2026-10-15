@@ -31,7 +31,7 @@ loop:
 
 data:
   val_ood_datasets:
-    - "../../data/counterfact/test_unseen_categories_1.json"
+    - "../../data/counterfact/test_ood_1.json"
   # val_ood_datasets:
   # val_ood_datasets:
   val_limit: null

@@ -13,7 +13,7 @@
       "refusal_subcategories"
     ],
     "val_ood_datasets": [
-      "../../data/counterfact/test_seen_categories.json"
+      "../../data/counterfact/val_id.json"
     ],
     "training_datasets": null,
     "val_id_path": null,

@@ -12,9 +12,9 @@
       "fact_subcategories"
     ],
     "val_ood_datasets": [
-      "../../data/counterfact/test_unseen_categories_0.json",
-      "../../data/counterfact/test_unseen_categories_1.json",
-      "../../data/counterfact/test_unseen_categories_2.json"
+      "../../data/counterfact/test_ood_0.json",
+      "../../data/counterfact/test_ood_1.json",
+      "../../data/counterfact/test_ood_2.json"
     ],
     "training_datasets": null,
     "val_id_path": null,

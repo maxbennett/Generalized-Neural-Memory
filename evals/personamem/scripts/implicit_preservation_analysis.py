@@ -58,7 +58,7 @@ conditions = {
     "ICL-FT paper (explicit+desc)": ({KEY(r): r for r in json.load(open(D / "icl_ft/results.json"))},
                                      "icl_ft_baseline_letter"),
 }
-for cond in sys.argv[1:] or ["explicit_bare", "implicit"]:
+for cond in sys.argv[1:] or ["implicit_v3", "icl_ft_implicit_v3"]:   # the paper's conditions
     recs = json.load(open(RES / cond / "results.json"))
     if cond.startswith("icl_ft"):
         conditions[f"ICL-FT {cond[7:]}"] = ({KEY(r): r for r in recs}, "icl_ft_baseline_letter")

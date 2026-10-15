@@ -31,9 +31,9 @@ loop:
 
 data:
   val_ood_datasets:
-    - "../../data/counterfact/test_unseen_categories_0.json"
-    - "../../data/counterfact/test_unseen_categories_1.json"
-    - "../../data/counterfact/test_unseen_categories_2.json"
+    - "../../data/counterfact/test_ood_0.json"
+    - "../../data/counterfact/test_ood_1.json"
+    - "../../data/counterfact/test_ood_2.json"
   val_limit: null
   eligible_target_types_val_ood:
     - "fact_refusal_compositions"

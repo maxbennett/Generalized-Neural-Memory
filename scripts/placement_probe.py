@@ -39,7 +39,7 @@ from instructions import update_format
 
 STATE_DICT = os.path.join(REPO, "models/gnm_counterfact/model.pth")
 PARAMS = os.path.join(REPO, "evals/counterfact/params_long_horizon_f0.yaml")
-VAL_JSON = os.path.join(REPO, "data/counterfact/test_unseen_categories_0.json")
+VAL_JSON = os.path.join(REPO, "data/counterfact/test_ood_0.json")
 SEQ_LEN = 200
 CHECKPOINTS = {0, 1, 4, 9, 19, 39, 59, 79, 119, 159, 199}  # 0-based state = docs injected - 1
 VARIANTS = ["block_none", "block_oracle", "stm_tail"]

@@ -49,7 +49,7 @@ def load_experiment():
         cfg = load_cfg(os.path.join(REPO, "evals/counterfact/params_long_horizon_f0.yaml"),
                        modelcfg=ModelCfg(model="memoryllm_chat", pretty_name="x", model_state_dict_path="x"))
         random.seed(4242); np.random.seed(4242)
-        ds = DocDataset(os.path.join(REPO, "data/counterfact/test_unseen_categories_0.json"),
+        ds = DocDataset(os.path.join(REPO, "data/counterfact/test_ood_0.json"),
                         shuffle=False, limit=None)
         dl = DataLoader(ds, batch_size=60, shuffle=False, drop_last=True,
                         collate_fn=partial(docs_collate_fn, train_or_test="test",

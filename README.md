@@ -212,9 +212,9 @@ The released datasets are canonical (`scripts/download_data.py`); to regenerate 
 | Path | Split | Contents |
 |---|---|---|
 | `data/counterfact/train_0-4.json` | train | five training buckets |
-| `data/counterfact/test_seen_categories.json` | val-id | new facts, seen categories — early stopping only |
-| `data/counterfact/test_unseen_categories_0-2.json` | test-ood | held-out categories and formats — the three Table 1 / Fig. 3 streams |
-| `data/counterfact/test_lag1000_f0-2.json` | test-ood | 1,000-document streams for the long-horizon supplement |
+| `data/counterfact/val_id.json` | val-id | new facts, seen categories — early stopping only |
+| `data/counterfact/test_ood_0-2.json` | test-ood | held-out categories and formats — the three Table 1 / Fig. 3 streams |
+| `data/counterfact/test_ood_1000doc_0-2.json` | test-ood | 1,000-document streams for the long-horizon supplement |
 | `data/personamem/train_{gnm,icl,gnm_seed_robustness}/train_0-4.json` | train | each released model's training corpus |
 | `data/personamem/train_*/val_id.json` | Val-ID | unseen preferences, seen target topics — early stopping only |
 | `data/personamem/val_ood.json` | Val-OOD | held-out target topics — **the** evaluation file for every reported PersonaMem number |

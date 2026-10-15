@@ -407,7 +407,7 @@ if __name__ == "__main__":
                                                                     max_number_of_facts_in_doc=params['create_docs']['max_facts_per_doc']
                                                                     )
     
-    with open(os.path.join(args.output_dir, "test_seen_categories.json"), 'w') as f:
+    with open(os.path.join(args.output_dir, "val_id.json"), 'w') as f:
         json.dump(generated_categorized_doc_data_test_seen_categories, f, indent=4)
     del generated_categorized_doc_data_test_seen_categories
 
@@ -425,5 +425,5 @@ if __name__ == "__main__":
                                                     max_number_of_facts_in_doc=params['create_docs']['max_facts_per_doc']
                                                 )
         
-        with open(os.path.join(args.output_dir, f"test_unseen_categories_{i}.json"), 'w') as f:
+        with open(os.path.join(args.output_dir, f"test_ood_{i}.json"), 'w') as f:
             json.dump(unseen_test, f, indent=4)

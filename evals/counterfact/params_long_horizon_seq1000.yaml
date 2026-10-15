@@ -1,4 +1,4 @@
-# Figure 3 supplemental samples: 1,000-document streams (data/counterfact/test_lag1000_f*.json).
+# Figure 3 supplemental samples: 1,000-document streams (data/counterfact/test_ood_1000doc_*.json).
 run_name: "memoryllm"
 seed: 42 # for seq 4
 
@@ -31,7 +31,7 @@ loop:
 
 data:
   val_ood_datasets:
-    - "../../data/counterfact/test_lag1000_fFILE.json"
+    - "../../data/counterfact/test_ood_1000doc_FILE.json"
   # val_ood_datasets:
   # val_ood_datasets:
   val_limit: null
