@@ -1,6 +1,6 @@
 #!/bin/bash
 # Eval runs for the authored-instruction condition, seq-len 1.
-# Usage: run_inferred_evals.sh <upstream> <gpu_gnm> <gpu_icl> [mode=author]
+# Usage: run_inferred_evals.sh <llama3|qwen3> <gpu_gnm> <gpu_icl> [author|author_generic]
 set -u
 UP=$1; G1=$2; G2=$3; MODE=${4:-author}
 R=$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)

@@ -1,11 +1,11 @@
-[implicit_v3] 8188 records, enriched 8188 with trained-baseline letters
-[implicit_v3] wrote /local/zemel/max/code/gnm_public/evals/personamem/paper_results/implicit_instructions/implicit_v3/summary_selected.json  (n 8188 -> 8188)
-[implicit_v3] wrote /local/zemel/max/code/gnm_public/evals/personamem/paper_results/implicit_instructions/implicit_v3/summary_any_trained.json  (n 8188 -> 4963)
+[implicit] 8188 records, enriched 8188 with trained-baseline letters
+[implicit] wrote evals/personamem/paper_results/implicit_instructions/implicit/summary_selected.json  (n 8188 -> 8188)
+[implicit] wrote evals/personamem/paper_results/implicit_instructions/implicit/summary_any_trained.json  (n 8188 -> 4963)
 
 ==============================================================================================================
 Comparison vs paper (collision_mode=any_trained), diagonal metrics
 ==============================================================================================================
-metric                                                    paper      implicit_v3
+metric                                                    paper         implicit
 accuracy_overall                                          0.936            0.843   (full)
                                                           0.882            0.765   (most_recent)
 accuracy_excluding_collisions                             0.938            0.838   (full)

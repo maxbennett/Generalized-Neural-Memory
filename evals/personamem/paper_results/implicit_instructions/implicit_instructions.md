@@ -1,4 +1,4 @@
-# Implicit learning instructions (v3 bank — topic-term-free)
+# Implicit learning instructions (topic-term-free bank)
 
 Used for the implicit-instruction experiment (appendix). None of the 30
 instructions contains its topic's term or a cognate stem (audited:

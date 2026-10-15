@@ -1,18 +1,14 @@
-"""Build implicit-instruction variants of the PersonaMem MC final-eval file.
+"""Build the implicit-instruction variant of the PersonaMem Val-OOD eval file.
 
-Copies data/personamem/val_ood.json and
-rewrites ONLY the top-level `learning_instruction` field of each example
-(documents, probes, precomputed baseline letters, metadata, and example order
-are untouched, so the any_trained collision filter and probe-level pairing
-with the paper run stay valid). Two conditions:
+Copies data/personamem/val_ood.json and rewrites ONLY the top-level
+`learning_instruction` field of each example (documents, probes, precomputed
+baseline letters, metadata, and example order are untouched, so the any_trained
+collision filter and probe-level pairing with the paper run stay valid). Each
+example's explicit instruction is replaced by one of the hand-authored
+intent-based utterances in implicit_instructions.py, assigned round-robin per
+topic (the i-th example of a topic gets variant i % 3).
 
-  - explicit_bare: same template as the original example, but the rendered
-    topic-with-descriptor is replaced by the bare lowercase topic name.
-    Isolates the descriptor's contribution from implicitness.
-  - implicit: hand-authored intent-based instructions (implicit_instructions.py),
-    assigned round-robin per topic (i-th example of a topic gets variant i % 3).
-
-Outputs to data/personamem/implicit_eval/.
+Output: data/personamem/implicit_eval/val_ood_implicit.json
 """
 
 import argparse
@@ -21,7 +17,7 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from implicit_instructions import IMPLICIT_INSTRUCTIONS, IMPLICIT_INSTRUCTIONS_V2, IMPLICIT_INSTRUCTIONS_V3
+from implicit_instructions import IMPLICIT_INSTRUCTIONS
 
 REPO = Path(__file__).resolve().parents[3]
 
@@ -34,8 +30,6 @@ TEMPLATES = [
     "Ignore everything except preferences about {t}.",
     "Track only {t} preferences from this conversation.",
 ]
-
-BARE_NAMES = {t: t.lower() for t in IMPLICIT_INSTRUCTIONS}
 
 
 def match_template(li: str) -> str:
@@ -56,17 +50,13 @@ def main():
                     default=REPO / "data/personamem/val_ood.json")
     ap.add_argument("--outdir", type=Path,
                     default=REPO / "data/personamem/implicit_eval")
-    ap.add_argument("--bank", choices=["v1", "v2", "v3"], default="v1",
-                    help="v2 = clarity rewrites for topics that scored <0.80 in the v1 run")
     args = ap.parse_args()
-    bank = {"v1": IMPLICIT_INSTRUCTIONS, "v2": IMPLICIT_INSTRUCTIONS_V2, "v3": IMPLICIT_INSTRUCTIONS_V3}[args.bank]
-    suffix = {"v1": "", "v2": "_v2", "v3": "_v3"}[args.bank]
+    bank = IMPLICIT_INSTRUCTIONS
 
     data = json.load(open(args.source))
     print(f"[build-implicit] {args.source.name}: {len(data)} examples")
 
     implicit = copy.deepcopy(data)
-    bare = copy.deepcopy(data)
     per_topic_idx = defaultdict(int)
     variant_counts = Counter()
 
@@ -80,34 +70,28 @@ def main():
         variant = k % len(bank[target])
         implicit[i]["learning_instruction"] = bank[target][variant]
         variant_counts[(target, variant)] += 1
-
-        tpl = match_template(ex["learning_instruction"])
-        bare[i]["learning_instruction"] = tpl.format(t=BARE_NAMES[target])
+        match_template(ex["learning_instruction"])   # every source LI must be one of the 6 templates
 
     # Validate: everything except learning_instruction must be byte-identical.
-    for name, variant_data in [("implicit", implicit), ("explicit_bare", bare)]:
-        for orig, new in zip(data, variant_data):
-            o = {k: v for k, v in orig.items() if k != "learning_instruction"}
-            n = {k: v for k, v in new.items() if k != "learning_instruction"}
-            if o != n:
-                raise AssertionError(f"{name}: non-LI field diverged")
-        n_changed = sum(o["learning_instruction"] != n["learning_instruction"]
-                        for o, n in zip(data, variant_data))
-        print(f"[build-implicit] {name}: {n_changed}/{len(data)} LIs rewritten, all other fields identical")
+    for orig, new in zip(data, implicit):
+        o = {k: v for k, v in orig.items() if k != "learning_instruction"}
+        n = {k: v for k, v in new.items() if k != "learning_instruction"}
+        if o != n:
+            raise AssertionError("non-LI field diverged")
+    n_changed = sum(o["learning_instruction"] != n["learning_instruction"]
+                    for o, n in zip(data, implicit))
+    print(f"[build-implicit] {n_changed}/{len(data)} LIs rewritten, all other fields identical")
 
     args.outdir.mkdir(parents=True, exist_ok=True)
-    out_implicit = args.outdir / f"val_ood_implicit{suffix}.json"
-    out_bare = args.outdir / "val_ood_explicit_bare.json"
+    out_implicit = args.outdir / "val_ood_implicit.json"
     json.dump(implicit, open(out_implicit, "w"))
-    json.dump(bare, open(out_bare, "w"))
     print(f"[build-implicit] wrote {out_implicit}")
-    print(f"[build-implicit] wrote {out_bare}")
 
     print("\n[build-implicit] per-topic variant usage:")
     for (topic, variant), c in sorted(variant_counts.items()):
         print(f"    {topic:<12} v{variant}: {c}")
 
-    print("\n[build-implicit] samples (original -> bare -> implicit):")
+    print("\n[build-implicit] samples (original -> implicit):")
     seen = set()
     for i, ex in enumerate(data):
         t = ex["metadata"]["learn_topics"][0]
@@ -116,7 +100,6 @@ def main():
         seen.add(t)
         print(f"  [{t}]")
         print(f"    orig:     {ex['learning_instruction']}")
-        print(f"    bare:     {bare[i]['learning_instruction']}")
         print(f"    implicit: {implicit[i]['learning_instruction']}")
 
 

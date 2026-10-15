@@ -1,4 +1,4 @@
-"""Autonomous infer->execute table: seq-len 1 conditions.
+"""Inferred-instruction table (appendix): seq-len 1 conditions.
 
 All runs are seq-len 1 (each doc memorized/contexted alone, its own probes only),
 released GNM / ICL-FT PersonaMem checkpoints. Probes are keyed by SHA-256 of
@@ -80,28 +80,18 @@ def mcnemar(o1, o2, kind, field):
 
 
 CONDS = {
-    "GNM oracle-explicit":   (RES / "gnm_oracle_seq1.json",                 "gnm_base"),
-    "GNM implicit (v3)":     (RES / "gnm_implicit_v3_seq1.json",            "gnm_base"),
-    "GNM inferred-llama3":   (RES / "gnm_inferred_llama3_seq1.json",        "gnm_base"),
-    "GNM inferred-qwen3":    (RES / "gnm_inferred_qwen3_seq1.json",         "gnm_base"),
-    "GNM inferred-generic-llama3": (RES / "gnm_inferred_llama3_author_generic_seq1.json", "gnm_base"),
-    "GNM inferred-generic-qwen3": (RES / "gnm_inferred_qwen3_author_generic_seq1.json", "gnm_base"),
-    "GNM inferred-intent-llama3": (RES / "gnm_inferred_llama3_author_intent_seq1.json", "gnm_base"),
-    "GNM inferred-intent-qwen3": (RES / "gnm_inferred_qwen3_author_intent_seq1.json", "gnm_base"),
-    "GNM inferred-intent-end-llama3": (RES / "gnm_inferred_llama3_author_intent_end_seq1.json", "gnm_base"),
-    "GNM inferred-purpose-llama3": (RES / "gnm_inferred_llama3_author_purpose_seq1.json", "gnm_base"),
-    "GNM inferred-purpose-qwen3": (RES / "gnm_inferred_qwen3_author_purpose_seq1.json", "gnm_base"),
-    "ICL-FT oracle-explicit": (RES / "icl_oracle_seq1/results.json",        "icl_base"),
-    "ICL-FT implicit (v3)":  (RES / "icl_implicit_v3_seq1/results.json",    "icl_base"),
-    "ICL-FT inferred-llama3": (RES / "icl_inferred_llama3_seq1/results.json", "icl_base"),
-    "ICL-FT inferred-qwen3": (RES / "icl_inferred_qwen3_seq1/results.json", "icl_base"),
-    "ICL-FT inferred-generic-llama3": (RES / "icl_inferred_llama3_author_generic_seq1/results.json", "icl_base"),
-    "ICL-FT inferred-generic-qwen3": (RES / "icl_inferred_qwen3_author_generic_seq1/results.json", "icl_base"),
-    "ICL-FT inferred-intent-llama3": (RES / "icl_inferred_llama3_author_intent_seq1/results.json", "icl_base"),
-    "ICL-FT inferred-intent-qwen3": (RES / "icl_inferred_qwen3_author_intent_seq1/results.json", "icl_base"),
-    "ICL-FT inferred-intent-end-llama3": (RES / "icl_inferred_llama3_author_intent_end_seq1/results.json", "icl_base"),
-    "ICL-FT inferred-purpose-llama3": (RES / "icl_inferred_llama3_author_purpose_seq1/results.json", "icl_base"),
-    "ICL-FT inferred-purpose-qwen3": (RES / "icl_inferred_qwen3_author_purpose_seq1/results.json", "icl_base"),
+    "GNM oracle-explicit":          (RES / "gnm_oracle_seq1.json",                           "gnm_base"),
+    "GNM implicit":                 (RES / "gnm_implicit_seq1.json",                         "gnm_base"),
+    "GNM inferred-llama3":          (RES / "gnm_inferred_llama3_seq1.json",                  "gnm_base"),
+    "GNM inferred-qwen3":           (RES / "gnm_inferred_qwen3_seq1.json",                   "gnm_base"),
+    "GNM inferred-generic-llama3":  (RES / "gnm_inferred_llama3_author_generic_seq1.json",   "gnm_base"),
+    "GNM inferred-generic-qwen3":   (RES / "gnm_inferred_qwen3_author_generic_seq1.json",    "gnm_base"),
+    "ICL-FT oracle-explicit":         (RES / "icl_oracle_seq1/results.json",                          "icl_base"),
+    "ICL-FT implicit":                (RES / "icl_implicit_seq1/results.json",                        "icl_base"),
+    "ICL-FT inferred-llama3":         (RES / "icl_inferred_llama3_seq1/results.json",                 "icl_base"),
+    "ICL-FT inferred-qwen3":          (RES / "icl_inferred_qwen3_seq1/results.json",                  "icl_base"),
+    "ICL-FT inferred-generic-llama3": (RES / "icl_inferred_llama3_author_generic_seq1/results.json",  "icl_base"),
+    "ICL-FT inferred-generic-qwen3":  (RES / "icl_inferred_qwen3_author_generic_seq1/results.json",   "icl_base"),
 }
 
 rows = {}
@@ -117,27 +107,17 @@ for name, (path, own) in CONDS.items():
           f"{m['pld']:.1f} | {m['score']:.1f} | {m['nl']}/{m['nig']} |")
 
 PAIRS = [
-    ("GNM inferred-intent-end-llama3", "ICL-FT inferred-intent-end-llama3"),
-    ("GNM inferred-intent-end-llama3", "GNM inferred-intent-llama3"),
-    ("GNM inferred-purpose-llama3", "ICL-FT inferred-purpose-llama3"),
-    ("GNM inferred-purpose-qwen3", "ICL-FT inferred-purpose-qwen3"),
-    ("GNM inferred-purpose-llama3", "GNM oracle-explicit"),
-    ("GNM inferred-purpose-llama3", "GNM implicit (v3)"),
-    ("GNM inferred-purpose-qwen3", "GNM implicit (v3)"),
-    ("GNM inferred-generic-llama3", "ICL-FT inferred-generic-llama3"),
-    ("GNM inferred-generic-qwen3", "ICL-FT inferred-generic-qwen3"),
-    ("GNM inferred-intent-llama3", "GNM oracle-explicit"),
-    ("GNM inferred-intent-llama3", "GNM implicit (v3)"),
-    ("GNM inferred-intent-llama3", "ICL-FT inferred-intent-llama3"),
-    ("GNM inferred-generic-llama3", "GNM oracle-explicit"),
-    ("GNM inferred-generic-llama3", "GNM inferred-llama3"),
-    ("GNM inferred-generic-llama3", "GNM implicit (v3)"),
     ("GNM inferred-llama3", "GNM oracle-explicit"),
     ("GNM inferred-qwen3", "GNM oracle-explicit"),
-    ("GNM inferred-llama3", "GNM implicit (v3)"),
+    ("GNM inferred-llama3", "GNM implicit"),
     ("GNM inferred-llama3", "ICL-FT inferred-llama3"),
     ("GNM inferred-qwen3", "ICL-FT inferred-qwen3"),
     ("ICL-FT inferred-llama3", "ICL-FT oracle-explicit"),
+    ("GNM inferred-generic-llama3", "ICL-FT inferred-generic-llama3"),
+    ("GNM inferred-generic-qwen3", "ICL-FT inferred-generic-qwen3"),
+    ("GNM inferred-generic-llama3", "GNM oracle-explicit"),
+    ("GNM inferred-generic-llama3", "GNM inferred-llama3"),
+    ("GNM inferred-generic-llama3", "GNM implicit"),
 ]
 print("\nExact McNemar (paired on shared probes):")
 for a, bname in PAIRS:

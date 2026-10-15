@@ -8,18 +8,18 @@
       "selectivity_overall_n": 1081,
       "selectivity_excluding_collisions_n": 819,
       "successfully_avoided_leaking_excluding_collisions_n": 819,
-      "accuracy_overall": 0.855,
-      "accuracy_excluding_collisions": 0.8360655737704918,
-      "selectivity_overall": 0.6160962072155411,
-      "selectivity_excluding_collisions": 0.6105006105006106,
-      "successfully_avoided_leaking_excluding_collisions": 0.7863247863247863
+      "accuracy_overall": 0.875,
+      "accuracy_excluding_collisions": 0.8655737704918033,
+      "selectivity_overall": 0.6281221091581869,
+      "selectivity_excluding_collisions": 0.6275946275946276,
+      "successfully_avoided_leaking_excluding_collisions": 0.8107448107448108
     }
   },
   "args": {
-    "eval_path": "data/personamem/inferred_eval/val_ood_inferred_llama3_author_intent.json",
+    "eval_path": "data/personamem/implicit_eval/val_ood_implicit.json",
     "model": "memoryllm_chat",
     "model_state_dict_path": "models/gnm_personamem/model.pth",
-    "output_path": "evals/personamem/paper_results/inferred_instructions/gnm_inferred_llama3_author_intent_seq1.json",
+    "output_path": "evals/personamem/paper_results/inferred_instructions/gnm_implicit_seq1.json",
     "seq_len": 1,
     "n_rollouts": 400,
     "rollout_offset": 0,

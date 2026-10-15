@@ -399,7 +399,7 @@ if __name__ == "__main__":
 
     # Make 1 val-id file
     seed_everything(42)
-    generated_categorized_doc_data_test_seen_categories = generate_subcategorized_doc_data(
+    generated_categorized_doc_data_val_id = generate_subcategorized_doc_data(
                                                                     input_file_path=input_test, 
                                                                     groupings_to_put_in_doc=groupings_to_train_on,
                                                                     groupings_to_learn=groupings_to_train_on,
@@ -408,8 +408,8 @@ if __name__ == "__main__":
                                                                     )
     
     with open(os.path.join(args.output_dir, "val_id.json"), 'w') as f:
-        json.dump(generated_categorized_doc_data_test_seen_categories, f, indent=4)
-    del generated_categorized_doc_data_test_seen_categories
+        json.dump(generated_categorized_doc_data_val_id, f, indent=4)
+    del generated_categorized_doc_data_val_id
 
 
 

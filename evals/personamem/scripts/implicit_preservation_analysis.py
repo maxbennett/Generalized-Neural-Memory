@@ -7,8 +7,9 @@ provides baseline letters and the filter set, keyed by
 (rollout_idx, seq_idx_of_doc, seq_idx_of_io_pairs, pair_idx) — valid because the
 implicit runs use identical probes, example order, and rollout chunking.
 
-Rows: paper GNM (explicit+descriptor), paper ICL-FT (context), explicit_bare,
-implicit (+ any extra condition dirs passed on argv). Paired McNemar vs paper GNM.
+Rows: paper GNM (explicit+descriptor), paper ICL-FT (context), then the implicit
+conditions (GNM `implicit`, ICL-FT `icl_ft_implicit`; other condition dirs can be
+passed on argv). Paired McNemar vs the paper rows.
 """
 import json
 import sys
@@ -58,7 +59,7 @@ conditions = {
     "ICL-FT paper (explicit+desc)": ({KEY(r): r for r in json.load(open(D / "icl_ft/results.json"))},
                                      "icl_ft_baseline_letter"),
 }
-for cond in sys.argv[1:] or ["implicit_v3", "icl_ft_implicit_v3"]:   # the paper's conditions
+for cond in sys.argv[1:] or ["implicit", "icl_ft_implicit"]:
     recs = json.load(open(RES / cond / "results.json"))
     if cond.startswith("icl_ft"):
         conditions[f"ICL-FT {cond[7:]}"] = ({KEY(r): r for r in recs}, "icl_ft_baseline_letter")

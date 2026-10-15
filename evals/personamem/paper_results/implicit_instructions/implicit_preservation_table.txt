@@ -4,14 +4,14 @@ IGNORE probes, diagonal, paper trained_any collision filter (AC4 methodology)
 condition                        acc%  n_ig  preserved%  leak%  drift%  P(leak|dev)%
 GNM paper (explicit+desc)        93.6   657        81.4    6.1    12.5          32.8
 ICL-FT paper (explicit+desc)     91.5   657        82.3   10.5     7.2          59.5
-GNM implicit_v3                  84.3   657        74.4   12.5    13.1          48.8
-ICL-FT implicit_v3               79.6   657        65.8   29.4     4.9          85.8
+GNM implicit                     84.3   657        74.4   12.5    13.1          48.8
+ICL-FT implicit                  79.6   657        65.8   29.4     4.9          85.8
 
-McNemar GNM implicit_v3 vs GNM paper on preserved: b=65  c=19  p=0.0000
-McNemar GNM implicit_v3 vs GNM paper on leak     : b=9   c=51  p=0.0000
-P(leak|dev) GNM implicit_v3: 82/168=48.8%  vs paper 40/122=32.8%  p=0.006
+McNemar GNM implicit vs GNM paper on preserved: b=65  c=19  p=0.0000
+McNemar GNM implicit vs GNM paper on leak     : b=9   c=51  p=0.0000
+P(leak|dev) GNM implicit: 82/168=48.8%  vs paper 40/122=32.8%  p=0.006
 
-McNemar ICL-FT implicit_v3 vs ICL-FT paper on preserved: b=122 c=13  p=0.0000
-McNemar ICL-FT implicit_v3 vs ICL-FT paper on leak     : b=8   c=132 p=0.0000
-P(leak|dev) ICL-FT implicit_v3: 193/225=85.8%  vs paper 69/116=59.5%  p=0.000
+McNemar ICL-FT implicit vs ICL-FT paper on preserved: b=122 c=13  p=0.0000
+McNemar ICL-FT implicit vs ICL-FT paper on leak     : b=8   c=132 p=0.0000
+P(leak|dev) ICL-FT implicit: 193/225=85.8%  vs paper 69/116=59.5%  p=0.000
 

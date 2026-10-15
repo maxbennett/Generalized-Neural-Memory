@@ -1,9 +1,0 @@
-{
-  "model": "llama3_8b_instruct_pref_v3",
-  "eval_path": "data/personamem/inferred_eval/val_ood_inferred_qwen3_author_intent.json",
-  "seq_len": 1,
-  "n_rollouts": 400,
-  "rollout_offset": 0,
-  "n_probes": 1481,
-  "wrapper_class": "ICLChatPrefV3Wrapper"
-}

@@ -88,7 +88,7 @@ def summarize(records, collision_mode):
 
 
 def main():
-    conditions = sys.argv[1:] or ["implicit_v3"]   # the paper's bank; v1 / v2 / explicit_bare were development iterations
+    conditions = sys.argv[1:] or ["implicit"]
 
     source = json.load(open(SOURCE_EVAL))
     by_hash = {}
@@ -120,7 +120,7 @@ def main():
             s = summarize(records, mode)
             out = RES / cond / f"summary_{mode}.json"
             json.dump(s, open(out, "w"), indent=2)
-            print(f"[{cond}] wrote {out}  (n {s['n_probes_pre_filter']} -> {s['n_probes_total']})")
+            print(f"[{cond}] wrote {out.relative_to(REPO)}  (n {s['n_probes_pre_filter']} -> {s['n_probes_total']})")
         summaries[cond] = summarize(records, "any_trained")
         json.dump(records, open(RES / cond / "results.json", "w"))
 
