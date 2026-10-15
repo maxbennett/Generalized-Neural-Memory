@@ -12,8 +12,6 @@ Official implementation of **"Tell Me What To Learn: Generalizing Neural Memory 
 
 ![Figure 1](assets/figure1_overview.png)
 
-**GNM (Generalized Neural Memory)** trains a latent-memory LLM (MemoryLLM, Llama-3-8B based) to condition its memory *writes* on natural-language learning instructions — "learn this fact", "always answer in this format", "refuse questions about X", "remember this preference" — so a single model can be told, in plain language, what to learn and what to ignore from a document stream.
-
 ---
 
 ## 1. Installation
